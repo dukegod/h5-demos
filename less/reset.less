@@ -88,10 +88,17 @@ b {
 .marginauto{
     margin-right:auto;
     margin-left: auto; 
-} 
-
+}
+ //some app reguler 
+img {
+    -webkit-touch-callout: none; /* 禁止长按链接与图片弹出菜单 */
+}
 html{
 	font-size:62.5%;
+    -webkit-overflow-scrolling: touch;
+    -webkit-user-select: none;   /* 禁止选中文本（如无文本选中需求，此为必选项） */
+    user-select: none;
+    -Webkit-tap-highlight-color: rgba(0,0,0,0);/*按钮添加active状态或者移除点击高亮的状态了*/
 }
 body{
 	font: 120%/150% helvetica arial sans-serif;
