@@ -36,3 +36,16 @@
 			content: "big screen";
 		}
 	}
+### 自由缩放属性resize
+> resize属性主要是用来改变元素尺寸大小的，其主要目的是增强用户体验
+>
+> *resize: none | both | horizontal | vertical | inherit*
+>> none:用户不能拖动元素修改尺寸大小
+>>
+>>both:用户可以拖动元素，同时修改元素的宽度和高度
+>>
+>>horizontal:用户可以拖动元素，仅可以修改元素的宽度，但不能修改元素的高度。
+>>
+>>vertical:用户可以拖动元素，仅可以修改元素的高度，但不能修改元素的宽度。
+>>
+>>inherit:继承父元素的resize属性值。	
