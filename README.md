@@ -48,4 +48,8 @@
 >>
 >>vertical:用户可以拖动元素，仅可以修改元素的高度，但不能修改元素的宽度。
 >>
->>inherit:继承父元素的resize属性值。	
+>>inherit:继承父元素的resize属性值。
+	
+### 有个比较好的js面向对象的方法，参考imook写的
++ *index-pic-opp-good.html*		
++ *index-pic2.html*
