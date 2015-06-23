@@ -50,6 +50,7 @@
 		
 		<script>
 			document.querySelector('.productHolder').onclick = function(e) {
+				console.log("dd");
 			    if(e.target.className === 'item') {
 			    	console.log(e);
 			        var clone = e.target.cloneNode(true);
