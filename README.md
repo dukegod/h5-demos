@@ -53,3 +53,10 @@
 ### 有个比较好的js面向对象的方法，参考imook写的
 + *index-pic-opp-good.html*		
 + *index-pic2.html*
+
+### 所有的页面居中的样式，模态弹出层
+	juzhong.html
+	
+
+
+
