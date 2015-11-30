@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>dom1</title>
+	</head>
+	<body>
+		<h2>操作documentfragment</h2>
+		<ul id="list">
+			<li>first node1</li>
+			<li>first node2</li>
+			<li>first node3</li>
+			<li>first node4</li>
+			<li>first node5</li>
+			<li>first node6</li>
+		</ul>
+		<div style="font-size: 18px;line-height: 1.5;">
+			<h3>title</h3>
+			<p>content content title o</p>
+			<span>span span </span>
+		</div>
+	</body>
+	
+	<script type="text/javascript">
+		var ul = document.getElementById('list');
+		if(ul.nodeType == 1){
+			console.log(ul.nodeType);
+			console.log(ul.nodeName);
+			console.log(ul.nodeValue);			
+		}
+		
+		var fli = document.createElement('li');
+		fli.innerHTML = '我是新添加的li属性';
+		ul.appendChild(fli);
+		console.log(ul.childNodes);
+		console.log(ul.firstChild);
+		console.log(ul.lastChild);
+	
+//		ul.insertBefore(fli,ul.firstChild);
+//		ul.insertBefore(fli,ul.childNodes[3]);
+		
+		ul.replaceChild(fli,ul.firstChild);
+		
+		var clo = ul.cloneNode(true);
+		
+		ul.appendChild(clo);
+		
+	</script>
+</html>

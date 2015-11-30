@@ -4,7 +4,8 @@
     <title>远人imooc</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link href="css/animate.css" rel="stylesheet" type="text/css">
+	<link href="static/css/animate.css" rel="stylesheet" type="text/css">
+	</head>
 	<style>
 	   blockquote, 
 	   body, 
@@ -66,7 +67,7 @@
 			if(i%4==1){
 				p = 0;
 			}
-			tmpl+='<li data-id="'+i+'" class="animated bounceIn" style="width:'+picWidth+'px;height:'+picWidth+'px;padding-left:'+p+'px;padding-top:'+padding+'px;"><img src="imgs/'+i+'.jpg"></li>';
+			tmpl+='<li data-id="'+i+'" class="animated bounceIn" style="width:'+picWidth+'px;height:'+picWidth+'px;padding-left:'+p+'px;padding-top:'+padding+'px;"><img src="static/imgs/'+i+'.jpg"></li>';
 		}
 		$('#container').html(tmpl);
 	}
@@ -82,7 +83,7 @@
 			height:zWin.height()
 			//top:$(window).scrollTop()
 		}).show();
-		var imgsrc = 'imgs/'+id+'.large.jpg';
+		var imgsrc = 'static/imgs/'+id+'.large.jpg';
 		var ImageObj = new Image();
 		ImageObj.src = imgsrc;
 		ImageObj.onload = function(){

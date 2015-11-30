@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>dom1</title>
+	</head>
+	<body>
+		<h2>操作documentfragment</h2>
+		<ul id="list">
+		</ul>
+	</body>
+	
+	<script type="text/javascript">
+		var dof = document.createDocumentFragment();
+		for (var i = 0 ; i<10;i++) {
+			var li = document.createElement('li');
+			var span = document.createElement('span');
+			span.innerText = 'span:::::'+i;
+			li.appendChild(span);
+			
+//			li.innerHTML = 'list' + i;
+			li.className ='liitem';
+			li.style.width = '100%';
+			li.style.listStyle = 'none';
+			li.style.fontSize = '18px';
+			li.style.lineHeight = 1.5;
+			li.id = 'liid'+i;
+			dof.appendChild(li);
+		}		
+		document.getElementById('list').appendChild(dof);
+		
+	</script>
+</html>

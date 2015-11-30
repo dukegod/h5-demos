@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <link rel="stylesheet" href="base.css"/>
+  <title>绝对居中</title>
+</head>
+<body>
+  <h2>第一种方案,absolute定位，会随着页面的滚动，不断的滚动;需要去掉滚动，给body加上overflow：hidden属性</h2>
+  <p class="height">ddd</p>
+  <p><button id="btn">点击弹出样式</button></p>
+  <p class="height">ddd</p>
+  <p class="height">ddd</p>
+  <p class="height">ddd</p>
+  <p class="height">ddd</p>
+  <p class="height">ddd</p>
+  <p class="height">ddd</p>
+  <p class="height">ddd</p>
+  
+  
+  <section class="four disnone"></section>
+  <section class="third disnone">
+    <div class="a">
+      <p>左右居中样式</p>
+    </div>
+  </section>
+  <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+  <script>
+   
+    var btn = document.getElementById('btn');
+    btn.addEventListener('click',ck,false);
+    
+    function ck(){
+      $('.four').show();
+      $('.third').show();
+//      document.body.style.overflow = 'hidden';
+    }
+    
+  </script>
+
+</body>
+</html>

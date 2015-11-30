@@ -2,25 +2,29 @@
 // retrive data
 ;function Getwin(e){
 	var H = document.documentElement.offsetWidth;
-	console.log(H);
+//	console.log(H);
 	var a = document.getElementById('btn');
 	var fix = document.getElementById('fix');
-	console.log(getStyle(fix));
+//	console.log(getStyle(fix));
 	
-	console.log(fix.className);
-	console.log(fix.style.height);
+//	console.log(fix.className);
+//	console.log(fix.style.height);
 	a.addEventListener('click',function(){
-		console.log('222');
-		var f = fix.style;
+//		console.log('222');
+		var f = getComputedStyle(fix).getPropertyValue('display');
 		console.log(f);
 		if(f == 'none'){
-			fix.style.display == 'block';
+			fix.style.display = 'block';
+			
+			document.body.style.height = '100%';
+			document.documentElement.style.minHeight = '100%';
+			document.body.style.overflow = 'hidden';
 		}else{
-			fix.style.display == 'block';
+			fix.style.display = 'none';
 		}
 	},false);
 }
-Getwin();
+
 
 // 获取js的css属性
 // 只有在页面中的style才可以直接 输出 ele.style.CSSproperty
