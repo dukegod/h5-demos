@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width"/>
+		<meta name="viewport" content="initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>fitvid 应用</title>
+		<link rel="stylesheet" type="text/css" href="../../static/css/bootstrap.css"/>		
+	</head>
+	<style type="text/css">
+		/*iframe{
+			width: 100%;
+			height: auto;
+		}*/
+	</style>
+	<body>
+		<p>
+			需要过滤的网站，先添加到js库中
+			<pre>
+				 var selectors = [
+		        'iframe[src*="player.vimeo.com"]',
+		        'iframe[src*="player.youku.com"]',
+		        'iframe[src*="youtube.com"]',
+		        'iframe[src*="youtube-nocookie.com"]',
+		        'iframe[src*="kickstarter.com"][src*="video.html"]',
+		        'object',
+		        'embed'
+		      ];
+			</pre>
+			
+		</p>
+		<div class="video">
+			<p>
+			<iframe src="http://player.youku.com/embed/XMTMzMDc0MjAxMg==" frameborder="0" allowfullscreen="true"></iframe>
+		</p>
+		  <div class="">
+        	<iframe src="http://player.vimeo.com/video/25708134?title=0&amp;byline=0&amp;portrait=0" width="400" height="225" frameborder="0"></iframe>
+        </div>
+		</div>
+		
+	</body>
+	<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+	<script src="jquery.fitvids.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		$('iframe').css({
+			width: '100%',
+			height: 'auto'
+		});
+	  $('iframe').attr('allowFullsreen','true');
+	  $('iframe').attr('webkitallowFullsreen','true');
+		$('body').fitVids();
+	</script>
+</html>

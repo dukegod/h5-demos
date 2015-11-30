@@ -1,0 +1,116 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.height {
+  height: 300px;
+  margin-top: 20px;
+  background-color: green;
+}
+
+.disnone {
+  display: none;
+}
+
+.first1 .a {
+  width: 200px;
+  height: 200px;
+  margin: auto;
+  background-color: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  top: auto;
+  left: 0;
+  right: 0;
+}
+
+.first2 .a {
+  width: 200px;
+  height: 200px;
+  margin: auto;
+  background-color: rgba(0, 0, 255, 0.6);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: auto;
+}
+
+.first3 div {
+  width: 100px;
+  height: 100px;
+  background-color: yellow;
+  margin: auto;
+}
+
+.second div {
+  width: 200px;
+  height: 200px;
+  margin: auto;
+  background-color: rgba(0, 0, 255, 0.6);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.third div {
+  width: 50%;
+  height: 50%;
+  margin: auto;
+  background-color: rgba(0, 0, 255, 0.6);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+}
+
+.four {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 20;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.flex-h-c {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.flex {
+  width: 200px;
+  height: 200px;
+  background-color: rgba(0, 0, 255, 0.6);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+.flex .a {
+  width: 180px;
+  height: 180px;
+  background-color: red;
+}
+
+html {
+  height: 100%;
+}
