@@ -40,9 +40,31 @@ function getStyle(ele){
 }
 
 //
-//
-//
+//苹果上出现遮挡不全的问题
+function getH(){
+	var WINH = (typeof window.outerHeight != 'undefined')?Math.max(window.outerHeight, $(window).height()):$(window).height()
+	var docH = $(document).height();
+	var H;
+  if(docH > WINH){
+  	 $('.lg_fu_bg').css('height',docH);
+  }else{
 
+  	if($('.qs-container').get(0)){
+  		 H = $('.qs-container').height();
+       $('.qs-container').append('<p style="height:'+(WINH - H)+'px;width:100%"></p>');
+  	}else if($('.qscontainer').get(0)){
+  		 H = $('.qscontainer').height();
+       $('.qscontainer').append('<p style="height:'+(WINH - H)+'px;width:100%;"></p>'); 
+  	}else{
+  		 $('.qscontainer').append('<p style="height:300px;width:100%;"></p>');
+  	}
+  }
+}
+// document.addEventListener('DOMContentLoaded', getH ,false);
+//$(window).load(function() {
+//	/* Act on the event */
+//	getH();
+//});
 
 
 
