@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width" />
+		<meta name="viewport" content="initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>验证弹出在iPhone</title>
+	</head>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.fix{
+			position: fixed;
+			top: 0;
+			bottom: 0;
+			right: 0;
+			left: 0;
+			width: 100%;
+			background-color: black;
+			opacity: 0.5;
+			color: red;
+			display: none;
+		}
+		button{
+			padding: 10px 15px;
+			font-size: 30px;
+		}
+		img{
+			display: flex;
+			width: 100%;
+			height: auto;
+			margin-top: 20px;
+		}
+	</style>
+	<body>
+		<h2 id="hh">用ddddddddonload实现dom加载</h2>		
+		<h2 id="h">用onload实现dom加载</h2>
+		<button id="btn">click me </button>
+		<img src="1.jpg"/>		
+		<img src="1.jpg"/><img src="1.jpg"/><img src="1.jpg"/><img src="1.jpg"/><img src="1.jpg"/><img src="1.jpg"/>
+		<section class="fix">99999</section>
+		
+		<script src="http://libs.baidu.com/jquery/2.0.0/jquery.js"></script>
+		<script type="text/javascript">
+		
+		function getH(){
+			var WINH = (typeof window.outerHeight != 'undefined')?Math.max(window.outerHeight, $(window).height()):$(window).height()
+			var docH = $(document).height();
+     }
+		
+		function btn(){
+			$('#btn').click(function(){
+				console.log(111)
+				$('.fix').show();
+			})
+		}
+		
+		document.addEventListener('DOMContentLoaded',btn,false);
+
+		</script>
+	</body>
+
+</html>

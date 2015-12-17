@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width"/>
+		<meta name="viewport" content="initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>zepto 测试ready</title>
+	</head>
+	<body>
+		<img src="1.jpg"/>
+		<!--<img src="2.jpg"/>-->
+		<!--<img src="3.jpg"/>-->		
+		<script type="text/javascript">
+			
+			// 验证onload时间，与 DOMContentLoaded 加载的区别
+			window.onload = function(){
+				console.log('load completed')
+			}
+			
+			document.addEventListener('DOMContentLoaded',function(){
+				console.log('dom')
+			},false)
+			
+		</script>
+	</body>
+</html>

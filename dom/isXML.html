@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width"/>
+		<meta name="viewport" content="initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>IS XML</title>
+	</head>
+	<body>
+		
+		<script type="text/javascript">
+			function isXML(e){
+				return e.createElement('p').nodeName !== e.createElement('P').nodeName;
+			}
+			console.log(isXML(document));
+		</script>
+	</body>
+</html>

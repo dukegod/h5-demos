@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width"/>
+		<meta name="viewport" content="initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+	</head>
+	<style type="text/css">
+		*{
+			margin:0;
+			padding: 0;
+		}
+	</style>
+	<body>
+		<h2 id="h">dom ready fanilly</h2>
+		
+		<!--<script src="domReady.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			myReady(function(){
+        document.getElementById("h").style.color = "red";
+      });
+		</script>-->
+		
+		<script type="text/javascript">
+//			document.onreadystatechange = function(){
+//				console.log(111);
+//				alert(111);
+//				if(document.readyState = 'complete'){
+//					
+//				}
+//				if(document.readyState = ''){
+//					
+//				}
+//			};
+			(function(){
+				console.log(222);
+				alert(444)
+			})()
+			
+			var i = document.readyState;
+			console.log(i);
+			  
+				if(i = 'loading'){
+					alert(111);
+				}
+//				if(i = 'interactive'){
+//					alert(222);
+//				}		
+//			  if(i = 'complete'){
+//					alert(333);
+//				}
+			
+			
+			
+		</script>
+	</body>
+</html>
