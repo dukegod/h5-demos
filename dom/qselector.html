@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width"/>
+		<meta name="viewport" content="initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+	</head>
+	<style type="text/css">
+		*{
+			margin:0;
+			padding: 0;
+		}
+	</style>
+	<body>
+		
+		<h1>querySelector querySelectorAll 区别</h1>
+		
+		<p>
+			querySelector 就近取得第一个匹配到的数值
+			
+			querySelectorAll 取得所有匹配到的结果
+			
+		</p>
+		<h2>query 选择</h2>
+		
+		<section id="section">
+			<div class="d">
+				<p class="p">first parament</p>
+				<p class="p">first parament</p>
+				<p class="p">first parament</p>
+				<p id="p">first parament</p>
+				<p class="p">first parament</p>
+			</div>
+		</section>
+	</body>
+	<script type="text/javascript">
+		var el = document.querySelector('.p');
+		console.log(el);
+		
+		var eall = document.querySelectorAll('.p');
+		console.log(eall)
+	</script>
+</html>

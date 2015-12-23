@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width"/>
+		<meta name="viewport" content="initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>class list</title>
+	</head>
+	<style type="text/css">
+		*{
+			margin:0;
+			padding: 0;
+		}
+	</style>
+	<body>
+		<h2>class list operation</h2>
+		<p id="pp" class="p div class id">opration </p>
+		<div id="divd" class="p div class id">opration </div>		
+		<section data-type = "lh">
+			set data prototype
+		</section>
+		<div id="inner">
+			<ul>
+				<li>1</li>
+				<li>2</li>
+				<li>3</li>
+			</ul>
+		</div>
+		
+		<script type="text/javascript">
+			
+			var inner = document.getElementById('inner');
+//			inner.innerHTML = '<style> body{background-color:red;opacity:0.3}</style>';
+		
+		
+			var classname = document.getElementById('pp').className;
+			var classlist = document.getElementById('pp').classList;
+			console.log(classname);
+			console.log(classname instanceof Array)
+//			console.log(classlist);
+			
+			var classname2 = classname.split(/\s+/);
+			console.log(classname2);
+			console.log('classname2.length::'+classname2.length);			
+			console.log(classname2 instanceof Array);
+			var pos = -1;
+			
+			for (var i = 0; i< classname2.length ;i++) {
+				if(classname2[i] == 'div'){
+					pos = i;
+					console.log('pos:'+pos);
+					break;
+				}
+			}
+			console.log(i);
+			classname2.splice(i,1);
+			console.log(classname2);
+			
+			var newclass = classname2.join(' ');
+			console.log(newclass);
+			document.getElementById('pp').className = newclass;
+			
+			
+			// div operation html5 new method
+			var div = document.getElementById('divd');
+			div.classList.add('diddid')
+			
+			
+			var head = document.head || document.getElementsByTagName('head')[0];
+			console.log(head);
+			
+			var sec = document.getElementsByTagName('section')[0];
+			console.log(sec);
+			console.log(sec.dataset.type);
+			
+			
+			
+			
+		</script>
+	</body>
+</html>
