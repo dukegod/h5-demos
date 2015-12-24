@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width"/>
+		<meta name="viewport" content="initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>style operation</title>
+	</head>
+	<style type="text/css">
+		*{
+			margin:0;
+			padding: 0;
+		}
+		#div-f{
+			background-color: red;
+			font-size: 16px;
+		}
+		.div-f{
+			background-color: green;
+			width: 200px;
+			height: 200px;
+			font-size: 17px;			
+		}
+		
+	</style>
+	<body>
+		<div id="div-f" class="div-f" style="background-color: black;font-size: 18px;">
+			comfirmed color style 
+		</div>
+		
+		<section style="margin:40px">
+			<div id="yellow" style="width: 200px;height: 200px;background-color: yellow;" onclick="getleft(this);getTop(this)">
+				yellow 
+			</div>
+		</section>
+		
+		<script type="text/javascript">
+			function getleft(e){
+				var autalleft = e.offsetLeft;
+				console.log(autalleft);	
+				var currentlf = e.offsetParent;
+				console.log(currentlf);				
+				while(currentlf != null){
+					autalleft += currentlf.offsetParent;
+					currentlf = currentlf.offsetParent;
+				}
+				console.log(autalleft);
+				return autalleft;
+			}
+			
+			function getTop(e){
+				var actop = e.offsetTop;
+				console.log(actop);
+				var cur = e.offsetParent;
+				
+				while(cur !== null){
+					actop += cur.offsetTop;
+					cur = cur.offsetParent;
+				}
+				console.log(actop);
+				return actop;
+			}
+			
+			function getClientWidthHeight(){
+				var clientW = document.documentElement.clientWidth;
+				var clientH = document.documentElement.clientHeight;
+				return{
+					w: clientW,
+					H: clientH
+				}
+			}
+			console.log(getClientWidthHeight());
+			
+			function getTotal(){
+				var docWidth = Math.max(document.documentElement.scrollWidth,document.documentElement.clientWidth);
+				var docHeight = Math.max(document.documentElement.scrollHeight,document.documentElement.clientHeight);				
+				return{
+					w: docWidth,
+					h: docHeight
+				}
+			}
+
+			window.onscroll=function(){
+				console.log(getTotal());				
+			}
+				
+				
+				
+			var divf = document.getElementById('div-f');
+			console.log(divf);
+			// 只能获取行内的style样式
+			var style = divf.style.cssText;
+			console.log(style)
+			
+			// getComputedStyle 获取生效的文本
+			var getcomputedstyle = getComputedStyle(divf,null);
+			console.log(getcomputedstyle);
+			
+			// 兼容 compiled IE
+			var currentstyle = divf.currentStyle;
+//			console.log(currentstyle.height);
+			
+		</script>
+		
+	</body>
+</html>
