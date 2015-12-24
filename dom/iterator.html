@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width"/>
+		<meta name="viewport" content="initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>遍历dom</title>
+	</head>
+	<body>
+		<h1>iterator operator</h1>
+		
+		<section id="section">
+			<div id="div">
+				<ul id="ul">
+					<li>1</li>
+					<li>2</li>
+					<li>3</li>
+				</ul>
+			</div>
+			<h2>h2222222</h2>
+			<p>pppppppppppppp</p>
+		</section>
+		
+		<script type="text/javascript">
+		// nodeIterator 数据
+	   function nodeIterator(){
+			  var filter = function(node){
+					return node.tagName.toLowerCase() == 'li'? NodeFilter.FILTER_ACCEPT:NodeFilter.FILTER_SKIP;
+				}	
+				var sec = document.getElementById('section');
+				var ite1 = document.createNodeIterator(sec,NodeFilter.SHOW_ELEMENT,filter,false);
+				var node1 = ite1.nextNode();
+				while( node1 != null){
+					console.log(node1);
+					node1 = ite1.nextNode();
+				}
+	   }
+//	   nodeIterator();
+	   
+			//treeWalker
+			function treeWalker(){
+				var filter = function(node){
+					return node.tagName.toLowerCase() == 'li'? NodeFilter.FILTER_ACCEPT:NodeFilter.FILTER_SKIP;
+				}	
+				var id = document.getElementById('section');
+				var iteratortree = document.createTreeWalker(id,NodeFilter.SHOW_ELEMENT,null,false);
+				iteratortree.firstChild();
+				iteratortree.nextSibling();
+				var node = iteratortree.nextNode();
+				while(node != null){
+					console.log(node);
+					node = iteratortree.nextNode();
+				}
+			}
+			treeWalker();
+		</script>
+	</body>
+</html>
