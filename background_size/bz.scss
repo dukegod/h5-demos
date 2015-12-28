@@ -1,0 +1,40 @@
+//background-size
+
+*{
+	margin: 0;
+	padding: 0;
+}
+section{
+	margin-top: 20px;
+	width: 400px;
+	height: 300px;
+	border: 10px dotted red;	
+}
+.sec{
+	background-image: url(10.jpg);
+	background-repeat: no-repeat;	
+}
+@mixin bz($bz){
+	background-size:$bz;
+}
+.sec-auto{
+	@extend .sec;
+	@include bz(auto);
+}
+.sec-contain{
+	@extend .sec;
+	@include bz(contain);
+}
+.sec-cover{
+	@extend .sec;
+	@include bz(cover);
+}
+.sec100{
+	@extend .sec;
+	@include bz(100%);	
+}
+.sec50{
+	@extend .sec;
+	@include bz(50%);	
+}
+
