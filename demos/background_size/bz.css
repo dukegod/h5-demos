@@ -1,0 +1,38 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+section {
+  margin-top: 20px;
+  width: 400px;
+  height: 300px;
+  border: 10px dotted red;
+}
+
+.sec, .sec-auto, .sec-contain, .sec-cover, .sec100, .sec50 {
+  background-image: url(10.jpg);
+  background-repeat: no-repeat;
+}
+
+.sec-auto {
+  background-size: auto;
+}
+
+.sec-contain {
+  background-size: contain;
+}
+
+.sec-cover {
+  background-size: cover;
+}
+
+.sec100 {
+  background-size: 100%;
+}
+
+.sec50 {
+  background-size: 50%;
+}
+
+/*# sourceMappingURL=bz.css.map */
