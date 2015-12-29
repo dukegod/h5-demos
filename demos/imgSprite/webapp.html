@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<title>webapp</title>
+	</head>
+	<style type="text/css">
+		/*感兴趣 我要参加*/
+		.at-card2 {
+		  width: 100%;
+		  height: 5rem;
+		  overflow: hidden;
+		}
+		.at-card2 .box-media {
+		  display: -webkit-flex;
+		  display: flex;
+		  -webkit-flex-direction: row;
+		  flex-direction: row;
+		  -webkit-flex-flow: nowrap;
+		  flex-flow: nowrap;
+		  -webkit-justify-content: initial;
+		  justify-content: initial;
+		  -webkit-align-items: center;
+		  align-items: center;
+		  -webkit-align-content: space-around;
+		  align-content: space-around;
+		  background-color: transparent;
+		  border-top: 1px solid #DADADA;
+		}
+		.at-card2 .box-media .lf {
+		  -webkit-flex-grow: 0;
+		  flex-grow: 0;
+		  -webkit-flex-shrink: 1;
+		  flex-shrink: 1;
+		  -webkit-flex-basis: auto;
+		  flex-basis: auto;
+		  -webkit-flex-wrap: nowrap;
+		  flex-wrap: nowrap;
+		  width: 50%;
+		  height: 5rem;
+		  border-right: 1px solid #DADADA;
+		  text-align: center;
+		  line-height: 5rem;
+		}
+		.at-card2 .box-media .rig {
+		  -webkit-flex-grow: 0;
+		  flex-grow: 0;
+		  -webkit-flex-shrink: 1;
+		  flex-shrink: 1;
+		  -webkit-flex-basis: auto;
+		  flex-basis: auto;
+		  -webkit-flex-wrap: nowrap;
+		  flex-wrap: nowrap;
+		  width: 50%;
+		  height: 5rem;
+		  text-align: center;
+		  line-height: 5rem;
+		}
+		.interest-init,
+		.interest-tap,
+		.join-init,
+		.join-tap{
+		  background: url(imgs/xqcj.png) no-repeat;
+		  background-size: 30px 101px;
+		  vertical-align: middle;
+		  display: inline-block;
+		}
+		.interest-init{
+		  width:21px;
+		  height:18px;
+		  background-position: -5px 0;
+		}
+		.interest-tap{
+		  width:21px;
+		  height:18px;
+		  background-position: -5px -51px;
+		}
+		.join-init{
+		  width:20px;
+		  height:20px;
+		  background-position: -5px -24px;
+		}
+		.join-tap{
+		  width:20px;
+		  height:20px;
+		  background-position: -5px -79px;
+		}
+
+		.at-card2 .box-media span{
+		  font-size: 1.6rem;
+		  color: #333333;
+		  margin-left: 5px;
+		  vertical-align: middle;
+		}
+		.qs-body-white{
+			background-color: #fff;
+		}
+	</style>
+	<body>
+
+		<h2>在webapp中运用雪碧图注意点</h2>
+		<h4>
+			尺寸都需要减半(如：width,background-size,background-position)<br>
+			方便以后增加图标，可以这么设置background-size
+		<pre>.icon{background-size: width/2 auto;}</pre>
+			
+		</h4>
+		<h4>可以提取公用的属性放在一起，所以在切图的时候最好图标做成一样大的，放在竖排显示比较常用</h4>
+
+		<section class="qs-body-white">
+			<div class="at-card2">
+				<div class="box-media">
+					<div class="lf">
+						<span class="interest-init"></span><span>感兴趣</span>
+					</div>
+					<div class="rig">
+						<span class="join-init"></span><span>我要参加</span>
+					</div>
+				</div>
+			</div>
+		</section>
+		<hr>
+
+		<section class="qs-body-white">
+			<div class="at-card2">
+				<div class="box-media">
+					<div class="lf">
+						<span class="interest-tap"></span><span>感兴趣</span>
+					</div>
+					<div class="rig">
+						<span class="join-tap"></span><span>已经参加</span>
+					</div>
+				</div>
+			</div>
+		</section>
+
+	</body>
+</html>
