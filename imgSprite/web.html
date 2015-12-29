@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<title>web</title>
+	</head>
+	<style type="text/css">
+		/*感兴趣 我要参加*/
+		li{
+			list-style: none;
+			margin-top: 20px;
+		}
+		a{
+			text-decoration: none;
+		}
+		span{
+			margin-left: 10px;
+		}
+		.interest-init,
+		.interest-tap,
+		.join-init,
+		.join-tap{
+		  background: url(imgs/xqcj.png) no-repeat;
+		  /*background-size: 30px 101px;*/
+		  vertical-align: middle;
+		  display: inline-block;
+		  width: 44px;
+		  height: 40px;
+		}
+		.interest-init{
+		  background-position: -10px -1px;
+		}
+		.interest-tap{
+		  background-position: -10px -102px;
+		}
+		.join-init{
+		  background-position: -10px -48px;
+		}
+		.join-tap{
+		  background-position: -10px -158px;
+		}
+		.at-card2 .box-media span{
+		  font-size: 1.6rem;
+		  color: #333333;
+		  margin-left: 5px;
+		  vertical-align: middle;
+		}
+		.qs-body-white{
+			background-color: #fff;
+		}
+	</style>
+	<body>
+
+		<h2>在web中运用雪碧图注意点：</h2>
+		<h4>可以提取公用的属性放在一起，所以在切图的时候最好图标做成一样大的，放在竖排显示比较常用</h4>
+
+		<ul>
+			<li><a><span class="interest-init"></span><span>感兴趣</span></a></li>
+			<li><a><span class="join-init"></span><span>我要参加</span></a></li>
+			<li><a></a></li>
+			<li><a><span class="interest-tap"></span><span>感兴趣</span></a></li>
+			<li><a><span class="join-tap"></span><span>已经参加</span></a></li>
+		</ul>
+
+	</body>
+</html>
