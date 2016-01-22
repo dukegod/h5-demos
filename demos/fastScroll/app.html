@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width"/>
+		<meta name="viewport" content="initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<!--<link rel="stylesheet" type="text/css" href="../../bower_components/bootstrap/dist/css/bootstrap.css"/>-->
+		<title>fast scroll</title>
+		<link rel="stylesheet" type="text/css" href="ScrollFix/style.css"/>
+		<style type="text/css">
+			ul,li{
+				margin: 0;
+			}
+			li{
+				font-size: 18px;
+				border-bottom: 1px solid red;
+				margin-top: 10px;
+				list-style: none;
+			}
+			body{
+				-webkit-overflow-scrolling: touch;
+				margin: 0;
+			}
+			header{
+				width: 100%;
+				height: 50px;
+				text-align: center;
+				font-size: 24px;
+				background-color: black;
+				color: white;
+				line-height: 50px;
+			}
+			footer{
+				position: fixed;
+				bottom: 0;
+				width: 100%;
+				height: 50px;
+				text-align: center;
+				font-size: 24px;
+				background-color: black;
+				color: white;		
+				line-height: 50px;		
+			}
+			ul{
+				padding: 0;
+			}
+		/*top bottom*/
+
+		</style>
+	</head>
+	<body>
+		<header>
+			PEAK
+		</header>
+		<article>
+			<ul class="list-group" >
+				<li class="list-group-item">
+					fast scroll demos1
+				</li>
+				<li class="list-group-item">
+					fast scroll demos2
+				</li>
+				<li class="list-group-item">
+					fast scroll demos3
+				</li>
+				<li class="list-group-item">
+					fast scroll demos4
+				</li>
+				<li class="list-group-item">
+					fast scroll demos4
+				</li>
+				<li class="list-group-item">
+					fast scroll demos5
+				</li>
+				<li class="list-group-item">
+					fast scroll demos66
+				</li>
+				<li class="list-group-item">
+					fast scroll demos
+				</li>
+				<li class="list-group-item">
+					fast scroll demos
+				</li>
+				<li class="list-group-item">
+					fast scroll demos
+				</li>
+				<li class="list-group-item">
+					fast scroll demos
+				</li>
+				<li class="list-group-item">
+					fast scroll demos
+				</li>
+				<li class="list-group-item">
+					fast scroll demos
+				</li>
+				<li class="list-group-item">
+					fast scroll demos
+				</li>
+				<li class="list-group-item">
+					fast scroll demos
+				</li>
+				<li class="list-group-item">
+					fast scroll demos
+				</li>
+				<li class="list-group-item">
+					fast scroll demos
+				</li>
+				<li class="list-group-item">
+					fast scroll demos
+				</li>
+				<li class="list-group-item">
+					fast scroll demos
+				</li>
+				<li class="list-group-item">
+					fast scroll demos
+				</li>
+				<li class="list-group-item">
+					fast scroll demos
+				</li>
+				<li class="list-group-item">
+					fast scroll demos
+				</li>
+				<li class="list-group-item">
+					fast scroll demos
+				</li>
+				<li class="list-group-item">
+					fast scroll demos
+				</li>
+				<li class="list-group-item">
+					fast scroll demos
+				</li>
+				<li class="list-group-item">
+					fast scroll demos last twe
+				</li>
+				<li class="list-group-item">
+					fast scroll demos  last one
+				</li>
+			</ul>
+		</article>
+		<footer>
+			BOTTOM
+		</footer>
+		<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+		<script src="ScrollFix/scrollfix.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript" charset="utf-8">
+			
+(function(){
+		var u = navigator.userAgent.toLowerCase();
+		return version = {
+				ios: !!u.match(/\(i[^;]+;( u;)? cpu.+mac os x/), //ios终端  
+				android: u.indexOf('android') > -1 || u.indexOf('linux') > -1, //android终端或者uc浏览器  
+		}
+})();
+
+
+
+//andriod 
+function appView(opt){
+	this.x = opt.header;
+	this.y = opt.footer;
+	this.z = opt.article;
+//	console.log(this.x);
+}
+
+appView.prototype.android = function(){
+	var andHeader = this.x;
+	var andFooter = this.y;
+	var andArticle = this.z;
+//	console.log(andHeader);
+	andHeader.css({
+		'position':'fixed',
+		'top': '0'
+	});
+	andFooter.css({
+		'position':'fixed',
+		'bottom': '0'
+	})	;
+	andArticle.css({
+	  'padding-top':'50px',
+	  'padding-bottom': '50px'
+	})
+}
+
+appView.prototype.ios = function(){
+	var iosHeader = this.x;
+	var iosFooter = this.y;
+	var iosArticle = this.z;
+	iosHeader.css({
+		'position':'',
+		'top': ''
+	});
+	iosFooter.css({
+		'position':'fixed',
+		'bottom': '0'
+	})	;
+	iosArticle.css({
+	  'padding-top':'0',
+	  'padding-bottom': '50px'
+	});
+	iosArticle.attr({
+		'id':'scrollable',
+		'class':'scrollable'
+	});
+}
+
+var app = new appView({
+	header : $('header'),
+  footer : $('footer'),
+  article : $('article')
+})
+
+if(version.ios){
+	console.log('ios');
+	app.ios();
+	var scrollable = document.getElementById("scrollable");
+	new ScrollFix(scrollable);
+}; 
+if(version.android){
+	console.log('andriod');
+	app.android();
+}
+
+		</script>
+	</body>
+</html>
