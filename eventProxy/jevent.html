@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>事件委托</title>
+</head>
+<style>
+  ul{
+    padding: 0;
+  }
+  li{
+    padding: 10px 5px;
+    font-size: 16px;
+    border-top: 1px solid #333;
+  }
+  li:first-child{
+    border-top: none;
+  }
+  li:active,
+  li:focus{
+    color: red;
+    background-color: green;
+  }
+  div{
+    margin: 10px 0;
+  }
+  button{
+    font-size: 20px;
+    padding: 5px 10px;
+  }
+</style>
+<body>
+  <h2>事件委托</h2>
+  <p>
+    在一个全局需要的事件中绑定一个方法，增加或者删除都比较的方便操作
+  </p>
+  <ul>
+    <li>perfect one </li>
+    <li>1212123456</li>
+    <li>778</li>
+    <li>09998888</li>
+    <li>ididjdjfk</li>
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+  </ul>
+  <div>
+    <button>add a li item</button>
+  </div>
+  
+  <script src="../../bower_components/jquery/dist/jquery.js"></script>
+  <script>
+    (function(e){
+      var $btn = $('button');
+      $btn.on('click', function(event) {
+        event.preventDefault();
+        /* Act on the event */
+        $('ul').append('<li>this is</li>');
+      });
+    })();
+
+    (function(){
+      $('body').on('click', 'li', function(event) {
+        event.preventDefault();
+        /* Act on the event */
+        console.log(this);
+      });
+    })(jQuery) 
+
+  </script>
+
+</body>
+</html>
