@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>抛物线实现方法</title>
+</head>
+<style>
+  body {
+    font-size: 16px;
+  }
+  li {
+    list-style: none;
+    width: 300px;
+    border: 1px solid black;
+    margin-top: 20px;
+    overflow: hidden;
+  }
+  li button {
+    padding: 15px 10px;
+    margin: 2px;
+    display: block;
+    float: right;
+    /*position: absolute;*/
+  }
+  div#bottom {
+    width: 100px;
+    height: 50px;
+    line-height: 50px;
+    background-color: red;
+    margin-top: 50px;
+    position: relative;
+  }
+
+</style>
+<body>
+  
+<ul>
+  <li> 
+    <button id="but">first part</button>
+  </li>
+  <li> 
+    <button>second part</button>
+  </li>
+  <li>
+    <button>third part</button>
+  </li>
+</ul>
+<div id="bottom">Believe Me</div>
+
+  <script src="https://cdn.bootcss.com/jquery/2.2.1/jquery.js"></script>
+  <script type="text/javascript" src="parabola.js"></script>
+
+  <script type="text/javascript">
+   var element = document.querySelectorAll("button"), 
+        target = document.getElementById("bottom");
+
+      for(var i=0; i< element.length; i++){
+        (function(a){
+          // get target cor
+          var parabola = funParabola(element[a], target).mark();
+          //  toggle 
+          element[i].onclick = function() {
+            console.log(element);
+            this.style.marginLeft = "0px";
+            this.style.marginTop = "0px";
+            parabola.init();
+          }  
+        })(i)
+      }
+          
+  </script>
+
+
+
+
+
+
+</body>
+</html>
