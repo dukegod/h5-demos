@@ -1,0 +1,69 @@
+doctype html
+html
+  head
+    meta(charset="UTF-8")
+    meta(content="text/html; charset=utf-8" http-equiv="Content-Type")
+    meta(name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no")
+    title 获取样式
+    link(rel="stylesheet",href="style.css")
+  body
+    h2 获取classNamestyle
+    div#container 
+      ul.ultitle
+        li.lisub Focus on highlighting the repetition of identifiable shapes in your scene.
+        li.lisub Look for patterns large and small in scale — whether zooming in close to the subtle lines on a flower petal or photographing the smokestacks of an industrial site from a distance.
+        li.lisub Try using video to capture moving patterns — like a line of ants marching in unison through your backyard.
+        li.lisub.lastclass(data-cn= "last") last go throng 
+    section#second
+      h3.hthird the third classname
+      p#pp(style="width:200px;") style style
+        
+    script(src="style.js")  
+    script(src="../../bower_components/jquery/dist/jquery.js")
+    script.
+      jQuery(document).ready(function(){
+      // 获取指定的class属性  ,jquery 不能获得伪类      
+        var liH = $('ul.ultitle').css('height');
+        console.log('liH',liH);
+        var liClassName = $('li:last-child').attr('data-cn');
+        console.log(liClassName);
+      })
+      
+      // 原生获取样式,只读的方式找到样式
+      var hth = document.getElementsByClassName('hthird')[0];
+      var rawStyle = getStyle(hth,'width');
+      console.log('rawStyle----',rawStyle);
+      
+      // 获取伪类的样式
+      var fakeStyle = window.getComputedStyle(hth, ':after').getPropertyValue('width');
+      console.log('获取伪类元素的内容---',fakeStyle);
+      var fakestyle2 = getStyle(hth,':after','width');
+      console.log('fakestyle2---',fakestyle2);
+      
+      // style 可以获取页面中的样式,不能获取外部定义的样式
+      // 可以定义内部的样式
+      var pp = document.getElementById('pp');
+      console.log(getStyle(pp,null,'width'));
+      console.log('pp---',pp);
+      console.log('pp style:',pp.style.width);
+      console.log('pp style inner:', pp.style.backgroundColor);
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
