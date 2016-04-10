@@ -3,46 +3,26 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
-  <title>condition</title>
+  <title>array</title>
 </head>
 <body>
 
-<h1>赋值算法</h1>
+<h1>array 循环</h1>
 <div id="interpolation"></div>
 
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/zepto/1.1.6/zepto.min.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/dot/1.0.3/doT.min.js"></script>
 <script id="interpolationtmpl" type="text/x-dot-template">
-  {{?it.b}}
-    <h2>{{=it.name}}</h2>
-    <h2>{{=it.age}}</h2>
-  {{?}}
+  {{ ~it.array:value:key }}
+  <p>{{=key+1}}</p>
+  <p>{{=value}}</p>
+  <hr>
+  {{ }}
+
 </script>
 <script type="text/javascript">
-  var dataInter = {
-      "name":"name",
-      "age":10,
-      "b":true
-    };
+  var dataInter = {"array":["banana","apple","orange"]}
 
-  var dataInter2 = [
-    {
-      'name':1,
-      'age':10,
-      'b':true
-    },
-    {
-      'name':2,
-      'age':20,
-      'b':true
-    },
-    {
-      'name':3,
-      'age':30,
-      'b':false
-    }
-  ];
-  
   var interText = doT.template($("#interpolationtmpl").text());
   $("#interpolation").html(interText(dataInter));
 </script>
