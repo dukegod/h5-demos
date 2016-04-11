@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+  <title>array</title>
+</head>
+<body>
+
+<!--<h1>代码换行对于内联标签带来了空白需要注意下</h1>-->
+
+<div id="showId"></div>
+
+<div id="showId2"></div>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/zepto/1.1.6/zepto.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/dot/1.0.3/doT.min.js"></script>
+    <script id="template" type="text/x-dot-template">
+      <p>
+        <span>cancel</span><span>confirm</span>
+      </p>
+    </script>
+    
+    <script id="template2" type="text/x-dot-template">
+      <p>
+        <span>cancel</span>
+        <span>confirm</span>
+      </p>
+    </script>
+
+<script type="text/javascript">
+  var dataInter = {}
+  var interText = doT.template($("#template").text());
+  $("#showId").html(interText(dataInter));
+</script>
+
+<script type="text/javascript">
+  var dataInter = {}
+  var interText = doT.template($("#template2").text());
+  $("#showId2").html(interText(dataInter));
+</script>
+
+</body>
+</html>

@@ -7,22 +7,20 @@
 </head>
 <body>
 
-<h1>array 循环</h1>
-<div id="interpolation"></div>
+<h1>keep code</h1>
+<div id="showId"></div>
 
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/zepto/1.1.6/zepto.min.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/dot/1.0.3/doT.min.js"></script>
-<script id="interpolationtmpl" type="text/x-dot-template">
-  {{~it:value:index}}
-  <div>{{=value}}</div>
-  <hr>
-  {{~}}
-
+<script id="template" type="text/x-dot-template">
+  
+  Visit {{!it.url}} {{!it.html}}
+  
 </script>
 <script type="text/javascript">
-  var dataInter = ["banana","apple","orange"]
-  var interText = doT.template($("#interpolationtmpl").text());
-  $("#interpolation").html(interText(dataInter));
+  var dataInter = {"url":"http://dukegod.github.io/","html":"<div style='background: #f00; height: 30px; line-height: 30px;'>html元素</div>"}
+  var interText = doT.template($("#template").text());
+  $("#showId").html(interText(dataInter));
 </script>
 </body>
 </html>
