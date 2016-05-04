@@ -24,8 +24,9 @@
     function Init(){
       this.a = top;
       this.b = left;
-      //this.startM();
+      this.startM();
       this.Moving();
+      console.log(this);
     }
     Init.prototype.startM = function(){
       console.log('kaishi');
@@ -58,10 +59,7 @@
       $MB.addEventListener('touchstart',ts,false);
       $MB.addEventListener('touchmove',tm,false);
       $MB.addEventListener('touchend',te,false);
-
     };
-
-
   };
 })(jQuery)
 
