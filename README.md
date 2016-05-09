@@ -38,7 +38,7 @@
 
 [移动页面的滚动](https://github.com/dukegod/h5-demos/tree/master/demos/fastScroll)
 
-[]()
+[解决汉字带来的字符长度的问题](https://github.com/dukegod/h5-demos/tree/master/demos/chineseTransStart)
 
 []()
 
