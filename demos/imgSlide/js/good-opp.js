@@ -24,7 +24,6 @@ Slider.prototype.renderDOM = function(){
 	var wrap = this.wrap;
 	var data = this.list;
 	var len = data.length;
-
 	this.outer = document.createElement('ul');
 	//根据元素的
 	for(var i = 0; i < len; i++){
