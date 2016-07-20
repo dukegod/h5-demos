@@ -40,6 +40,8 @@
 
 [解决汉字带来的字符长度的问题](https://github.com/dukegod/h5-demos/tree/master/demos/chineseTransStart)
 
+[数据加载demo](https://github.com/dukegod/h5-demos/tree/master/demos/loadingDates)
+
 []()
 
 []()
