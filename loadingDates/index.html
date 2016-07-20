@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta name="format-detection" content="telephone=no,address=no">
+    <meta name="apple-mobile-web-app-status-bar-style" content="white">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>数据加载问题</title>
+    <link rel="stylesheet" href="../../bower_components/bootstrap/dist/css/bootstrap.css">
+  </head>
+  <body>
+  
+  <article id="page"></article>
+  <script type="text/template" id="pageTemplate">
+    <ul class="list-group">
+      {{ for(var i=0;i< it.length; i++){ }}
+      <!--<a href="detail.html" data-id="{{=it[i].id}}" >-->
+        <li class="list-group-item {{? i%2 == 0}} list-group-item-success{{?}}" style=" height:180px;">{{=it[i].title}}</li>
+      <!--</a>-->
+      {{ } }}
+    </ul>
+  </script>
+  <script src="../../bower_components/zepto/zepto.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/dot/1.0.3/doT.min.js"></script>
+  <script src="date.js"></script>
+  </body>
+</html>
