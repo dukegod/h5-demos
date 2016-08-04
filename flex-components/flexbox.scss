@@ -1,0 +1,32 @@
+// flex box 样式控制
+
+@mixin flexbox-flex($fg,$fs,$fb){
+  flex-grow:  $fg;
+  flex-shrink: $fs;
+  flex-basis: $fb;
+}
+
+@mixin flexbox-flex-flow($fd,$fw){
+  flex-direction: $fd;
+  flex-wrap: $fw;
+}
+
+@mixin flexbox-align-content($fac){
+  align-content: $fac;
+}
+
+@mixin flexbox-align-items($fai){
+  align-items: $fai;
+}
+
+@mixin flexbox-align-self($fas){
+  align-self: $fas;
+}
+
+@mixin flexbox-justify-content($fjc){
+  justify-content: $fjc
+}
+
+@mixin flexbox-order($fo){
+  order: $fo;
+}
