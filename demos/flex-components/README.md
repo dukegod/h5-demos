@@ -1,9 +1,3 @@
----
-title:  Flexbox
-date: 2016-04-01
-tags: css
----
-
 Flexbox布局在经历了旧版到新版本的过渡后，现在移动端支持的越来越好了，也正是可以在移动端大发异彩的时候到了。
 
 综合新旧版本总结：flex，box
@@ -11,8 +5,6 @@ Flexbox布局在经历了旧版到新版本的过渡后，现在移动端支持�
 - [flex-bais](#flex-bais)
 - [flex-grow](#flex-grow)
 - [flex-shrink](#flex-shrink)
-
-<!-- more -->
 
 ## flex属性
 
