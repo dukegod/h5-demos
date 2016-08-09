@@ -1,0 +1,186 @@
+@charset "utf-8";
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary,
+img,
+h1,
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+form,
+fieldset,
+input,
+button,
+textarea,
+p,
+blockquote,
+th,
+td {
+  margin: 0 ;
+  padding: 0;
+}
+fieldset,
+img,
+html,
+body,
+iframe {
+  border: 0;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+li {
+  list-style: none;
+}
+em,
+i,
+small,
+caption,
+th {
+  font-weight: normal;
+  font-style: normal;
+  font-size: 100%;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+em,
+strong,
+b {
+  font-weight: bold;
+  font-size: 100%;
+}
+.marginauto {
+  margin-right: auto;
+  margin-left: auto;
+}
+img {
+  -webkit-touch-callout: none;
+  /* 禁止长按链接与图片弹出菜单 */
+}
+html {
+  font-size: 62.5%;
+  -webkit-overflow-scrolling: touch;
+  -webkit-user-select: none;
+  /* 禁止选中文本（如无文本选中需求，此为必选项） */
+  user-select: none;
+  -Webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  /*按钮添加active状态或者移除点击高亮的状态了*/
+}
+body {
+  font: 120%/150% helvetica arial sans-serif;
+  font-size: 1.2rem;
+}
+.dkflexbox {
+  width: 100%;
+  height: 4.4rem;
+  background-color: #ca2b53;
+}
+.dkflexbox {
+  -webkit-display: -webkit-box;
+  -webkit-display: -webkit-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+.dkflexbox .ff {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  margin: 0 .5rem;
+  background-color: #cccccc;
+  font-size: 1.8rem;
+  color: #ffffff;
+}
+.dkflexbox .ff:first-child {
+  -webkit-flex: 15%;
+  flex: 15%;
+}
+.dkflexbox .ff:last-child {
+  -webkit-flex: 15%;
+  flex: 15%;
+}
+.dkflexbox .ff:nth-child(2) {
+  background-color: blue;
+  -webkit-flex: 70%;
+  flex: 70%;
+}
+.dkflexbox .ff span {
+  line-height: 4.5rem;
+}
+.dkflexbox:after {
+  content: "";
+  overflow: hidden;
+  clear: both;
+}
+.dkh {
+  width: 100%;
+  height: 4.4rem;
+  background-color: #eeeeee;
+}
+.fsec {
+  width: 100%;
+  height: 300px;
+  background-color: yellow;
+  -webkit-display: -webkit-box;
+  -webkit-display: -webkit-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+.divf {
+  width: 50px;
+  height: 50px;
+  margin: 5px;
+  background-color: blue;
+}
