@@ -10,11 +10,31 @@ window.onload = function () {
   var img_data;
   img_data = {
     "data": [{
-      "src": "17.jpg"
+      "src": "http://7xsubf.com1.z0.glb.clouddn.com/8b1784b738743f1da3bba82bd06b4b31ecb24cd56c61b-0gkLzK_fw658.png"
     }, {
-      "src": "15.jpg"
+      "src": "http://7xsubf.com1.z0.glb.clouddn.com/%E4%B8%89%E6%8A%98%E9%A1%B5%E6%95%88%E6%9E%9C%E5%9B%BE.png"
     }, {
-      "src": "16.jpg"
+      "src": "http://7xsubf.com1.z0.glb.clouddn.com/%E4%B8%89%E6%8A%98%E9%A1%B5%E8%83%8C.jpg"
+    }, {
+      "src": "http://7xsubf.com1.z0.glb.clouddn.com/%E4%BD%9C%E4%B8%9A02.jpg"
+    }, {
+      "src": "http://7xsubf.com1.z0.glb.clouddn.com/%E4%BD%9C%E4%B8%9A03.jpg"
+    }, {
+      "src": "http://7xsubf.com1.z0.glb.clouddn.com/%E4%BD%9C%E4%B8%9Aps02.jpg"
+    }, {
+      "src": "http://7xsubf.com1.z0.glb.clouddn.com/%E5%86%B0%E7%81%AB%E6%8B%B3%E5%A4%B4.png"
+    }, {
+      "src": "http://7xsubf.com1.z0.glb.clouddn.com/%E6%B5%B7%E6%8A%A5.png"
+    }, {
+      "src": "http://7xsubf.com1.z0.glb.clouddn.com/%E6%B5%B7%E6%8A%A5%E5%89%AF%E6%9C%AC.png"
+    }, {
+      "src": "http://7xsubf.com1.z0.glb.clouddn.com/%E7%81%AF%E6%B3%A1.png"
+    }, {
+      "src": "http://7xsubf.com1.z0.glb.clouddn.com/%E4%B8%89%E6%8A%98%E9%A1%B5%E8%83%8C.jpg"
+    }, {
+      "src": "http://7xsubf.com1.z0.glb.clouddn.com/%E4%B8%89%E6%8A%98%E9%A1%B5%E8%83%8C.jpg"
+    }, {
+      "src": "http://7xsubf.com1.z0.glb.clouddn.com/%E4%B8%89%E6%8A%98%E9%A1%B5%E8%83%8C.jpg"
     }]
   };
   window.onscroll = function () {
@@ -28,7 +48,10 @@ window.onload = function () {
         boximg.className = "box_img"; //为节点添加类名
         dcontent.appendChild(boximg); //添加根元素
         var img = document.createElement("img"); //创建节点
-        img.src = "../../static/imgs/" + img_data.data[i].src; //图片加载路径
+
+        var imgSrc = '../static/imgs/';
+
+        img.src = img_data.data[i].src; //图片加载路径
         boximg.appendChild(img); //添加根元素
       }
     }
