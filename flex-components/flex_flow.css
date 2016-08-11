@@ -1,0 +1,99 @@
+.itemitem, .group-fl .item1, .group-fl .item2, .group-fl .item3, .group-fl .item4, .group-fl .item5, .group-fl .item6, .group-fl .item7, .group-fl .item8, .group-fl .item9, .group-box .item1, .group-box .item2, .group-box .item3, .group-box .item4, .group-box .item5, .group-box .item6, .group-box .item7, .group-box .item8, .group-box .item9 {
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  -webkit-flex-shrink: 0;
+      -ms-flex-negative: 0;
+          flex-shrink: 0;
+  -webkit-flex-basis: auto;
+      -ms-flex-preferred-size: auto;
+          flex-basis: auto;
+  font-size: 28px;
+  color: #ffffff;
+  width: 98px;
+  height: 98px;
+  border: 1px solid ghostwhite;
+}
+
+.display-box, .group-fl {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+}
+
+.group-fl {
+  background-color: #222;
+}
+.group-fl .item1 {
+  background-color: red;
+}
+.group-fl .item2 {
+  background-color: green;
+}
+.group-fl .item3 {
+  background-color: black;
+}
+.group-fl .item4 {
+  background-color: red;
+}
+.group-fl .item5 {
+  background-color: green;
+}
+.group-fl .item6 {
+  background-color: black;
+}
+.group-fl .item7 {
+  background-color: red;
+}
+.group-fl .item8 {
+  background-color: green;
+}
+.group-fl .item9 {
+  background-color: black;
+}
+
+.group-box {
+  background-color: #222;
+  display: -webkit-box;
+  -webkit-box-direction: normal;
+  box-direction: normal;
+  -webkit-box-orient: horizontal;
+  box-orient: horizontal;
+}
+.group-box .item1 {
+  background-color: red;
+}
+.group-box .item2 {
+  background-color: green;
+}
+.group-box .item3 {
+  background-color: black;
+}
+.group-box .item4 {
+  background-color: red;
+}
+.group-box .item5 {
+  background-color: green;
+}
+.group-box .item6 {
+  background-color: black;
+}
+.group-box .item7 {
+  background-color: red;
+}
+.group-box .item8 {
+  background-color: green;
+}
+.group-box .item9 {
+  background-color: black;
+}

@@ -2,13 +2,108 @@ Flexbox布局在经历了旧版到新版本的过渡后，现在移动端支持�
 
 综合新旧版本总结：flex，box
 
-- [flex-bais](#flex-bais)
-- [flex-grow](#flex-grow)
-- [flex-shrink](#flex-shrink)
+# 在父级控制子元素显示样式(flex容器)
 
-## flex属性
+## flex-flow
 
-flex属性包括:
+添加在父级别中,控制子元素在容器中的显示样式.
+
+flex-flow包括两个属性flex-direction 与 flex-wrap
+
+### flex-direction:控制子元素在容器的显示
+
+- row: 水平显示,左对齐
+- row-reverse: 水平显示,右对齐
+- column: 纵向显示, 顶对齐
+- column-reverse: 底部对齐
+
+### flex-wrap: 控制是否换行显示
+
+- nowrap: 不换行
+- wrap : 换行
+- wrap-reverse : 换行后子元素在前面显示.
+
+flex旧版本属性: box-orient,box-direction
+
+box-orient: 
+
+- horizontal：水平显示
+= vertical：横向显示
+- inline-axis：水平显示(不常用)
+= block-axis：横向显示(不常用)
+
+box-direction: 
+
+- normal：左到右
+- reverse：右到左
+
+```
+.display-box, .group-fl {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -webkit-flex-wrap: wrap;
+}
+```
+
+[演示地址](http://codepen.io/dukegod/pen/LpZxgd?editors=1100)
+
+## align-content 
+
+align-content控制子元素在弹性盒中显示的方式,在多行可变弹性盒模型中.
+
+- flex-start
+- flex-end
+- center
+- space-between
+- space-around
+- stretch
+
+flex旧版本属性: -box-align
+
+- start
+- center
+- end
+- baseline
+- stretch
+
+[演示地址](http://codepen.io/dukegod/pen/rLopWz?editors=1100)
+
+## just-content
+
+控制子元素在水平轴上的变化对齐方式.
+
+- flex-start
+- flex-end
+- center
+- space-between
+- space-around
+
+space-between 与 space-around 区别:
+
+between会是子元素在盒子两端有个元素,
+around 会使各个元素之间保持一定的间距
+
+flex 旧属性: -webkit-box-pack
+
+[演示地址](http://codepen.io/dukegod/pen/rLopWz?editors=1100)
+
+## align-item
+
+控制子元素在纵轴上的变化
+
+- flex-start
+- flex-end
+- center
+- baseline
+- stretch
+
+# 用来控制子元素的属性(flex子项目)
+
+## flex属性包括:
 
 + flex-grow: 控制扩展比例数值(不可为负),当子元素的宽、高总和大于父级的时候有用
 
@@ -16,11 +111,16 @@ flex属性包括:
 
 + flex-basis: auto | <'width'> 基础宽度
 
-## flex-bais
+flex 旧版本
+
+只有一个属性对应: box-flex
+
+
+### flex-basis
 
 控制基数，可以为auto。即flex-grow或者flex-shrink以后扩展或者收缩的比例
 
-## flex-grow细说
+### flex-grow细说
 
 ```
 <div class="group-test">
@@ -102,7 +202,7 @@ item3最终的宽度为： 40 + 30*2 = 100;
 
 item2最终的宽度为： 40 + 30*3 = 130;
 
-## flex-shrink
+### flex-shrink
 
 ```
 <div class="group-fs">
@@ -181,7 +281,9 @@ item2最终的宽度为： 120 - 10*2 = 100;
 
 item3最终的宽度为： 120 - 10*3 = 90;
 
-## flex 旧版本
+#### flex 旧版本
+
+只有一个属性对应: box-flex
 
 ```
 <div class="group-box-normal">
@@ -222,8 +324,17 @@ display只有-webkit-box属性，没有box属性。
 
 
 
+## align-self
 
+则用来在单独的伸缩项目上的对齐方式
 
+## order 
 
+可以为负值,数值越小排在前面. 默认为:0
+
+控制子元素出现的顺序
+
+[w3cplus](http://www.w3cplus.com/css3/a-guide-to-flexbox-new.html)
+[css88](http://www.css88.com/book/css/properties/flex/align-items.htm)
 
 
