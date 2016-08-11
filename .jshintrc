@@ -4,7 +4,6 @@
     "forin": true,
     "freeze": true,
     "globals": {
-
     },
     "latedef": true,
     "maxerr": 200,

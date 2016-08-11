@@ -1,0 +1,107 @@
+@mixin item ($fg, $fs, $fb) {
+  flex-grow: $fg;
+  flex-shrink: $fs;
+  flex-basis: $fb;
+  font-size: 28px;
+  color: #ffffff;
+  width: 98px;
+  height: 98px;
+  border: 1px solid ghostwhite;
+}
+
+.itemitem{
+  @include item (1, 0, auto);
+}
+
+.display-box {
+  display: -webkit-box;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.group-fl {
+  background-color: #222;
+  @extend .display-box;
+  .item1 {
+    @extend .itemitem;
+    background-color: red;
+  }
+  .item2 {
+    @extend .itemitem;
+    background-color: green;
+  }
+  .item3 {
+    @extend .itemitem;
+    background-color: black;
+  }
+  .item4 {
+    @extend .itemitem;
+    background-color: red;
+  }
+  .item5 {
+    @extend .itemitem;
+    background-color: green;
+  }
+  .item6 {
+    @extend .itemitem;
+    background-color: black;
+  }
+  .item7 {
+    @extend .itemitem;
+    background-color: red;
+  }
+  .item8 {
+    @extend .itemitem;
+    background-color: green;
+  }
+  .item9 {
+    @extend .itemitem;
+    background-color: black;
+  }
+}
+
+.group-box {
+  background-color: #222;
+  display: -webkit-box;
+  -webkit-box-direction: normal;
+  box-direction: normal;
+  -webkit-box-orient: horizontal;
+  box-orient: horizontal;
+  .item1 {
+    @extend .itemitem;
+    background-color: red;
+  }
+  .item2 {
+    @extend .itemitem;
+    background-color: green;
+  }
+  .item3 {
+    @extend .itemitem;
+    background-color: black;
+  }
+  .item4 {
+    @extend .itemitem;
+    background-color: red;
+  }
+  .item5 {
+    @extend .itemitem;
+    background-color: green;
+  }
+  .item6 {
+    @extend .itemitem;
+    background-color: black;
+  }
+  .item7 {
+    @extend .itemitem;
+    background-color: red;
+  }
+  .item8 {
+    @extend .itemitem;
+    background-color: green;
+  }
+  .item9 {
+    @extend .itemitem;
+    background-color: black;
+  }
+}

@@ -1,0 +1,124 @@
+.itemitem, .group-ac .item1, .group-ac .item2, .group-ac .item3, .group-ac .item4, .group-ac .item5, .group-ac .item6, .group-ac .item7, .group-ac .item8, .group-ac .item9 {
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
+  -webkit-flex-shrink: 0;
+      -ms-flex-negative: 0;
+          flex-shrink: 0;
+  -webkit-flex-basis: 48px;
+      -ms-flex-preferred-size: 48px;
+          flex-basis: 48px;
+  font-size: 28px;
+  color: #ffffff;
+  width: 48px;
+  height: 48px;
+  border: 1px solid ghostwhite;
+}
+
+.display-box, .group-ac {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-align-content: flex-start;
+      -ms-flex-line-pack: start;
+          align-content: flex-start;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.group-ac {
+  width: 302px;
+  height: 302px;
+  border: 1px solid #000000;
+  background-color: #eee;
+}
+.group-ac .item1 {
+  background-color: red;
+}
+.group-ac .item2 {
+  background-color: green;
+}
+.group-ac .item3 {
+  background-color: black;
+}
+.group-ac .item4 {
+  background-color: red;
+}
+.group-ac .item5 {
+  background-color: green;
+}
+.group-ac .item6 {
+  background-color: black;
+}
+.group-ac .item7 {
+  background-color: red;
+}
+.group-ac .item8 {
+  background-color: green;
+}
+.group-ac .item9 {
+  background-color: black;
+  -webkit-align-self: flex-end;
+      -ms-flex-item-align: end;
+          align-self: flex-end;
+}
+
+.box-item, .group-box-ac .item1, .group-box-ac .item2, .group-box-ac .item3, .group-box-ac .item4, .group-box-ac .item5, .group-box-ac .item6, .group-box-ac .item7, .group-box-ac .item8, .group-box-ac .item9 {
+  width: 50px;
+  height: 50px;
+}
+
+.group-box-ac {
+  display: -webkit-box;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-box-align: start;
+  width: 400px;
+  height: 300px;
+  border: 1px solid #000000;
+  background-color: #eee;
+}
+.group-box-ac .item1 {
+  background-color: red;
+}
+.group-box-ac .item2 {
+  background-color: green;
+}
+.group-box-ac .item3 {
+  background-color: black;
+}
+.group-box-ac .item4 {
+  background-color: red;
+}
+.group-box-ac .item5 {
+  background-color: green;
+}
+.group-box-ac .item6 {
+  background-color: black;
+}
+.group-box-ac .item7 {
+  background-color: red;
+}
+.group-box-ac .item8 {
+  background-color: green;
+}
+.group-box-ac .item9 {
+  background-color: black;
+}
