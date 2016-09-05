@@ -1,9 +1,10 @@
-/*
- *@dukegod
- *获取css样式
+/**
+ * [getStyle description]
+ * @param  {[type]} ele    [输入的类名]
+ * @param  {[type]} pseudo [伪类名字,::after,::befor; 可以传入null,忽略伪类类型]
+ * @param  {[type]} e      [获取伪类的类名]
+ * @return {[type]}        [输出伪类属性值]
  */
-'use strict';
-// ele 为你输入的style，e为具体的样式
 function getStyle(ele, pseudo, e) {
   var ps = pseudo || null
   var style = null;
@@ -15,3 +16,4 @@ function getStyle(ele, pseudo, e) {
   }
   return style;
 }
+

@@ -54,6 +54,14 @@ body {
   content: 'in the back of you';
 }
 #second p {
+  margin-top: 80px;
   height: 100px;
-  background-color: #2b2d2f;
+  background-color: #eee;
+}
+
+#pp::after{
+  width: 100px;
+  font-size: 28px;
+  color: #7f9fd4;
+  content: attr(data-cont);
 }
