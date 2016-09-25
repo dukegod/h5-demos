@@ -1,12 +1,6 @@
 # demos
 
-主要放一些H5的demos
-
-探索的东西：
-
-+ html
-+ css
-+ js
+自己制造的各种小小轮子
 
 [background_size](https://github.com/dukegod/h5-demos/tree/master/demos/background_size)
 
