@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>多行显示省略号样式</title>
+</head>
+<style media="screen">
+  /*单行显示省略号*/
+  body{
+    background-color: #f9f5f5;
+  }
+  div{
+    margin-top: 20px;
+    background-color: #eee;
+  }
+  .single-ellipsis {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+  .multi-ellipsis {
+    height: 100px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+  .box1 {
+    width: 100%;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  .box2 {
+    width: 100%;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  .box3 {
+    width: 100%;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+</style>
+
+<body>
+  <div class="box1">
+    -webkit-line-clamp 是一个 不规范的属性（unsupported WebKit property），它没有出现在 CSS 规范草案中。-webkit-line-clamp 是一个 不规范的属性（unsupported WebKit property），它没有出现在 CSS 规范草案中。-webkit-line-clamp 是一个 不规范的属性（unsupported WebKit property），它没有出现在 CSS 规范草案中。
+  </div>
+  <div class="box2">
+    -webkit-line-clamp 是一个 不规范的属性（unsupported WebKit property），它没有出现在 CSS 规范草案中。-webkit-line-clamp 是一个 不规范的属性（unsupported WebKit property），它没有出现在 CSS 规范草案中。-webkit-line-clamp 是一个 不规范的属性（unsupported WebKit property），它没有出现在 CSS 规范草案中。
+  </div>
+  <div class="box3">
+    -webkit-line-clamp 是一个 不规范的属性（unsupported WebKit property），它没有出现在 CSS 规范草案中。-webkit-line-clamp 是一个 不规范的属性（unsupported WebKit property），它没有出现在 CSS 规范草案中。-webkit-line-clamp 是一个 不规范的属性（unsupported WebKit property），它没有出现在 CSS 规范草案中。
+  </div>
+  <h1>常规的设置</h1>
+  <div class="single-ellipsis">
+    常规的设置常规的设置常规的设置常规的设置常规的设置常规的设置常规的设置常规的设置常规的设置常规的设置常规的设置常规的设置常规的设置常规的设置
+  </div>
+  <h2>常规的设置</h2>
+  <div class="multi-ellipsis">
+    常规的设置常规的设置常规的设置常规的设置常规的设置常规的设置常规的设置常规的设置常规的设置常规的设置常规的设置常规的设置常规的设置常规的设置常规的设置常规的设置常规的设置常规的设置常规的设置常规的设置常规的设置常规的设置常规的设置常规的设置常规的设置常规的设置常规的设置常规的设置常规的设置常规的设置常规的设置常规的设置常规的设置常规的设置常规的设置常规的设置常规的设置常规的设置常规的设置常规的设置常规的设置常规的设置
+  </div>
+</body>
+
+</html>
