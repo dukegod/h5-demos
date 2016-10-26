@@ -1,6 +1,7 @@
 # demos
 
-自己制造的各种小小轮子
+自己制造的各种小小轮子,效果图可以显示
+http://dukegod.github.io/h5-demos/+（具体的项目文件就可以访问）
 
 [background_size](https://github.com/dukegod/h5-demos/tree/master/demos/background_size)
 
@@ -36,7 +37,7 @@
 
 [数据加载demo](https://github.com/dukegod/h5-demos/tree/master/demos/loadingDates)
 
-[]()
+[网页hover效果](https://github.com/dukegod/h5-demos/tree/master/demos/appHover)
 
 []()
 
