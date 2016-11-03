@@ -1,0 +1,73 @@
+@charset "utf-8";
+
+.title-contain {
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: black;
+    box-sizing: border-box;
+}
+
+.title-underline {
+    display: inline-block;
+    box-sizing: border-box;
+    padding: 0px;
+    margin-bottom: -1px;
+    line-height: 1.1;
+    border-bottom-width: 6px;
+    border-bottom-style: solid;
+    border-color: rgb(0, 160, 233);
+    font-size: 125%;
+    font-family: inherit;
+    font-weight: inherit;
+    text-decoration-line: inherit;
+    text-decoration-style: inherit;
+    text-decoration-color: inherit;
+    color: rgb(0, 160, 233);
+}
+
+h2 {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    display: inline-block;
+    box-sizing: border-box;
+    padding: 0px;
+    margin-bottom: -1px;
+    line-height: 1.1;
+    border-bottom-width: 6px;
+    border-bottom-style: solid;
+    border-color: rgb(0, 160, 233);
+    font-size: 125%;
+    font-family: inherit;
+    font-weight: inherit;
+    text-decoration-line: inherit;
+    text-decoration-style: inherit;
+    text-decoration-color: inherit;
+    color: rgb(0, 160, 233);
+    margin: 0;
+    padding: 0;
+}
+
+h1::after {
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: black;
+    box-sizing: border-box;
+
+}
+
+.ribbon {
+    background-color: #5BC8F7;
+}
+
+.ribbon::after {
+    content: "Look at this orange box.";
+    background-color: #FFBA10;
+    border-color: black;
+    border-style: dotted;
+}
+
+

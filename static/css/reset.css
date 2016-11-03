@@ -1,0 +1,108 @@
+@charset "utf-8";
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary,
+img,
+h1,
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+form,
+fieldset,
+input,
+button,
+textarea,
+p,
+blockquote,
+th,
+td {
+    margin: 0;
+    padding: 0;
+}
+
+fieldset,
+img,
+html,
+body,
+iframe {
+    border: 0;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+li {
+    list-style: none;
+}
+
+em,
+i,
+small,
+caption,
+th {
+    font-weight: normal;
+    font-style: normal;
+    font-size: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+em,
+strong,
+b {
+    font-weight: bold;
+    font-size: 100%;
+}
+
+.marginauto {
+    margin-right: auto;
+    margin-left: auto;
+}
+
+img {
+    -webkit-touch-callout: none;
+    /* 禁止长按链接与图片弹出菜单 */
+}
+
+html {
+    font-size: 62.5%;
+    -webkit-overflow-scrolling: touch;
+    -webkit-user-select: none;
+    /* 禁止选中文本（如无文本选中需求，此为必选项） */
+    user-select: none;
+    -Webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    /*按钮添加active状态或者移除点击高亮的状态了*/
+}
+
+body {
+    font: 120%/150% helvetica arial sans-serif;
+    font-size: 1.2rem;
+}

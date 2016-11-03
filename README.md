@@ -23,7 +23,7 @@ http://dukegod.github.io/h5-demos/+（具体的项目文件就可以访问）
 
 [各种高度宽度总结](https://github.com/dukegod/h5-demos/tree/master/demos/kindsOfHeightWidth)
 
-[定位服务](https://github.com/dukegod/h5-demos/tree/master/demos/positon)
+[css控制居中与模态框总结](https://github.com/dukegod/h5-demos/tree/master/demos/positon)
 
 [个人常用默认样式总结](https://github.com/dukegod/h5-demos/tree/master/demos/resetClass)
 

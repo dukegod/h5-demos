@@ -1,0 +1,45 @@
+body {
+    box-sizing: border-box;
+}
+
+.position {
+    width: 280px;
+    height: 200px;
+    background-color: yellow;
+    border: 1px dotted black;
+    box-sizing: border-box;
+}
+
+.f-01 {
+    position: relative;
+}
+
+.f-02 {
+    position: relative;
+    border: 5px dashed red;
+    top: 50px;
+    left: 20px;
+}
+
+.f-03 {
+    width: 200px;
+    height: 200px;
+    background-color: green;
+}
+
+.fabs-01 {
+    width: 300px;
+    background-color: red;
+    position: absolute;
+}
+
+.fabs-02 {
+    width: 250px;
+    background-color: black;
+    position: absolute;
+}
+
+.fabs-03 {
+    width: 200px;
+    position: absolute;
+}
