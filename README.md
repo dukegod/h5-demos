@@ -41,9 +41,6 @@ http://dukegod.github.io/h5-demos/+（具体的项目文件就可以访问）
 
 [各种高度宽度总结](https://github.com/dukegod/h5-demos/tree/master/demos/kindsOfHeightWidth)
 
-<<<<<<< Updated upstream
-[css控制居中与模态框总结](https://github.com/dukegod/h5-demos/tree/master/demos/positon)
-=======
 [数据加载demo](https://github.com/dukegod/h5-demos/tree/master/demos/loadingDates)
 
 [视频加载](https://github.com/dukegod/h5-demos/tree/master/demos/loadvideo)
@@ -53,7 +50,6 @@ http://dukegod.github.io/h5-demos/+（具体的项目文件就可以访问）
 [parabola 动画效果](https://github.com/dukegod/h5-demos/tree/master/demos/parabola)
 
 [定位服务](https://github.com/dukegod/h5-demos/tree/master/demos/positon)
->>>>>>> Stashed changes
 
 [个人常用默认样式总结](https://github.com/dukegod/h5-demos/tree/master/demos/resetClass)
 
