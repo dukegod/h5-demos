@@ -42,7 +42,6 @@ http://dukegod.github.io/h5-demos/+（具体的项目文件就可以访问）
 [各种高度宽度总结](https://github.com/dukegod/h5-demos/tree/master/demos/kindsOfHeightWidth)
 
 [css控制居中与模态框总结](https://github.com/dukegod/h5-demos/tree/master/demos/positon)
-
 [数据加载demo](https://github.com/dukegod/h5-demos/tree/master/demos/loadingDates)
 
 [视频加载](https://github.com/dukegod/h5-demos/tree/master/demos/loadvideo)
