@@ -6,7 +6,7 @@
 window.page = sessionStorage.getItem('currentPage') || 0;
 // 封装数据请求
 function req(options) {
-  var host ="https://cnodejs.org/api/v1/topics" ,
+  var host ="https://cnodejs.org/api/v1/topics",
     defaultOptions = {
       type: "get",
       dataType: 'json',
