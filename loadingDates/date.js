@@ -61,9 +61,9 @@ function getListData() {
       }
     }
   };
-  
+
   req(options);
-};
+}
 
 
 //  读取缓存信息
@@ -110,6 +110,5 @@ window.onload = function(){
     window.location.href="detail.html";
     sessionStorage.setItem('scrollTop_n', $("body").scrollTop());
   })
-  
-}
 
+}
