@@ -13,7 +13,7 @@ http://dukegod.github.io/h5-demos/+（具体的项目文件就可以访问）
 
 [不同的加载方式浅析](https://github.com/dukegod/h5-demos/tree/master/demos/diffsBetweenLoader)
 
-[动态修改META]()
+[动态修改META](dynamic_modifing_mate)
 
 [时间绑定]()
 
@@ -58,6 +58,8 @@ http://dukegod.github.io/h5-demos/+（具体的项目文件就可以访问）
 [css控制显示省略号](https://github.com/dukegod/h5-demos/tree/master/demos/show_ellipsis)
 
 [时间转为字符串](https://github.com/dukegod/h5-demos/tree/master/demos/timeTransString)
+
+[倒计时]()
 
 [瀑布流加载样式](https://github.com/dukegod/h5-demos/tree/master/demos/waterFallLayout)
 
