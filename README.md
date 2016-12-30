@@ -1,5 +1,10 @@
 # demos
 
+CDN引用说明，大部分引用http://www.bootcdn.cn/，更新的比较快，比较稳定
+
++ js : zepto.js
++ css : mobi.css
+
 自己制造的各种小小轮子,效果图可以显示
 http://dukegod.github.io/h5-demos/+（具体的项目文件就可以访问）
 
