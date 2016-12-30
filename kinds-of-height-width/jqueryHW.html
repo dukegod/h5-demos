@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width"/>
+		<meta name="viewport" content="initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>页面中的各种高度，宽度问题-jQuery</title>
+	</head>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.f{
+			width: 100%;
+			height: 300px;
+			background-color: red;
+			opacity: 0.6;
+		}
+		p{
+			margin-top: 10px
+		}
+		h4{
+			margin-top: 20px;
+		}
+		
+	</style>
+	
+	<body>
+		<p class="f" id ="f"></p>
+		<p class="f"></p>
+		   	<img src="../../static/imgs/browseSize.bmp" alt="">
+		<p class="f"></p>
+		<p class="f"></p>
+		<p class="f"></p>
+		<h4>
+			window当前可见区域的大小，窗口改变，高度改变即：也就是你浏览器所能看到的页面的那部分的高度 这个大小在你缩放浏览器窗口大小时 会改变
+		</h4>
+		<p id= "p1"></p>
+		<h4>整个document的高度(获取整个页面的高度)，随着你去拉伸窗口，并不会改变.</h4>
+		<p id= "p2"></p>
+		<h4>body 高度</h4>
+		<p id= "p3"></p>
+
+
+		<h4>滚动变化值</h4>
+		<h4>window 高度</h4>
+		<p id= "p4">dd</p>
+		<h4>document 高度</h4>
+		<p id= "p5"></p>
+		<h4>div 高度</h4>
+		<p id = "p6"></p>
+	</body>
+	<script src="//cdn.bootcss.com/jquery/3.0.0/jquery.js"></script>
+	<script type="text/javascript" charset="utf-8">
+
+	$(window).load(function() {
+		/* Act on the event */
+
+		 $('#p1').html("窗口的高度：" + $(window).height()+"  窗口的宽度"+$(window).width());
+	   $('#p2').html("document的高度：" + $(document).height()+"  document的宽度"+$(document).width());
+	   $('#p3').html("body的高度：" + $('body').height()+"  body的宽度"+$('body').width());
+	   $('#f').html("具体的div高度：" + $('#f').height()+ "div的宽度"+$('#f').width());
+
+	   $('#p4').html("scrollTop()：" + $('window').scrollTop());
+
+	   $(window).scroll(function(event) {
+	   	/* Act on the event */
+	   	 $('#p4').html("scrollTop()：" + $(window).scrollTop());
+	   	 $('#p5').html("scrollTop()：" + $(document).scrollTop());
+	   	 $('#p6').html("scrollTop()：" + $('p#p6').scrollTop());
+
+	   	 console.log('$(window).scrollTop()'+$(window).scrollTop());
+	   	 console.log('$(document).scrollTop():'+$(document).scrollTop());
+
+   });
+
+	});
+
+
+
+   
+
+   
+
+
+	</script>
+
+
+</html>
