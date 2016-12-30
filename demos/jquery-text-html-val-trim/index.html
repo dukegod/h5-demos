@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta content="" width="device-width">
+  <title>jquery</title>
+  <link rel="stylesheet" href="../../bower_components/bootstrap/dist/css/bootstrap.css">
+</head>
+<body style="margin: 20px">
+  <h1>jquery,zepto中的text,html,val深入理解</h1>
+
+  <form action="">
+    <input type="text" class="form-control" placeholder="Recipient's username" aria-describedby="basic-addon2">
+    <input type="text" class="form-control" placeholder="Recipient's username" aria-describedby="basic-addon2">
+    <span class="input-group-addon" id="basic-addon">@example.com</span>
+  </form>
+  
+  <ul class="list-group">
+    <li class="list-group-item">
+      jquery,zepto中的text,html,val深入理解
+      <p>内部的ppp</p>
+    </li>
+    <li class="list-group-item">jquery,zepto中的text,html,val深入理解</li>
+    <li class="list-group-item">jquery,zepto中的text,html,val深入理解</li>
+    <li class="list-group-item">
+      jquery,zepto中的text,html,val深入理解
+      <p>内部的ppp</p>
+    </li>
+    <li class="list-group-item">jquery,zepto中的text,html,val深入理解</li>
+  </ul>
+  <div id="list1" class="list-group list-group-item-danger"></div>
+  <div id="list2" class="list-group list-group-item-danger"></div>
+
+  <!--<script src="../../bower_components/jquery/dist/jquery.js"></script>-->
+  <script src="//cdn.bootcss.com/zepto/1.2.0/zepto.min.js"></script>
+  <script>
+    $('input').on('change',function(){
+      var tt = '';
+        tt += $(this).val();
+      $('#basic-addon').text(tt);
+    });
+    
+    $('#list1').html($('li').text());
+    
+    var ii = '   44   ';
+    console.log('ii.length' + ii.length)
+    console.log(ii.trim().length);
+
+    $('#list2').html($('li').html());
+
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+  <title>点击事件最终版</title>
+</head>
+<style>
+  body {
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  }
+
+  .pure-css {
+    padding: 10px 15px;
+    background-color: #ddd;
+    outline: none;
+    width: 60px;
+    height: 25px;
+  }
+
+  .active {
+    background-color: red;
+  }
+
+</style>
+
+<body>
+<h2>jquery实现</h2>
+<ol>
+  <li>dd</li>
+  <li>ddd</li>
+</ol>
+<div class="pure-css">点击我</div>
+<script src="//cdn.bootcss.com/jquery/3.0.0/jquery.js"></script>
+<script src="jquery.add.hover.js" type="text/javascript" charset="utf-8"></script>
+<script>
+
+
+  $('.pure-css').addhover({
+    bgcolor: 'red',
+    timeLasting: '10'
+  });
+</script>
+
+</body>
+</html>
