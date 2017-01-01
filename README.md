@@ -13,8 +13,13 @@ CDN引用说明，大部分引用http://www.bootcdn.cn/，更新的比较快，�
 + css : mobi.css
 + //cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css
 
-自己制造的各种小小轮子,效果图可以显示
-http://dukegod.github.io/h5-demos/+（具体的项目文件就可以访问）
+### 项目演示发布发布到 gh-pages
+
+```
+git subtree push --prefix=demos origin gh-pages
+
+```
+http://dukegod.github.io/h5-demos/+（具体的项目文件就可以访问）项目演示
 
 [移动端点击事件](https://github.com/dukegod/h5-demos/tree/master/demos/app-hover)
 
