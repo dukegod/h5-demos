@@ -18,7 +18,8 @@
 
   var options = {
     'data' : '2016-12-31',
-    'msg' : '距离开始时间'
+    'msg' : '距离开始时间',
+    'el':'class',
   }
   function GetDate(opt) {
     this.data = opt.data;
