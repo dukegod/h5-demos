@@ -81,10 +81,11 @@ http://dukegod.github.io/h5-demos/+（具体的项目文件就可以访问）项
 
 [瀑布流加载样式](https://github.com/dukegod/h5-demos/tree/master/demos/water-fall-layout)
 
-[DOM总结](https://github.com/dukegod/h5-demos/tree/master/dom)
+[倒计时支持UMD](https://github.com/dukegod/h5-demos/tree/master/demos/counter)
+
+[移动div](https://github.com/dukegod/h5-demos/tree/master/demos/animate-div)
 
 [函数的去抖]()
-
 [函数的节流]()
 []()
 []()

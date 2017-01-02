@@ -11,15 +11,30 @@
     margin: 0;
     padding: 0;
   }
+  body{
+    margin: 40px;
+  }
+  i{
+    font-style: normal;
+    color: #999;
+  }
+  span{
+    font-size: 18px;
+    padding-left: 10px;
+  }
 </style>
 <body>
-<h1>counter</h1>
+<h1 id= "TxtId">counter</h1>
 <div id ="counterId"></div>
 
 <script src="http://cdn.bootcss.com/zepto/1.2.0/zepto.min.js"></script>
 <script type="text/javascript" src="./counterLib.js"></script>
 <script type="text/javascript">
-
+  getDateInstance({
+    "el" : "TxtId",
+    "data" : "2017-01-31",
+    "msg" : "倒计时结束时间"
+  })
 </script>
 </body>
 </html>
