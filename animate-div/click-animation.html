@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+</head>
+<style>
+.addProducts {
+  Height: 700px;
+  width: 70%;
+  background-color: skyblue;
+  padding-top: 5px;
+  padding-right: 5px;
+}
+
+.productHolder {
+  overflow-y: scroll;
+  width: 50%;
+  height: 500px;
+  background-color: yellow;
+  position: relative;
+  top: 100px;
+}
+
+.item {
+  width: 150px;
+  left: 2px;
+  height: 100px;
+  background-color: red;
+  margin: 10px;
+  text-align: center;
+  clear: both;
+}
+</style>
+
+<body>
+  <div></div>
+  <div class="addProducts">
+    <div class="productHolder">
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+      <div class="item">4</div>
+      <div class="item">5</div>
+    </div>
+  </div>
+  <h1>H5移动方法</h1>
+  <section>
+    <img />
+  </section>
+  <script>
+  document.querySelector('.productHolder').onclick = function(e) {
+    console.log("dd");
+    if (e.target.className === 'item') {
+      console.log(e);
+      var clone = e.target.cloneNode(true);
+      clone.style.float = 'right';
+      clone.style.margin = '5px';
+      this.parentNode.insertBefore(clone, this);
+    }
+  }
+  </script>
+</body>
+
+</html>
