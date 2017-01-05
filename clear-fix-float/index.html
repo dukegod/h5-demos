@@ -7,8 +7,14 @@
     <link rel="stylesheet" href="base.css" media="screen" charset="utf-8">
   </head>
   <body>
-    <h1>float</h1>
-    <div class="container">
+    <h2>添加空div</h2>
+    <div style="width:100px;height:50px;background-color:red;float:left">1</div>
+    <div style="width:100px;height:50px;background-color:blue;float:left">2</div>
+    <div style="clear:both"></div>
+    <div style="width:100px;height:50px;background-color:yellow;">3</div>
+
+    <h2>float常规设置</h2>
+    <div class="container clearfixed">
       <div class="left">
         left left left
       </div>
@@ -19,8 +25,23 @@
         right right right
       </div>
     </div>
+    <div class="footer">
+      footerfooter
+    </div>
 
-    <div class=" footer">
+    <h2>overflow</h2>
+    <div class="container-overflow">
+      <div class="left-overflow">
+        left left left
+      </div>
+      <div class="left-overflow">
+        left left left2
+      </div>
+      <div class="right-overflow">
+        right right right
+      </div>
+    </div>
+    <div class="footer">
       footerfooter
     </div>
 
