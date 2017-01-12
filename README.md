@@ -86,7 +86,11 @@ http://dukegod.github.io/h5-demos/+（具体的项目文件就可以访问）项
 [移动div](https://github.com/dukegod/h5-demos/tree/master/demos/animate-div)
 
 [函数的去抖]()
+
 [函数的节流]()
 
 [clear-fix-float](https://github.com/dukegod/h5-demos/tree/master/demos/clear-fix-float)
+
+[safari-body](https://github.com/dukegod/h5-demos/tree/master/demos/safari-body)
+
 []()

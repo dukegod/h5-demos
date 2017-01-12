@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width"/>
+  	<meta name="viewport" content="initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>研究Safari在body上监听事件的bug</title>
+  </head>
+  <style media="screen">
+    article{
+      margin-top: 40px;
+      width: 100%;
+      height: 100px;
+      background-color: #ffb43e;
+    }
+    #container{
+      margin-top: 50px;
+      background-color: #ededed;
+    }
+    section{
+      margin-top: 10px;
+      width: 100%;
+      height: 50px;
+      background-color: #ddd;
+    }
+  </style>
+  <body>
+    <h1>研究Safari在body上监听事件的bug</h1>
+    <article id="first">
+      第一个监听事件，点击返回第一个事件内容
+    </article>
+    <article id="second">
+      第2个监听事件，点击返回第一个事件内容
+    </article>
+    <article id="third">
+      第3个监听事件，点击返回第一个事件内容
+    </article>
+    <footer>底部数据的展示</footer>
+
+    <div id="container">
+      <section id="s1">s1</section>
+      <section id="s2">s2</section>
+      <section id="s3">s3</section>
+      <section id="s4">s4</section>
+
+    <div>
+
+    <script src="//cdn.bootcss.com/zepto/1.2.0/zepto.min.js"></script>
+    <script type="text/javascript">
+      $('body').on('click','#first',function(){
+        
+        alert(1);
+      })
+      // $('body').on('click','#second',function(){
+      //   alert(2)
+      // })
+      // $('body').on('click','#third',function(){
+      //   alert(3)
+      // })
+      
+      $('#container').on('click','#s1',function(){
+        
+        alert('s1');
+      })
+      $('#container').on('click','#s2',function(){
+        
+        alert('s2');
+      })
+      $('#container').on('click','#s3',function(){
+        
+        alert('s3');
+      })            
+
+    </script>
+  </body>
+</html>
