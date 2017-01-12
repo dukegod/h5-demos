@@ -13,12 +13,13 @@
     global.getDateInstance = factory(global);
   }
 }(typeof window !== 'undefined' ? window : this, function(window) {
+  //  没有考虑市区差值
 
   // 实例化返回值
   var getDateInstance = null;
 
   var options = {
-    'data' : '2017-12-31',
+    'data' : '2017-01-12 18:50:54',
     'msg' : '距离开始时间',
     'el':'class',
   }
@@ -28,18 +29,14 @@
     this.el = opt.el;
     this.conversionTime();
     this.txtMsg();
-    // setTimeout(function() {
-    //   var self = this;
-    //   self.conversionTime()
-    // }.bind(this), 1000);
   }
   GetDate.prototype.conversionTime = function() {
     // 接受传递过来的参数
     var future = new Date(this.data);
     // console.log(future.getTime());
     var now = new Date();
-    var dur = Math.round((future.getTime() - now.getTime()) / 1000) + future.getTimezoneOffset() * 60;
-    console.log(dur);
+    var dur = Math.round((future.getTime() - now.getTime()) / 1000) ;
+    // console.log(dur);
 
     var pms = {
       sec: '00',
@@ -98,7 +95,6 @@
   GetDate.prototype.txtMsg = function () {
     document.getElementById('TxtId').innerHTML = this.msg;
   };
-
 
   if (!getDateInstance) {
     getDateInstance = new GetDate(options);
