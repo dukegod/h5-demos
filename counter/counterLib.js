@@ -2,7 +2,7 @@
 (function (global, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD环境中
-    define( function () {
+    define(function () {
       return factory(global);
     });
   } else if (typeof module !== 'undefined' && module.exports) {
@@ -50,46 +50,46 @@
       // 秒数
       pms.sec = this.checkTime(dur % 60);
       // 分钟数
-      pms.mini = Math.floor((dur / 60)) > 0 ? this.checkTime(Math.floor((dur / 60)) % 60) : "00";
+      pms.mini = Math.floor((dur / 60)) > 0 ? this.checkTime(Math.floor((dur / 60)) % 60) : '00';
       // 时间数
-      pms.hour = Math.floor((dur / 3600)) > 0 ? this.checkTime(Math.floor((dur / 3600)) % 24) : "00";
+      pms.hour = Math.floor((dur / 3600)) > 0 ? this.checkTime(Math.floor((dur / 3600)) % 24) : '00';
       // 日期说
-      pms.day = Math.floor((dur / 86400)) > 0 ? this.checkTime(Math.floor((dur / 86400)) % 30) : "00";
+      pms.day = Math.floor((dur / 86400)) > 0 ? this.checkTime(Math.floor((dur / 86400)) % 30) : '00';
       // 月份，以实际平均每月秒数计算
-      pms.month = Math.floor((dur / 2629744)) > 0 ? this.checkTime(Math.floor((dur / 2629744)) % 12) : "00";
+      pms.month = Math.floor((dur / 2629744)) > 0 ? this.checkTime(Math.floor((dur / 2629744)) % 12) : '00';
       // 年份，按按回归年365天5时48分46秒算
-      pms.year = Math.floor((dur / 31556926)) > 0 ? Math.floor((dur / 31556926)) : "0";
+      pms.year = Math.floor((dur / 31556926)) > 0 ? Math.floor((dur / 31556926)) : '0';
     } else {
       window.clearTimeout();
     }
     this.conversionMsg(pms);
 
-    setTimeout(function() {
+    setTimeout(function () {
       var self = this;
       self.conversionTime();
       // self.conversionMsg(pms);
     }.bind(this), 1000);
   }
-  GetDate.prototype.checkTime = function(e) {
+  GetDate.prototype.checkTime = function (e) {
     var n = parseInt(e, 10);
     if (n > 0) {
       if (n <= 9) {
-        n = "0" + n;
+        n = '0' + n;
       }
       return String(n);
     } else {
-      return "00";
+      return '00';
     }
   }
   GetDate.prototype.conversionMsg = function(e) {
     // console.log(e);
-    var year = typeof(e.year) !== 'undefined' ? '<span>' + e.year + '</span><i>年</i>' : 0;
-    var month = typeof(e.month) !== 'undefined' ? '<span>' + e.month + '</span><i>月</i>' : 0;
-    var day = typeof(e.day) !== 'undefined' ? '<span>' + e.day + '</span><i>日</i>' : 0;
-    var hour = typeof(e.hour) !== 'undefined' ? '<span>' + e.hour + '</span><i>时</i>' : 0;
-    var mini = typeof(e.mini) !== 'undefined' ? '<span>' + e.mini + '</span><i>分</i>' : 0;
-    var sec = typeof(e.sec) !== 'undefined' ? '<span>' + e.sec + '</span>' : 0;
-    document.getElementById('counterId').innerHTML= (year+month+day+hour+mini+sec);
+    var year = typeof (e.year) !== 'undefined' ? '<span>' + e.year + '</span><i>年</i>' : 0;
+    var month = typeof (e.month) !== 'undefined' ? '<span>' + e.month + '</span><i>月</i>' : 0;
+    var day = typeof (e.day) !== 'undefined' ? '<span>' + e.day + '</span><i>日</i>' : 0;
+    var hour = typeof (e.hour) !== 'undefined' ? '<span>' + e.hour + '</span><i>时</i>' : 0;
+    var mini = typeof (e.mini) !== 'undefined' ? '<span>' + e.mini + '</span><i>分</i>' : 0;
+    var sec = typeof (e.sec) !== 'undefined' ? '<span>' + e.sec + '</span>' : 0;
+    document.getElementById('counterId').innerHTML= (year + month + day + hour + mini + sec);
   }
 
   GetDate.prototype.txtMsg = function () {
