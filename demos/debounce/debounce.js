@@ -4,9 +4,9 @@
 
 function debounce(method, context) {
   var timer = null;
-  return function() {
+  return function () {
     clearTimeout(timer);
-    timer = setTimeout(function() {
+    timer = setTimeout(function () {
       console.log(context);
       console.log(method);
       method.call(context);
@@ -15,9 +15,9 @@ function debounce(method, context) {
 }
 
 function print() {
-  console.log(arguments)
+  // console.log(arguments)
   document.getElementById('id').innerText = 'hello world';
-  console.log('hello world');
+  // console.log('hello world');
 }
 
-window.onscroll = debounce(print,999);
+window.onscroll = debounce(print, 999);
