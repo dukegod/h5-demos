@@ -1,17 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale = 1.0">
   <title>Title</title>
 </head>
 <style>
-  #id{
-    height: 2700px;
+  div {
+    width: 100%;
+    height: 100px;
     background-color: #eeeeee;
+    text-align: center;
+    line-height: 100px;
+    color: black;
+    font-size: 24px;
+  }
+
+  div:nth-child(2n) {
+    background-color: red;
   }
 </style>
+
 <body>
-  <div id="id"></div>
+  <div>text</div><div>text</div><div>text</div><div>text</div><div>text</div><div>text</div><div>text</div><div>text</div><div>text</div><div>text</div><div>text</div><div>text</div><div>text</div><div>text</div><div>text</div><div>text</div><div>text</div><div>text</div><div>text</div><div>text</div><div>text</div><div>text</div><div>text</div><div>text</div><div>text</div><div>text</div><div>text</div><div>text</div><div>text</div><div>text</div><div>text</div><div>text</div><div>text</div><div>text</div><div>text</div><div>text</div><div>text</div><div>text</div><div>text</div><div>text</div><div>text</div><div>text</div><div>text</div><div>text</div><div>text</div><div>text</div>
+
   <script src="debounce.js"></script>
+  <script type="text/javascript">
+    function log() {
+      console.log('直到滚动结束了，才会触发下一步操作',,new Date().getSeconds());
+    }
+    document.getElementsByTagName('body')[0].onscroll = _.debounce(log, 1000);
+  </script>
 </body>
+
 </html>
