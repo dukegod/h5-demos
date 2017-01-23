@@ -1,14 +1,10 @@
-## lodash
-
-## lodash-cli
-
-[lodash doc](https://lodash.com/custom-builds)
-
-lodash 命令客户端，可以根据自己的需求生成代码库。
-
-```
-lodash include=throttle -o throttle.js
-```
-
-
 ## 节流
+简单的说：函数节流能使得连续的函数执行，变为 固定时间段 间断地执行。
+
+throttle 和 debounce 的应用场景
+
++ 按一个按钮发送 AJAX：
+给 click 加了 debounce 后就算用户不停地点这个按钮，也只会最终发送一次；如果是 throttle 就会间隔发送几次
+
++ 监听滚动事件判断是否到页面底部自动加载更多：
+给 scroll 加了 debounce 后，只有用户停止滚动后，才会判断是否到了页面底部；如果是 throttle 的话，只要页面滚动就会间隔一段时间判断一次
