@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale = 1.0">
+  <title> 节流案例 </title>
+</head>
+<style>
+
+  div{
+    width: 100%;
+    height: 100px;
+    background-color: #eeeeee;
+    text-align: center;
+    line-height: 100px;
+    color: black;
+    font-size: 24px;
+  }
+  div:nth-child(2n){
+    background-color: red;
+  }
+</style>
+
+<body>
+  <div>text</div><div>text</div><div>text</div><div>text</div><div>text</div><div>text</div><div>text</div><div>text</div><div>text</div><div>text</div><div>text</div><div>text</div>
+  <div>text</div><div>text</div><div>text</div><div>text</div><div>text</div><div>text</div><div>text</div><div>text</div><div>text</div><div>text</div><div>text</div><div>text</div>
+  <div>text</div><div>text</div><div>text</div><div>text</div><div>text</div><div>text</div><div>text</div><div>text</div><div>text</div><div>text</div><div>text</div><div>text</div>
+
+  <script src="throttle.js"></script>
+  <script type="text/javascript">
+    function log() {
+      console.log('不断的滚动，2秒钟之内一定发生一次请求，无论你是不是还在滚动',new Date().getSeconds());
+    }
+    document.getElementsByTagName('body')[0].onscroll=  _.throttle(log, 2000)
+  </script>
+</body>
+
+</html>
