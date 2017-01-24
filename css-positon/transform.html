@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>绝对居中</title>
+</head>
+<style media="screen">
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  section {
+    background: #eee;
+    height: 100%;
+    /*margin: 20px;*/
+    width: 100%;
+    /*position: relative;*/
+    resize: vertical;
+    overflow: auto;
+  }
+
+  section .child {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    right: 20px;
+    background: black;
+    color: white;
+    padding: 20px;
+    transform: translate(0%, -50%);
+    resize: vertical;
+    overflow: auto;
+  }
+
+  著作权归作者所有。
+</style>
+
+<body>
+
+  <section class="flex">
+    <div class="child flex-item">
+      <div class="item">
+        <p>如果无法获取确定的宽高，同样需要设定父级容器为相对定位的容器，设定子元素绝对定位的位置 position: absolute; top: 50%; left: 50%。不同的是，接下来需要使用 transform: translate(-50%, -50%); 实现垂直居中：著作权归作者所有。 商业转载请联系作者获得授权,非商业转载请注明出处。
+        </p>
+      </div>
+    </div>
+  </section>
+
+
+</body>
+
+</html>
