@@ -4,6 +4,11 @@
 
 全小写，中划线
 
+关于文件夹的类型以后通过前标进行标注:
+
++ css-
++ js-
+
 
 CDN引用说明，大部分引用http://www.bootcdn.cn/，更新的比较快，比较稳定
 
@@ -17,7 +22,6 @@ CDN引用说明，大部分引用http://www.bootcdn.cn/，更新的比较快，�
 
 ```
 git subtree push --prefix=demos origin gh-pages
-
 ```
 http://dukegod.github.io/h5-demos/+（具体的项目文件就可以访问）项目演示
 
@@ -59,7 +63,13 @@ http://dukegod.github.io/h5-demos/+（具体的项目文件就可以访问）项
 
 [各种高度宽度总结](https://github.com/dukegod/h5-demos/tree/master/demos/kinds-of-height-width)
 
-[css控制居中与模态框总结](https://github.com/dukegod/h5-demos/tree/master/demos/positon)
+### 控制样式居中，弹框样式，css实现滑动
+
+[css控制居中与模态框总结](https://github.com/dukegod/h5-demos/tree/master/demos/css-positon)
+
+[css实现水平滑动滑动](https://github.com/dukegod/h5-demos/tree/master/demos/css-slide-nowrap)
+
+[css控制显示省略号](https://github.com/dukegod/h5-demos/tree/master/demos/css-show-ellipsis)
 
 [视频加载](https://github.com/dukegod/h5-demos/tree/master/demos/loadvideo)
 
@@ -67,11 +77,7 @@ http://dukegod.github.io/h5-demos/+（具体的项目文件就可以访问）项
 
 [parabola 动画效果](https://github.com/dukegod/h5-demos/tree/master/demos/parabola)
 
-[定位服务](https://github.com/dukegod/h5-demos/tree/master/demos/positon)
-
 [个人常用默认样式总结](https://github.com/dukegod/h5-demos/tree/master/demos/reset-class)
-
-[css控制显示省略号](https://github.com/dukegod/h5-demos/tree/master/demos/show-ellipsis)
 
 [时间转为字符串](https://github.com/dukegod/h5-demos/tree/master/demos/time-trans-string)
 

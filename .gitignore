@@ -3,6 +3,7 @@
 *.map
 *.settings
 *.project
+**/*.DS_Store
 *.DS_Store
 .DS_Store
 
@@ -16,5 +17,3 @@ node_modules
 manifest.json
 
 .DS_Store
-
-
