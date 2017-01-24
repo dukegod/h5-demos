@@ -1,19 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-  <link rel="stylesheet" href="base.css"/>
   <title>绝对居中</title>
 </head>
 <style>
-  .a{
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  .a {
     position: fixed;
     width: 300px;
     height: 200px;
     top: 50%;
     left: 50%;
-    margin: -100px  0 0 -150px;
+    margin: -100px 0 0 -150px;
     z-index: 30;
     background-color: red;
     opacity: 0.8;
@@ -21,12 +25,14 @@
     font-style: italic;
     font-size: 22px;
   }
-  .box-login{
+
+  .box-login {
     display: none;
   }
 </style>
+
 <body>
-  <h2>第一dd种方案</h2>
+  <h2>第一dd种方案。通过fixed属性控制弹框为固定宽高的。</h2>
   <p><button class="js-open-box">click me </button></p>
   <div style="height: 300px;background-color: cadetblue"></div>
   <div style="height: 300px;background-color: cadetblue"></div>
@@ -41,29 +47,30 @@
   </div>
 
 
-  <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+  <script src="http://cdn.bootcss.com/jquery/3.0.0/jquery.js"></script>
   <script>
     var btn = $('button');
-    $('.js-open-box').on('click',function(){
+    $('.js-open-box').on('click', function() {
       $('.box-login').fadeIn(200);
-      $('body').css('overflow','hidden');
-      document.body.addEventListener('touchstart',function(e){
-        e.preventDefault();
-      },false)
+      $('body').css('overflow', 'hidden');
+      // document.body.addEventListener('touchstart', function(e) {
+      //   e.preventDefault();
+      // }, false)
     });
 
     //如果需要点击 overlay 关闭弹窗的话，注意阻止事件冒泡
-    $('.box-login .section').on('click',function(e){
+    $('.box-login .section').on('click', function(e) {
       console.log('event prevent');
-//      e.stopPropagation();
+      //      e.stopPropagation();
     });
-    $('.overlay').on('click',function(){
-      $('.box-login').fadeOut(200,function(){
-//        $(this).removeAttr('style');
+    $('.overlay').on('click', function() {
+      $('.box-login').fadeOut(200, function() {
+        //        $(this).removeAttr('style');
         console.log('gg');
       });
     });
   </script>
 
 </body>
+
 </html>
