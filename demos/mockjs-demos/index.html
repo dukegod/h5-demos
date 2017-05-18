@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>MockJs</title>
+</head>
+
+<body>
+    <h1>MockJs</h1>
+    <pre>
+
+    </pre>
+</body>
+
+</html>
+<!--jquery-->
+<script src="//cdn.bootcss.com/jquery/3.0.0/jquery.js"></script>
+<!--mockjs-->
+<script src="./mock-min.js"></script>
+<!--ajax模拟数据-->
+<script src="./ajax-data.js"></script>
+<!-- demo测试-->
+<script type="text/javascript">
+    $(function(){
+        //模拟ajax POST 请求发送
+        $.ajax({
+            type: 'POST',
+            url: '/Apage',
+            data: {} , //参数
+            //dataType : "jsonp",
+           // jsonp : '_callback',
+            success: function(res){
+                $('pre').append(
+                        "<p>请求URL：" + this.url + "</p>" +
+                        "<p>请求结果：" + res + "</p>"
+                );
+            }
+        });
+        //模拟Ajax Get 请求
+        $.ajax({
+            type: 'GET',
+            url: '/Bpage',
+            //dataType : "jsonp",
+            // jsonp : '_callback',
+            success: function(res){
+                 $('pre').append(
+                     "<p>请求URL：" + this.url + "</p>" +
+                     "<p>请求结果：" + res + "</p>"
+                 );
+            }
+        });
+    });
+</script>
