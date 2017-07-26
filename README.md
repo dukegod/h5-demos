@@ -12,18 +12,19 @@
 
 CDN引用说明，大部分引用http://www.bootcdn.cn/，更新的比较快，比较稳定
 
-+ zepto.js : //cdn.bootcss.com/zepto/1.2.0/zepto.min.js
-+ jquery : //cdn.bootcss.com/jquery/3.0.0/jquery.js
-
-+ css : mobi.css
-+ //cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css
++ zepto.js ://cdn.bootcss.com/zepto/1.2.0/zepto.min.js
++ jquery ://cdn.bootcss.com/jquery/3.0.0/jquery.js
++ css://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css
 
 ### 项目演示发布发布到 gh-pages
 
-```
+```js
 git subtree push --prefix=demos origin gh-pages
 ```
-http://dukegod.github.io/h5-demos/+（具体的项目文件就可以访问）项目演示
+
+`http://dukegod.github.io/h5-demos/`+（具体的项目文件就可以访问）项目演示
+
+[自定义事件研究](https://github.com/dukegod/h5-demos/tree/master/demos/custom-event)
 
 [移动端点击事件](https://github.com/dukegod/h5-demos/tree/master/demos/app-hover)
 

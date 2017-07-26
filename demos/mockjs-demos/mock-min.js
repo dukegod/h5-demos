@@ -8126,7 +8126,7 @@
 				new window.Event('custom')
 			} catch (exception) {
 				window.Event = function(type, bubbles, cancelable, detail) {
-					var event = document.createEvent('CustomEvent') // MUST be 'CustomEvent'
+					var event = document.createEvent('CustomEvent') // MUST be 'custom-event'
 					event.initCustomEvent(type, bubbles, cancelable, detail)
 					return event
 				}
