@@ -28,7 +28,7 @@
   <script src="debounce.js"></script>
   <script type="text/javascript">
     function log() {
-      console.log('直到滚动结束了，才会触发下一步操作',,new Date().getSeconds());
+      console.log('直到滚动结束了，才会触发下一步操作', new Date().getSeconds());  
     }
     document.getElementsByTagName('body')[0].onscroll = _.debounce(log, 1000);
   </script>
