@@ -27,8 +27,8 @@ if(){}else if(){}else{}
 ### for 循环 or for~in 
 
 ```
-{{ for(){ }}
-{{ } }}
+for(){ 
+}
 ```
 ### 数组循环 ~
 
