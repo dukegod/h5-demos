@@ -23,14 +23,15 @@
 </style>
 
 <body>
-  <div>text</div><div>text</div><div>text</div><div>text</div><div>text</div><div>text</div><div>text</div><div>text</div><div>text</div><div>text</div><div>text</div><div>text</div><div>text</div><div>text</div><div>text</div><div>text</div><div>text</div><div>text</div><div>text</div><div>text</div><div>text</div><div>text</div><div>text</div><div>text</div><div>text</div><div>text</div><div>text</div><div>text</div><div>text</div><div>text</div><div>text</div><div>text</div><div>text</div><div>text</div><div>text</div><div>text</div><div>text</div><div>text</div><div>text</div><div>text</div><div>text</div><div>text</div><div>text</div><div>text</div><div>text</div><div>text</div>
+  <div>text1</div><div>text2</div><div>text3</div><div>text4</div><div>text</div><div>text</div><div>text</div><div>text1</div><div>text2</div><div>text3</div><div>text4</div><div>text</div><div>text</div><div>text</div><div>text1</div><div>text2</div><div>text3</div><div>text4</div><div>text</div><div>text</div><div>text</div><div>text1</div><div>text2</div><div>text3</div><div>text4</div><div>text</div><div>text</div><div>text</div><div>text1</div><div>text2</div><div>text3</div><div>text4</div><div>text</div><div>text</div><div>text</div><div>text1</div><div>text2</div><div>text3</div><div>text4</div><div>text</div><div>text</div><div>text</div><div>text1</div><div>text2</div><div>text3</div><div>text4</div>
 
-  <script src="debounce.js"></script>
+  <script src="dl.js"></script>
   <script type="text/javascript">
     function log() {
+      console.log(this);
       console.log('直到滚动结束了，才会触发下一步操作', new Date().getSeconds());  
     }
-    document.getElementsByTagName('body')[0].onscroll = _.debounce(log, 1000);
+    document.getElementsByTagName('body')[0].onscroll = debounce(log, 1000, false);
   </script>
 </body>
 

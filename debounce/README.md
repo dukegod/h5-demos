@@ -5,3 +5,10 @@
 应用场景：
 + 浏览器resize，scroll
 + ajax的输出验证，一定时间只让其做一次验证
+
+
+
+文件说明：
++ d.js 自己实现
++ dl.js  underscore实现
++ deboounce.js lodash实现
