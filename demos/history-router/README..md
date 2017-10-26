@@ -22,7 +22,7 @@ HTML5引入了 history.pushState() 和 history.replaceState()方法，它们分�
 
 + 状态对象： 状态对象state是一个JavaScript对象，通过pushState () 创建新的历史记录条目。无论什么时候用户导航到新的状态，popstate事件就会被触发，且该事件的state属性包含该历史记录条目状态对象的副本。
 + 标题：目前被忽略
-+ URL：定义一个新的URL，但是**调用 pushState() 后浏览器并不会立即加载这个URL，但可能会在稍后某些情况下加载这个URL,也就是`window.onpopstate` 不会处理未激活的历史记录**
++ URL：定义一个新的URL，但是 **调用 pushState() 后浏览器并不会立即加载这个URL，但可能会在稍后某些情况下加载这个URL,也就是`window.onpopstate` 不会处理未激活的历史记录**
 
 **注意 pushState() 绝对不会触发 hashchange 事件，即使新的URL与旧的URL仅哈希不同也是如此**
 
@@ -67,6 +67,11 @@ popstate事件只会在浏览器某些行为下触发, 比如点击后退、前�
 5, onhashchange事件       
 
 这是一个HTML 5新增的事件，当#值发生变化时，就会触发这个事件
+
+
+## pajax
+
+[pajax](https://github.com/defunkt/jquery-pjax)就是pushState+ajax实现页面无刷新跳转
 
 参考
 
