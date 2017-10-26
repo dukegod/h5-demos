@@ -12,6 +12,7 @@
 
 
     <p>You are at coordinate <span id="coord">5</span> on the line.</p>
+    <p id="tr"></p>
     <p>
         <a href="?x=6" onclick="go(1); return false;">Advance to 6</a> or
         <a href="?x=4" onclick="go(-1); return false;">retreat to 4</a>?
@@ -22,10 +23,13 @@
         setupPage(currentPage + d);
         history.pushState(currentPage, document.title, '?x=' + currentPage);
       }
-      onpopstate = function(event) {
+      window.onpopstate = function(event) {
+        console.log('eventevent')
         setupPage(event.state);
       }
       function setupPage(page) {
+        console.log('page', page)
+
         currentPage = page;
         document.title = 'Line Game - ' + currentPage;
         document.getElementById('coord').textContent = currentPage;
