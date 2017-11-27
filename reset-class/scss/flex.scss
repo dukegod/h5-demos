@@ -1,0 +1,33 @@
+/*
+* created 2017-11-27 10:36:31
+*/
+@mixin fb-display(){
+  display: -webkit-box;
+  display: flex;
+}
+// 控制弹性盒
+@mixin fb-flex-flow($fd,$fw){
+  flex-direction: $fd;
+  flex-wrap: $fw;
+}
+@mixin fb-align-content($fac){
+  align-content: $fac;
+}
+@mixin fb-align-items($fai){
+  align-items: $fai;
+}
+@mixin fb-justify-content($fjc){
+  justify-content: $fjc
+}
+// 控制子元素的样式
+@mixin fb-flex($fg,$fs,$fb){
+  flex-grow:  $fg;
+  flex-shrink: $fs;
+  flex-basis: $fb;
+}
+@mixin fb-align-self($fas){
+  align-self: $fas;
+}
+@mixin fb-order($fo){
+  order: $fo;
+}
