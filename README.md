@@ -24,6 +24,11 @@ git subtree push --prefix=demos origin gh-pages
 
 `http://dukegod.github.io/h5-demos/`+（具体的项目文件就可以访问）项目演示
 
+
+[默认css样式总结](https://github.com/dukegod/h5-demos/tree/master/demos/reset-class)
+
+### 项目
+
 [自定义事件研究](https://github.com/dukegod/h5-demos/tree/master/demos/custom-event)
 
 [移动端点击事件](https://github.com/dukegod/h5-demos/tree/master/demos/app-hover)
@@ -77,8 +82,6 @@ git subtree push --prefix=demos origin gh-pages
 [模块移动](https://github.com/dukegod/h5-demos/tree/master/demos/move-block)
 
 [parabola 动画效果](https://github.com/dukegod/h5-demos/tree/master/demos/parabola)
-
-[个人常用默认样式总结](https://github.com/dukegod/h5-demos/tree/master/demos/reset-class)
 
 [时间转为字符串](https://github.com/dukegod/h5-demos/tree/master/demos/time-trans-string)
 
