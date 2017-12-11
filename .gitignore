@@ -9,6 +9,7 @@
 
 .settings
 .idea
+.vscode
 
 bower_components
 

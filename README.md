@@ -77,6 +77,8 @@ git subtree push --prefix=demos origin gh-pages
 
 [css控制显示省略号](https://github.com/dukegod/h5-demos/tree/master/demos/css-show-ellipsis)
 
+[css控制属性position的属性](https://github.com/dukegod/h5-demos/tree/master/demos/css-position-fixed)
+
 [视频加载](https://github.com/dukegod/h5-demos/tree/master/demos/loadvideo)
 
 [模块移动](https://github.com/dukegod/h5-demos/tree/master/demos/move-block)
