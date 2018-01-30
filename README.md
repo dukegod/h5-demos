@@ -31,6 +31,8 @@ git subtree push --prefix=demos origin gh-pages
 
 [自定义事件研究](https://github.com/dukegod/h5-demos/tree/master/demos/custom-event)
 
+[数据双向绑定](https://github.com/dukegod/h5-demos/tree/master/demos/shu-ju-shuang-xiang-bang-ding)
+
 [移动端点击事件](https://github.com/dukegod/h5-demos/tree/master/demos/app-hover)
 
 [background_size](https://github.com/dukegod/h5-demos/tree/master/demos/background-size)

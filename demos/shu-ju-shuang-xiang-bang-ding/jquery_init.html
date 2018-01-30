@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>jquery 实现数据的双向绑定问题</title>
+    <link rel="stylesheet" href="./bootstrap.css">
+</head>
+<body class="container">
+    <h3> 数据的双向绑定 </h3>
+
+    <div class="input-group">
+        <span class="input-group-addon" id="basic-addon1">输入:</span>
+        <input data-bind-namespace="name" type="text" class="form-control" placeholder="Username" aria-describedby="basic-addon1">
+    </div>
+
+    <div class="list-group">
+        <h4> 你输入的内容为： </h4>
+        <p data-bind-namespace="name"></p>
+    </div>
+
+    <!--<script type="text/javascript" src="./jquery.js"></script>-->
+    <script type="text/javascript" src="//cdn.bootcss.com/jquery/3.0.0/jquery.js"></script>
+    <script>
+      function DataBinder(object_id){
+        //使用一个jQuery对象作为简单的订阅者发布者
+        var pubSub = jQuery({});
+
+        //我们希望一个data元素可以在表单中指明绑定：data-bind-<object_id>="<property_name>"
+        var data_attr = "bind-" + object_id,
+          message = object_id + ":change";
+
+        //使用data-binding属性和代理来监听那个元素上的变化事件
+        // 以便变化能够“广播”到所有的关联对象
+
+        jQuery(document).on("change","[data-" + data_attr + "]",function() {
+          var $input = jQuery(this);
+          pubSub.trigger(message, [$input.data(data_attr), $input.val()]);
+        });
+
+        //PubSub将变化传播到所有的绑定元素，设置input标签的值或者其他标签的HTML内容
+        pubSub.on(message, function(evt, prop_name, new_val){
+          jQuery("[data-" + data_attr + "=" + prop_name + "]").each(function(){
+            var $bound = jQuery(this);
+            if($bound.is("input,select")){
+              $bound.val(new_val);
+              console.log(new_val)
+            }else{
+              console.log(new_val)
+              $bound.html(new_val);
+            }
+          });
+        });
+        return pubSub;
+      }
+
+
+      function User(uid){
+        var binder = new DataBinder(uid)
+
+        return user = {
+            attributes: {},
+            //属性设置器使用数据绑定器PubSub来发布变化
+            set: function(attr_name, val){
+              this.attributes[attr_name] = val;
+              binder.trigger(uid + ":change", [attr_name, val, this]);
+            },
+
+            get: function(attr_name){
+              return this.attributes[attr_name];
+            },
+
+            _binder: binder
+          };
+
+        binder.on(uid +":change",function(evt, attr_name, new_val, initiator){
+          if(initiator !== user) {
+            user.set(attr_name,new_val);
+          }
+        })
+      }
+
+      var user = new User('namespace');
+      user.set("name","content");
+
+    </script>
+</body>
+</html>
