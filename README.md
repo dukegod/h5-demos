@@ -71,6 +71,8 @@ git subtree push --prefix=demos origin gh-pages
 
 [各种高度宽度总结](https://github.com/dukegod/h5-demos/tree/master/demos/kinds-of-height-width)
 
+[正则匹配emoji表情，特殊字符串](https://github.com/dukegod/h5-demos/tree/master/demos/input-content-limit)
+
 ### 控制样式居中，弹框样式，css实现滑动
 
 [css控制居中与模态框总结](https://github.com/dukegod/h5-demos/tree/master/demos/css-positon)

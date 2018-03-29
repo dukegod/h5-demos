@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title> 输入内容相关的控制 </title>
+  <style type="text/css">
+    button{
+      font-size: 20px;
+    }
+    input {
+      font-size: 16px;
+      height: 50px;
+    }
+  </style>
+</head>
+<body>
+  <input id="inpBtn" type="text" name="" value="">
+  <div>
+    <button id="btn"> submit </button>
+  </div>  
+  <script type="text/javascript">
+
+    document.getElementById('btn').addEventListener('click', function (argument) {
+      /* body... */
+      var val = document.getElementById('inpBtn').value;
+
+      //  匹配emoji表情
+      var emoj = (/\uD83C[\uDF00-\uDFFF]|\uD83D[\uDC00-\uDE4F]/ig).test(val)
+      
+      // 特殊符号匹配 
+      var rv=(/[\u0021|\uff01|\u0040|\u0023|\u0024|\u0025|\u0026|\u002a|\u005e|\u300a|\u300b|\u3008|\u3009|\u3010|\u3011|\u300e|\u300f|\u300c|\u300d|\ufe43|\ufe44|\u3014|\u3015|\u2026|\u2014|\uff5e|\ufe4f|\uffe5]/ig).test(val)
+
+      console.log(emj);
+      console.log(rv);
+      console.log(val);
+    }, false)
+  </script>
+</body>
+</html>
