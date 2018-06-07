@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>padding</title>
+    <style rel="stylesheet/css">
+        body {
+            margin: 0;
+            /*color: red;*/
+        }
+
+        .div {
+            padding: 50%;
+            background-color: yellow;
+        }
+
+        .span {
+            padding: 50%;
+            background-color: red;
+            font-size: 0;
+        }
+        .button {
+            position: absolute;
+            clip: rect(0 0 0 0);
+        }
+        .label {
+            display: inline-block;
+            line-height: 20px;
+            padding: 10px;
+        }
+
+        .icon-menu {
+            display: inline-block;
+            width: 140px; height: 10px;
+            padding: 35px 0;
+            border-top: 10px solid;
+            border-bottom: 10px solid;
+            background-color: currentColor;
+            background-clip: content-box;
+        }
+        .icon-dot {
+            display: inline-block;
+            width: 100px; height: 100px;
+            padding: 10px;
+            border: 10px solid red;
+            border-radius: 50%;
+            background-color: currentColor;
+            background-clip: content-box;
+        }
+
+        .father {
+            width: 300px;
+            background-color: #f0f3f9;
+        }
+        .son {
+            width: 200px; height: 120px;
+            margin-right: 80px;
+            margin-left: auto;
+            background-color: #cd0000;
+        }
+
+    </style>
+</head>
+<body>
+    <!--<div class="div"></div>-->
+    <!--<span class="span"></span>-->
+
+
+    <!--<button id="btn" class="button"></button>-->
+    <!--<label for="btn" class="label">按钮</label>-->
+
+    <!--<i class="icon-menu"></i>-->
+    <!--<i class="icon-dot"></i>-->
+
+    <div class="father">
+        <div class="son"></div>
+    </div>
+
+</body>
+</html>
