@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>垂直居中</title>
+</head>
+<style>
+    .container {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        /* for IE9+ */
+        background: rgba(0, 0, 0, .5);
+        text-align: center;
+        white-space: nowrap;
+        z-index: 99;
+    }
+
+    .container:after {
+        content: "";
+        display: inline-block;
+        height: 100%;
+        vertical-align: middle;
+    }
+
+    .dialog {
+        display: inline-block;
+        vertical-align: middle;
+        border-radius: 6px;
+        background-color: #fff;
+        text-align: left;
+        white-space: normal;
+    }
+
+    .content {
+        width: 240px;
+        height: 120px;
+        padding: 20px;
+        transition: height 2s ease-in-out;
+    }
+
+</style>
+<body>
+<div class="container">
+    <div class="dialog">
+        <div class="content">内容占位</div>
+    </div>
+</div>
+</body>
+</html>
