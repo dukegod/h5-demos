@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>BFC</title>
+</head>
+
+<style type="text/css">
+    body {
+        margin: 0;
+    }
+
+    section {
+        width: 400px;
+        height: 400px;
+        background-color: #7f9fd4;
+        /*opacity: 0.3;*/
+    }
+    .left-block{
+        float: left;
+        width: 200px;
+        height: 200px;
+        background-color: #3c763d;
+        margin-right: 50px;
+    }
+    .left-block::after {
+        display: block;
+        content: '';
+        clear: both;
+    }
+    .right-block {
+        /*overflow: hidden;*/
+    }
+</style>
+
+<body>
+
+<section>
+    <div class="left-block">
+
+    </div>
+    <p class="right-block">
+        正常显示的文字的大小，是不是会换行显示，我也不知道正常显示的文字的大小，是不是会换行显示，我也不知道正常显示的文字的大小，是不是会换行显示，我也不知道正常显示的文字的大小，是不是会换行显示，我也不知正常显示的文字的大小，是不是会换行显示，我也不知道正常显示的文字的大小，是不是会换行显示，我也不知道正常显示的文字的大小，是不是会换行显示，我也不知道正常显示的文字的大小，是不是会换行显示，我也不知道正常显示的文字的大小，是不是会换行显示，我也不知道正常显示的文字的大小，是不是会换行显示，我也不知道正常显示的文字的大小，是不是会换行
+    </p>
+
+</section>
+
+</body>
+</html>
