@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>outline 填充整个屏幕</title>
+</head>
+<style type="text/css">
+  .footer {
+    height: 50px;
+}
+.footer > p {
+    position: absolute;
+    left: 0; right: 0;
+    text-align: center;
+    padding: 15px 0;
+    background-color: #a0b3d6;
+    outline: 9999px solid #a0b3d6;
+    clip: rect(0 9999px 9999px 0);
+}
+</style>
+<body>
+<div class="footer">
+    <!-- <p> 借鉴来自 <a href="http://demo.cssworld.cn/11/1-2.php">demo</a> </p> -->
+    <p>Designed &amp; Powered by zhangxinxu</p>
+</div>
+</body>
+</html>
