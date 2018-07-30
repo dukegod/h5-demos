@@ -1,29 +1,33 @@
-var zepto = {}, $;
+var zepto = (function () {
 
-function Z(params) {
-  this.params = params;
-}
+  var zepto = {}, $;
 
-zepto.Z = function(v) {
-  console.log(v)
-  return new Z('zepto prototype')
-}
-
-zepto.init = function(v) {
-  return zepto.Z(v)
-}
-
-$ = function (params) {
-  return zepto.init()
-}
-
-$.fn = {
-  constructor: zepto.Z,
-  method: function() {
-    return this
+  function Z(params) {
+    this.params = params;
   }
-}
 
-zepto.Z.prototype = Z.prototype = $.fn
+  zepto.Z = function(v) {
+    console.log(v)
+    return new Z('zepto prototype')
+  }
 
-return $
+  zepto.init = function(v) {
+    return zepto.Z(v)
+  }
+
+  $ = function (params) {
+    return zepto.init(params)
+  }
+
+  $.fn = {
+    constructor: zepto.Z,
+    method: function() {
+      return this
+    }
+  }
+
+  zepto.Z.prototype = Z.prototype = $.fn
+
+  return $
+})()
+
