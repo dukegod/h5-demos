@@ -1,0 +1,9 @@
+build/*.js
+config/*.js
+.DS_Store
+node_modules/
+dist/
+npm-debug.log
+*.map
+.idea
+.vscode
