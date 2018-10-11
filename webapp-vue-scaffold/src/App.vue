@@ -5,31 +5,37 @@
     <div class="box3"></div>
     <div class="box4"></div>
     <div class="box5"></div>
+    <mt-button type="default">default</mt-button>
+    <mt-button type="primary">primary</mt-button>
+    <mt-button type="danger">danger</mt-button>
   </div>
 </template>
 <script>
+  import Vue from 'vue';
+  import { MessageBox } from 'mint-ui';
+  import { Button } from 'mint-ui';
 
-import { MessageBox } from 'mint-ui';
-export default {
+  Vue.component(Button.name, Button);
 
-  mounted(){
-    MessageBox({
-  title: '提示',
-  message: '确定执行此操作?',
-  showCancelButton: true
-});
-  }
-}
+  export default {
+    mounted() {
+      // MessageBox({
+      //   title: '提示',
+      //   message: '确定执行此操作?',
+      //   // showCancelButton: true
+      // });
+    }
+  };
 </script>
 
 <style>
-* {
-  margin: 0;
-  padding: 0;
-}
-</style>
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  </style>
 
-<style lang="less" scoped>
+  <style lang="less" scoped>
   .wrapper div {
     height: 1rem;
   }
