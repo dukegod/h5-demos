@@ -11,7 +11,7 @@
 </head>
 
 <body>
-  <h2>1</h2>
+  <h2>控制第一个区域</h2>
   <label>flex-grow:
     <input id="fg" type="text" name="">
   </label>
@@ -21,7 +21,7 @@
   <label>flex-basis:
     <input id="fb" type="text" name="">
   </label>
-  <h2>1</h2>
+  <h2>控制第二个区域</h2>
   <label>flex-grow:
     <input id="fg2" type="text" name="">
   </label>
@@ -31,7 +31,7 @@
   <label>flex-basis:
     <input id="fb2" type="text" name="">
   </label>
-  <h2>1</h2>
+  <h2>控制第三个区域</h2>
   <label>flex-grow:
     <input id="fg3" type="text" name="">
   </label>
@@ -42,6 +42,9 @@
     <input id="fb3" type="text" name="">
   </label>
   <button type="buttom"> comfirm </button>
+
+  <h2> 效果图，总宽度为600px, 初始，flex-basic： auto ； flex-grow:1; flex-shrink: 1 </h2>
+
   <div id="flexFirst">
     <div class="group">
       <div class="item1">一</div>
@@ -50,49 +53,33 @@
     </div>
   </div>
   <hr>
-  <h2>flex</h2>
-  <div class="group-test">
-    <div class="item1">一</div>
-    <div class="item2">二</div>
-    <div class="item3">三</div>
-  </div>
-  <hr>
-
-  <h2>| box-normal </h2>
-<div class="group-box-normal">
-  <div class="item1"></div>
-  <div class="item2"></div>
-  <div class="item3"></div>
-</div>
-<hr/>
-
 
 </body>
 <script type="text/javascript" charset="utf-8" async defer>
-function modifyAttribute() {
-  var fg = document.getElementById('fg').value;
-  var fs = document.getElementById('fs').value;
-  var fb = document.getElementById('fb').value;
-  document.getElementsByClassName('item1')[0].style.flexGrow = fg;
-  document.getElementsByClassName('item1')[0].style.flexShrink = fs;
-  document.getElementsByClassName('item1')[0].style.flexBasis = fb + 'px';
+  function modifyAttribute() {
+    var fg = document.getElementById('fg').value;
+    var fs = document.getElementById('fs').value;
+    var fb = document.getElementById('fb').value;
+    document.getElementsByClassName('item1')[0].style.flexGrow = fg;
+    document.getElementsByClassName('item1')[0].style.flexShrink = fs;
+    document.getElementsByClassName('item1')[0].style.flexBasis = fb + 'px';
 
-  var fg2 = document.getElementById('fg2').value;
-  var fs2 = document.getElementById('fs2').value;
-  var fb2 = document.getElementById('fb2').value;
-  document.getElementsByClassName('item2')[0].style.flexGrow = fg2;
-  document.getElementsByClassName('item2')[0].style.flexShrink = fs2;
-  document.getElementsByClassName('item2')[0].style.flexBasis = fb2 + 'px';
+    var fg2 = document.getElementById('fg2').value;
+    var fs2 = document.getElementById('fs2').value;
+    var fb2 = document.getElementById('fb2').value;
+    document.getElementsByClassName('item2')[0].style.flexGrow = fg2;
+    document.getElementsByClassName('item2')[0].style.flexShrink = fs2;
+    document.getElementsByClassName('item2')[0].style.flexBasis = fb2 + 'px';
 
-  var fg3 = document.getElementById('fg3').value;
-  var fs3 = document.getElementById('fs3').value;
-  var fb3 = document.getElementById('fb3').value;
-  document.getElementsByClassName('item3')[0].style.flexGrow = fg3;
-  document.getElementsByClassName('item3')[0].style.flexShrink = fs3;
-  document.getElementsByClassName('item3')[0].style.flexBasis = fb3 + 'px';
-}
+    var fg3 = document.getElementById('fg3').value;
+    var fs3 = document.getElementById('fs3').value;
+    var fb3 = document.getElementById('fb3').value;
+    document.getElementsByClassName('item3')[0].style.flexGrow = fg3;
+    document.getElementsByClassName('item3')[0].style.flexShrink = fs3;
+    document.getElementsByClassName('item3')[0].style.flexBasis = fb3 + 'px';
+  }
 
-document.getElementsByTagName('button')[0].addEventListener('click', modifyAttribute, false);
+  document.getElementsByTagName('button')[0].addEventListener('click', modifyAttribute, false);
 </script>
 
 </html>
