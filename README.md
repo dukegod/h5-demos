@@ -112,3 +112,14 @@ git subtree push --prefix=demos origin gh-pages
 [safari-body](https://github.com/dukegod/h5-demos/tree/master/demos/safari-body)
 
 []()
+
+
+### 布局
+
+flex + rem + dpr 动态适配m端布局方案demos  
+[传统布局](http://blog.stakecode.com/h5-demos/viewport-pro/normal.html)  
+[动态修改dpr](http://blog.stakecode.com/h5-demos/viewport-pro/dpr.html)  
+[动态修改dpr与rem](http://blog.stakecode.com/h5-demos/viewport-pro/dpr-rem.html)  
+[最终方案，兼容三方插件](http://blog.stakecode.com/h5-demos/viewport-pro/index.html)  
+[]()  
+[]()  
