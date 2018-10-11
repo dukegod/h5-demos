@@ -6,7 +6,7 @@ module.exports = {
     "autoprefixer": {
       browsers: ['ios >=4', 'android >=4', 'android 2.2', 'last 5 version'],
     },
-    // "postcss-px2rem": {remUnit: 37.5},
-    "postcss-px2rem": {remUnit: 75}
+    "postcss-px2rem": {remUnit: 37.5}
+    // "postcss-px2rem": {remUnit: 75}
   }
 }
