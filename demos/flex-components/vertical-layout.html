@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>两栏目布局</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    .top {
+      flex: 0 0 100px;
+      background-color: bisque;
+    }
+    .middle {
+      height: calc(100% - 300px);
+      /* flex: 0 0 200px; */
+      background-color: beige;
+      overflow: auto;
+    }
+    .mid-sr{
+      height: 2000px;
+    }
+    .bot{
+      /* flex: 0 0 100px; */
+      flex: 0 0 200px;
+      background-color: blueviolet
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="top">头部</div>
+    <div class="middle">
+      内容区
+      <div class="mid-sr">
+        滚动区域
+      </div>
+    </div>
+    <div class="bot">底部信息</div>
+  </div>  
+</body>
+</html>
