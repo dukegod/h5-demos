@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>两栏目布局</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+    }
+    .left-fixed {
+      flex: 0 0 200px;
+      background-color: bisque;
+    }
+    .middle {
+      width: calc(100% - 300px);
+      background-color: beige;
+    }
+    .right{
+      flex: 0 0 100px;
+      background-color: blueviolet
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="left-fixed">
+
+    </div>
+    <div class="middle"></div>
+    <div class="right">
+
+    </div>
+  </div>  
+</body>
+</html>
