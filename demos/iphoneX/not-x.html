@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="">
+    <title>未做设配iPhone x</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        width: 100vw;
+        height: 100vh;
+    }
+
+    .fixed {
+        position: fixed;
+        bottom: 150px;
+        right: 0;
+        width: 44px;
+        height: 44px;
+        background-color: black;
+        padding-top: 20px; /* Status bar height */
+        color: white;
+    }
+
+    header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 44px;
+        background-color: #2b2d2f;
+        padding-top: 20px; /* Status bar height */
+        color: white;
+    }
+
+    footer {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 100px;
+        background-color: #2b2d2f;
+        padding-top: 20px; /* Status bar height */
+        color: white;
+    }
+</style>
+<body>
+    <header>
+        header
+    </header>
+    <h4>带来一版本的iPhone的适配的demos</h4>
+    <div style="height: 1000px; background-color: #000;"></div>
+    <footer> bottom bar</footer>
+    <div class="fixed">
+        浮动快
+    </div>
+</body>
+</html>

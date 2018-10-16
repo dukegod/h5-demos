@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="">
+    <title>设配iPhone x</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        width: 100vw;
+        height: 100vh;
+        padding-bottom: constant(safe-area-inset-bottom);
+        padding-bottom: env(safe-area-inset-bottom);
+    }
+
+    .fixed {
+        position: fixed;
+        bottom: 150px;
+        right: 0;
+        width: 44px;
+        height: 44px;
+        background-color: black;
+        padding-top: 20px; /* Status bar height */
+        margin-bottom: constant(safe-area-inset-bottom);
+        margin-bottom: env(safe-area-inset-bottom);
+        color: white;
+    }
+
+    header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 44px;
+        background-color: #2b2d2f;
+        padding-top: 20px; /* Status bar height */
+        /* Status bar height on iOS 11.0 */
+        padding-top: constant(safe-area-inset-top);
+        /* Status bar height on iOS 11+ */
+        padding-top: env(safe-area-inset-top);
+        color: white;
+    }
+
+    footer {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 100px;
+        background-color: #2b2d2f;
+        padding-top: 20px; /* Status bar height */
+        padding-bottom: constant(safe-area-inset-bottom);
+        padding-bottom: env(safe-area-inset-bottom);
+        color: white;
+    }
+    article {
+        height: 1000px;
+        background-color: black;
+    }
+    @supports (bottom: constant(safe-area-inset-bottom)) or (bottom: env(safe-area-inset-bottom)) {
+        article {
+            background-color: #eba5a3;
+        }
+    }
+</style>
+<body>
+<header>
+    header
+</header>
+<h4>带来一版本的iPhone的适配的demos</h4>
+<article>
+
+</article>
+<footer> bottom bar</footer>
+<div class="fixed">
+    浮动快
+</div>
+</body>
+</html>
