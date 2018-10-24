@@ -1,12 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>grid 布局</title>
+  <title>grid 布局-三栏目布局方式</title>
+  <style>
+    .wrapper {
+      display: grid;
+      /*grid-template-columns: 1fr 1fr 1fr;*/
+      grid-template-columns: 300px 300px;
+      grid-auto-rows: fit-content(300px);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    .wrapper {
+      border: 2px solid #f76707;
+      border-radius: 5px;
+      background-color: #fff4e6;
+    }
+
+    .wrapper>div {
+      border: 2px solid #ffa94d;
+      border-radius: 5px;
+      background-color: #ffd8a8;
+      padding: 1em;
+      color: #d9480f;
+    }
+
+    .nested {
+      border: 2px solid #ffec99;
+      border-radius: 5px;
+      background-color: #fff9db;
+      padding: 1em;
+    }
+  </style>
 </head>
+
 <body>
-    
+
+<div class="wrapper">
+  <div>One</div>
+  <div>Two</div>
+  <div>Three</div>
+  <div>4</div>
+  <div>5</div>
+</div>
 </body>
+
 </html>
