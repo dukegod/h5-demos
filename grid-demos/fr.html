@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>fr</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    article {
+        display: grid;
+        /*grid-template-columns: repeat(4, 25%);*/
+        grid-template-columns: repeat(4, 1fr);
+        grid-column-gap: 10px;
+    }
+    div {
+        /*height: 100px;*/
+        border: 1px solid red;
+    }
+</style>
+<body>
+<article>
+    <div class="one">1</div>
+    <div class="one">2</div>
+    <div class="one">3</div>
+    <div class="one">4</div>
+</article>
+</body>
+</html>
