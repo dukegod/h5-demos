@@ -104,74 +104,78 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 
   // Override the current require with this new one
   return newRequire;
-})({"../../../.nvm/versions/node/v10.0.0/lib/node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
-var bundleURL = null;
+})({"src/libs/resolution.js":[function(require,module,exports) {
+/**
+ * 动态修改META
+ */
+var W = window;
+var R = window.reslut || (window.resolution = {});
 
-function getBundleURLCached() {
-  if (!bundleURL) {
-    bundleURL = getBundleURL();
-  }
+var i = 0,
+    initScale = 0,
+    doc = W.document,
+    html = doc.documentElement,
+    dpr = W.devicePixelRatio ? Math.floor(W.devicePixelRatio) : 1,
+    x = (W.navigator.appVersion.match(/android/gi), W.navigator.appVersion.match(/iphone/gi)),
+    i = x ? dpr >= 3 && (!i || i >= 3) ? 3 : dpr >= 2 && (!i || i >= 2) ? 2 : 1 : 1,
+    dpr = i,
+    initScale = 1 / dpr,
+    metaViewport = document.querySelector('meta[name="viewport"]'),
+    timer,
+    setRootREM = function setRootREM(width) {
+  var htmlWidth = html.getBoundingClientRect().width || W.innerWidth;
+  htmlWidth / dpr > 540 && (htmlWidth = 540 * dpr);
+  console.log("dpr-dpr , ".concat((dpr, htmlWidth)));
+  var fontSize = htmlWidth / 10; // html.style.width = htmlWidth + "px";
 
-  return bundleURL;
+  html.style.fontSize = fontSize + "px";
+  html.setAttribute('data-dpr', dpr);
+  R.rem = window.rem = fontSize;
+};
+
+metaViewport && (metaViewport.remove ? metaViewport.remove() : metaViewport.parentElement.removeChild(metaViewport));
+metaViewport = doc.createElement("meta");
+metaViewport.setAttribute("name", "viewport");
+metaViewport.setAttribute("content", "width=device-width, initial-scale=" + initScale + ", maximum-scale=" + initScale + ", minimum-scale=" + initScale + ", user-scalable=no");
+
+if (html.firstElementChild) {
+  html.firstElementChild.appendChild(metaViewport);
+} else {
+  var div = doc.createElement("div");
+  div.appendChild(metaViewport), doc.write(div.innerHTML);
 }
 
-function getBundleURL() {
-  // Attempt to find the URL of the current script and use that as the base URL
-  try {
-    throw new Error();
-  } catch (err) {
-    var matches = ('' + err.stack).match(/(https?|file|ftp):\/\/[^)\n]+/g);
+W.addEventListener('resize', function () {
+  clearTimeout(timer);
+  timer = setTimeout(setRootREM, 300);
+});
+W.addEventListener('pageshow', function (e) {
+  e.persisted && (clearTimeout(timer), timer = setTimeout(setRootREM, 300));
+});
 
-    if (matches) {
-      return getBaseURL(matches[0]);
-    }
-  }
-
-  return '/';
+if ("complete" === doc.readyState) {
+  //doc.body.style.fontSize = 14 * dpr + "px";
+  doc.body.style.display = '';
+} else {
+  doc.addEventListener("DOMContentLoaded", function () {
+    //doc.body.style.fontSize = 14 * dpr + "px";
+    doc.body.style.display = '';
+  }, !1);
 }
 
-function getBaseURL(url) {
-  return ('' + url).replace(/^((?:https?|file|ftp):\/\/.+)\/[^/]+$/, '$1') + '/';
-}
-
-exports.getBundleURL = getBundleURLCached;
-exports.getBaseURL = getBaseURL;
-},{}],"../../../.nvm/versions/node/v10.0.0/lib/node_modules/parcel-bundler/src/builtins/css-loader.js":[function(require,module,exports) {
-var bundle = require('./bundle-url');
-
-function updateLink(link) {
-  var newLink = link.cloneNode();
-
-  newLink.onload = function () {
-    link.remove();
-  };
-
-  newLink.href = link.href.split('?')[0] + '?' + Date.now();
-  link.parentNode.insertBefore(newLink, link.nextSibling);
-}
-
-var cssTimeout = null;
-
-function reloadCSS() {
-  if (cssTimeout) {
-    return;
-  }
-
-  cssTimeout = setTimeout(function () {
-    var links = document.querySelectorAll('link[rel="stylesheet"]');
-
-    for (var i = 0; i < links.length; i++) {
-      if (bundle.getBaseURL(links[i].href) === bundle.getBundleURL()) {
-        updateLink(links[i]);
-      }
-    }
-
-    cssTimeout = null;
-  }, 50);
-}
-
-module.exports = reloadCSS;
-},{"./bundle-url":"../../../.nvm/versions/node/v10.0.0/lib/node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"../../../.nvm/versions/node/v10.0.0/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+setRootREM(); // R.dpr = dpr,
+// R.refreshRem = setRootREM,
+// R.rem2px = function (d) {
+//   var c = parseFloat(d) * this.rem;
+//   return "string" == typeof d && d.match(/rem$/) && (c += "px"),
+//   c
+// },
+// R.px2rem = function (d) {
+//   var c = parseFloat(d) / this.rem;
+//   return "string" == typeof d && d.match(/px$/) && (c += "rem"),
+//   c
+// }
+},{}],"../../../.nvm/versions/node/v10.0.0/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -198,7 +202,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49388" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59581" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);
@@ -340,4 +344,5 @@ function hmrAccept(bundle, id) {
     return hmrAccept(global.parcelRequire, id);
   });
 }
-},{}]},{},["../../../.nvm/versions/node/v10.0.0/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js"], null)
+},{}]},{},["../../../.nvm/versions/node/v10.0.0/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js","src/libs/resolution.js"], null)
+//# sourceMappingURL=/resolution.2c19085c.map

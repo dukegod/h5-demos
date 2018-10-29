@@ -2,7 +2,6 @@
  * 动态修改META
  */
 
-export default () => {
   var W = window;
   var R = window.reslut || (window.resolution = {});
   var i = 0,
@@ -19,8 +18,9 @@ export default () => {
   setRootREM = function (width) {
     var htmlWidth = html.getBoundingClientRect().width || W.innerWidth;
     htmlWidth / dpr > 540 && (htmlWidth = 540 * dpr);
+    console.log(`dpr-dpr , ${dpr, htmlWidth}`)
     var fontSize = htmlWidth / 10;
-    // html.style.width = htmlWidth + "px";    
+    // html.style.width = htmlWidth + "px";
     html.style.fontSize = fontSize + "px";
     html.setAttribute('data-dpr', dpr);
     R.rem = window.rem = fontSize;
@@ -53,16 +53,16 @@ export default () => {
     }, !1);
   }
   setRootREM();
-  R.dpr = dpr,
-  R.refreshRem = setRootREM,
-  R.rem2px = function (d) {
-    var c = parseFloat(d) * this.rem;
-    return "string" == typeof d && d.match(/rem$/) && (c += "px"),
-    c
-  },
-  R.px2rem = function (d) {
-    var c = parseFloat(d) / this.rem;
-    return "string" == typeof d && d.match(/px$/) && (c += "rem"),
-    c
-  }
-};
+  // R.dpr = dpr,
+  // R.refreshRem = setRootREM,
+  // R.rem2px = function (d) {
+  //   var c = parseFloat(d) * this.rem;
+  //   return "string" == typeof d && d.match(/rem$/) && (c += "px"),
+  //   c
+  // },
+  // R.px2rem = function (d) {
+  //   var c = parseFloat(d) / this.rem;
+  //   return "string" == typeof d && d.match(/px$/) && (c += "rem"),
+  //   c
+  // }
+

@@ -1,3 +1,7 @@
-# parcel-scaffold
+# viewport 移动端布局总结
 
-新一代的前端构建工具，让你从复杂的webpack中解脱
++ normal 正常
++ dpr 处理
++ dpr-rem 处理
++ index 处理
++ vw-wh

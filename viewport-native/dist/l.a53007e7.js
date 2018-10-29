@@ -104,79 +104,152 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 
   // Override the current require with this new one
   return newRequire;
-})({"../../../.nvm/versions/node/v10.0.0/lib/node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
-var bundleURL = null;
+})({"src/libs/l.js":[function(require,module,exports) {
+var define;
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
-function getBundleURLCached() {
-  if (!bundleURL) {
-    bundleURL = getBundleURL();
+/*
+ * magic-viewport
+ */
+(function (factory) {
+  if ((typeof module === "undefined" ? "undefined" : _typeof(module)) === "object" && _typeof(module.exports) === "object") {
+    var v = factory(require, exports);
+    if (v !== undefined) module.exports = v;
+  } else if (typeof define === "function" && define.amd) {
+    define(["require", "exports"], factory);
   }
+})(function (require, exports) {
+  "use strict";
 
-  return bundleURL;
-}
-
-function getBundleURL() {
-  // Attempt to find the URL of the current script and use that as the base URL
-  try {
-    throw new Error();
-  } catch (err) {
-    var matches = ('' + err.stack).match(/(https?|file|ftp):\/\/[^)\n]+/g);
-
-    if (matches) {
-      return getBaseURL(matches[0]);
-    }
-  }
-
-  return '/';
-}
-
-function getBaseURL(url) {
-  return ('' + url).replace(/^((?:https?|file|ftp):\/\/.+)\/[^/]+$/, '$1') + '/';
-}
-
-exports.getBundleURL = getBundleURLCached;
-exports.getBaseURL = getBaseURL;
-},{}],"../../../.nvm/versions/node/v10.0.0/lib/node_modules/parcel-bundler/src/builtins/css-loader.js":[function(require,module,exports) {
-var bundle = require('./bundle-url');
-
-function updateLink(link) {
-  var newLink = link.cloneNode();
-
-  newLink.onload = function () {
-    link.remove();
+  var opt = {
+    fontSize: 14,
+    baseWidth: 540,
+    baseScale: 0
   };
 
-  newLink.href = link.href.split('?')[0] + '?' + Date.now();
-  link.parentNode.insertBefore(newLink, link.nextSibling);
-}
-
-var cssTimeout = null;
-
-function reloadCSS() {
-  if (cssTimeout) {
-    return;
-  }
-
-  cssTimeout = setTimeout(function () {
-    var links = document.querySelectorAll('link[rel="stylesheet"]');
-
-    for (var i = 0; i < links.length; i++) {
-      if (bundle.getBaseURL(links[i].href) === bundle.getBundleURL()) {
-        updateLink(links[i]);
-      }
+  var MagicViewport =
+  /** @class */
+  function () {
+    function MagicViewport(opt) {
+      this.bScale = opt.baseScale;
+      this.fSize = opt.fontSize;
+      this.bWidth = opt.baseWidth;
+      this.dpr = 0;
+      this.timer = 0;
+      this.init();
     }
 
-    cssTimeout = null;
-  }, 50);
-}
+    Object.defineProperty(MagicViewport.prototype, "$Win", {
+      get: function get() {
+        return window;
+      },
+      enumerable: true,
+      configurable: true
+    });
+    Object.defineProperty(MagicViewport.prototype, "$doc", {
+      get: function get() {
+        return window.document;
+      },
+      enumerable: true,
+      configurable: true
+    });
+    Object.defineProperty(MagicViewport.prototype, "$html", {
+      get: function get() {
+        return this.$doc.documentElement;
+      },
+      enumerable: true,
+      configurable: true
+    });
+    Object.defineProperty(MagicViewport.prototype, "$dpr", {
+      get: function get() {
+        return this.$Win.devicePixelRatio || 1;
+      },
+      enumerable: true,
+      configurable: true
+    });
+    Object.defineProperty(MagicViewport.prototype, "$version", {
+      get: function get() {
+        return this.$Win.navigator.appVersion.match(/android/ig), this.$Win.navigator.appVersion.match(/iphone/ig);
+      },
+      enumerable: true,
+      configurable: true
+    });
 
-module.exports = reloadCSS;
-},{"./bundle-url":"../../../.nvm/versions/node/v10.0.0/lib/node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"src/index.less":[function(require,module,exports) {
-var reloadCSS = require('_css_loader');
+    MagicViewport.prototype.init = function () {
+      var _this = this;
 
-module.hot.dispose(reloadCSS);
-module.hot.accept(reloadCSS);
-},{"_css_loader":"../../../.nvm/versions/node/v10.0.0/lib/node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../../../.nvm/versions/node/v10.0.0/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+      this.$Win.addEventListener('resize', function () {
+        clearTimeout(_this.timer);
+        _this.timer = setTimeout(_this.geneteMeta, 300);
+      }, false);
+      this.$Win.addEventListener('pageshow', function (e) {
+        if (e.persisted) {
+          clearTimeout(_this.timer);
+          _this.timer = setTimeout(_this.geneteMeta, 300);
+        }
+      }, false);
+
+      if (this.$doc.readyState === 'complete') {
+        this.$doc.body.style.fontSize = 12 * this.dpr + 'px';
+      } else {
+        this.$doc.addEventListener('DOMContentLoaded', function (e) {
+          // @ts-ignore
+          _this.$doc.body.style.fontSize = 12 * _this.dpr + 'px';
+        }, false);
+      }
+    };
+
+    MagicViewport.prototype.setRootDpr = function () {
+      var DPR = this.$dpr;
+
+      if (this.$version) {
+        if (DPR && DPR >= 3) {
+          this.dpr = DPR;
+        } else if (DPR && DPR >= 2) {
+          this.dpr = 2;
+        } else {
+          this.dpr = 1;
+        }
+      }
+    };
+
+    MagicViewport.prototype.setRootSize = function () {
+      this.setRootDpr();
+      var htmlWidth; // @ts-ignore
+
+      htmlWidth = this.$html.getBoundingClientRect().width || this.$html.clientWidth;
+      htmlWidth / this.dpr > this.bWidth && (htmlWidth = this.bWidth * this.dpr);
+      var fontSize = htmlWidth / 10; // @ts-ignore
+
+      this.$html.style.fontSize = fontSize + "px"; // @ts-ignore
+
+      this.$html.setAttribute('data-dpr', this.dpr);
+    };
+
+    MagicViewport.prototype.geneteMeta = function () {
+      this.setRootSize();
+      var metaViewport = document.querySelector('meta[name="viewport"]'); // @ts-ignore
+
+      metaViewport && (metaViewport.remove ? metaViewport.remove() : metaViewport.parentElement.removeChild(metaViewport));
+      metaViewport = this.$doc.createElement("meta");
+      metaViewport.setAttribute("name", "viewport");
+      metaViewport.setAttribute("content", "width=device-width, initial-scale=" + this.dpr + ", maximum-scale=" + this.dpr + ", minimum-scale=" + this.dpr + ", user-scalable=no");
+
+      if (this.$doc.firstElementChild) {
+        this.$doc.firstElementChild.appendChild(metaViewport);
+      } else {
+        var div = this.$doc.createElement("div");
+        div.appendChild(metaViewport);
+        this.$doc.write(div.innerHTML);
+      }
+    };
+
+    return MagicViewport;
+  }();
+
+  return new MagicViewport(opt);
+});
+},{}],"../../../.nvm/versions/node/v10.0.0/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -203,7 +276,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53769" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59581" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);
@@ -345,4 +418,5 @@ function hmrAccept(bundle, id) {
     return hmrAccept(global.parcelRequire, id);
   });
 }
-},{}]},{},["../../../.nvm/versions/node/v10.0.0/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js"], null)
+},{}]},{},["../../../.nvm/versions/node/v10.0.0/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js","src/libs/l.js"], null)
+//# sourceMappingURL=/l.a53007e7.map

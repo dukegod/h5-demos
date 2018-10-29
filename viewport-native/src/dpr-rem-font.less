@@ -1,0 +1,43 @@
+@base-font: 14px;
+@rem: 75rem;
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html[data-dpr='1'] body {
+	font-size: @base-font;
+}
+
+html[data-dpr='2'] body {
+	font-size: 2 * @base-font;
+}
+
+html[data-dpr='3'] body {
+	font-size: 3 * @base-font;
+}
+
+.part-full {
+	width: 750 / @rem;
+	height: 100 / @rem;
+	background-color: red;
+}
+
+.part-300 {
+	width: 300 / @rem;
+	height: 300 / @rem;
+	background-color: blue;
+}
+
+.part-200 {
+	width: 200 / @rem;
+	height: 200 / @rem;
+	background-color: yellowgreen;
+}
+
+.part-100 {
+	width: 100 / @rem;
+	height: 100 / @rem;
+	background-color: green;
+}

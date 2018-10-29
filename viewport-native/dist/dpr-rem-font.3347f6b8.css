@@ -1,0 +1,33 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+html[data-dpr='1'] body {
+  font-size: 14px;
+}
+html[data-dpr='2'] body {
+  font-size: 28px;
+}
+html[data-dpr='3'] body {
+  font-size: 42px;
+}
+.part-full {
+  width: 10rem;
+  height: 1.33333333rem;
+  background-color: red;
+}
+.part-300 {
+  width: 4rem;
+  height: 4rem;
+  background-color: blue;
+}
+.part-200 {
+  width: 2.66666667rem;
+  height: 2.66666667rem;
+  background-color: yellowgreen;
+}
+.part-100 {
+  width: 1.33333333rem;
+  height: 1.33333333rem;
+  background-color: green;
+}
