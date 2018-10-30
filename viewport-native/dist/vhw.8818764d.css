@@ -1,13 +1,3 @@
-@media screen and (max-width: 320px) {
-  html {
-    font-size: 64px;
-  }
-}
-@media screen and (min-width: 540px) {
-  html {
-    font-size: 108px;
-  }
-}
 body {
   max-width: 540px;
   min-width: 320px;
@@ -23,8 +13,8 @@ body {
   background-color: aqua;
 }
 .square {
-  width: 53.33333333vw;
-  height: 53.33333333vw;
+  width: 46.66666667vw;
+  height: 46.66666667vw;
   background-color: yellow;
 }
 .slim-one-px {
@@ -46,4 +36,10 @@ body {
     -webkit-transform: scaleY(0.5);
     -webkit-transform-origin: 50% 0%;
   }
+}
+.f20 {
+  font-size: 20px;
+}
+.f30 {
+  font-size: 30px;
 }

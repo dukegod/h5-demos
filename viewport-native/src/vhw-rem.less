@@ -1,4 +1,21 @@
-@vhw: 7.5;
+
+@vhw: 75rem;
+
+:root {
+  font-size: calc(10vw);
+}
+
+html {
+	font-size: calc(10vw);
+	// 同时，通过Media Queries 限制根元素最大最小值
+	@media screen and (max-width: 320px) {
+			font-size: 64px;
+	}
+	@media screen and (min-width: 540px) {
+			font-size: 108px;
+	}
+}
+
 
 body {
 	max-width: 540px;
@@ -11,14 +28,14 @@ body {
 	padding: 0;
 }
 .full {
-	width: 750vw/@vhw;
-	height: 100vw/@vhw;
+	width: 750/@vhw;
+	height: 100/@vhw;
 	background-color: aqua;
 }
 
 .square {
-	width: 350vw/@vhw;
-	height: 350vw/@vhw;
+	width: 350/@vhw;
+	height: 350/@vhw;
 	background-color: yellow;
 }
 
@@ -41,6 +58,7 @@ body {
 			}
 	}
 }
+
 .f20{
 	font-size: 20px;
 }

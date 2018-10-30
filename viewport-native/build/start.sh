@@ -11,4 +11,6 @@ rm -rf dist
 
 # parcel dpr-rem-font.html --no-cache
 
-parcel vh-vw.html --no-cache
+# parcel vh-vw.html --no-cache
+
+parcel vh-vw-rem.html --no-cache
