@@ -1,0 +1,49 @@
+@media screen and (max-width: 320px) {
+  html {
+    font-size: 64px;
+  }
+}
+@media screen and (min-width: 540px) {
+  html {
+    font-size: 108px;
+  }
+}
+body {
+  max-width: 540px;
+  min-width: 320px;
+  font-size: 14px;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+.full {
+  width: 100vw;
+  height: 13.33333333vw;
+  background-color: aqua;
+}
+.square {
+  width: 53.33333333vw;
+  height: 53.33333333vw;
+  background-color: yellow;
+}
+.slim-one-px {
+  position: relative;
+}
+.slim-one-px::after {
+  content: '';
+  position: absolute;
+  z-index: 1;
+  pointer-events: none;
+  background-color: red;
+  height: 1px;
+  left: 0;
+  right: 0;
+  top: 0;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+  .slim-one-px::after {
+    -webkit-transform: scaleY(0.5);
+    -webkit-transform-origin: 50% 0%;
+  }
+}

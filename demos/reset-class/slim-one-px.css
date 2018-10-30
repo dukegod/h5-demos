@@ -1,0 +1,22 @@
+/* 实现移动端1px的设计 */
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+  -webkit-transform: scaleY(0.5);
+  -webkit-transform-origin: 50% 0%;
+  .slim-one-px {
+    position: relative;
+  }
+  slim-one-px::after {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    pointer-events: none;
+    background-color: red;
+    height: 1px;
+    left: 0;
+    right: 0;
+    top: 0;
+    /* -webkit-transform: scaleY(0.5); */
+    /* -webkit-transform-origin: 50% 0%; */
+  }
+}

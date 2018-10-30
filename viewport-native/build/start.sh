@@ -9,4 +9,6 @@ rm -rf dist
 
 # parcel watch index.html --no-source-maps
 
-parcel dpr-rem-font.html --no-cache
+# parcel dpr-rem-font.html --no-cache
+
+parcel vh-vw.html --no-cache

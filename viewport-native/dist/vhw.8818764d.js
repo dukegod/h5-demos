@@ -171,7 +171,7 @@ function reloadCSS() {
 }
 
 module.exports = reloadCSS;
-},{"./bundle-url":"../../../.nvm/versions/node/v10.0.0/lib/node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"src/dpr-rem-font.less":[function(require,module,exports) {
+},{"./bundle-url":"../../../.nvm/versions/node/v10.0.0/lib/node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"src/vhw.less":[function(require,module,exports) {
 var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
@@ -203,7 +203,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57200" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61030" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);

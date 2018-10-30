@@ -1,0 +1,55 @@
+@vhw: 7.5;
+
+html {
+	// font-size: 20vw;
+	// 同时，通过Media Queries 限制根元素最大最小值
+	@media screen and (max-width: 320px) {
+			font-size: 64px;
+	}
+	@media screen and (min-width: 540px) {
+			font-size: 108px;
+	}
+}
+
+
+body {
+	max-width: 540px;
+	min-width: 320px;
+	font-size: 14px;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+.full {
+	width: 750vw/@vhw;
+	height: 100vw/@vhw;
+	background-color: aqua;
+}
+
+.square {
+	width: 400vw/@vhw;
+	height: 400vw/@vhw;
+	background-color: yellow;
+}
+
+// 实现1物理像素的下边框线
+.slim-one-px {
+	position: relative;
+	&::after {
+			content: '';
+			position: absolute;
+			z-index: 1;
+			pointer-events: none;
+			background-color: red;
+			height: 1px;
+			left: 0;
+			right: 0;
+			top: 0;
+			@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+					-webkit-transform: scaleY(0.5);
+					-webkit-transform-origin: 50% 0%;
+			}
+	}
+}
