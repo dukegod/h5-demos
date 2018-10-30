@@ -18,6 +18,8 @@
     "babel-core": "^6.26.3",
     "babel-plugin-transform-runtime": "^6.23.0",
     "babel-preset-env": "^1.7.0",
-    "less": "^3.8.1"
+    "less": "^3.8.1",
+    "lib-flexible": "^0.3.2",
+    "magic-viewport": "^1.0.0"
   }
 }

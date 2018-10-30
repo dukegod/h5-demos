@@ -916,6 +916,11 @@ less@^3.8.1:
     request "^2.83.0"
     source-map "~0.6.0"
 
+lib-flexible@^0.3.2:
+  version "0.3.2"
+  resolved "https://registry.yarnpkg.com/lib-flexible/-/lib-flexible-0.3.2.tgz#06f5a74832314a2d35c12039bc9c3ca2daeaa426"
+  integrity sha1-BvWnSDIxSi01wSA5vJw8otrqpCY=
+
 lodash@^4.17.4:
   version "4.17.11"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.11.tgz#b39ea6229ef607ecd89e2c8df12536891cac9b8d"
@@ -927,6 +932,11 @@ loose-envify@^1.0.0:
   integrity sha512-lyuxPGr/Wfhrlem2CL/UcnUc1zcqKAImBDzukY7Y5F/yQiNdko6+fRLevlw1HgMySw7f611UIY408EtxRSoK3Q==
   dependencies:
     js-tokens "^3.0.0 || ^4.0.0"
+
+magic-viewport@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/magic-viewport/-/magic-viewport-1.0.0.tgz#601bb481bea9274ec73f60885de43cf23df965d5"
+  integrity sha512-ulCuxWhMfTmxwOiXwAb8I40dWlZz1iwNm3uFrZ9ltSuw0lAqtQcGycs/n+pI1+vMokWN1nvrN6dFvsJRig2xGw==
 
 mime-db@~1.36.0:
   version "1.36.0"
