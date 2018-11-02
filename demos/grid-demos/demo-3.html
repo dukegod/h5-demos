@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>grid 布局</title>
+  <style>
+    .wrapper {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: 1fr 1fr;
+      grid-template-areas:
+              "a b c"
+              "d e f"
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    .wrapper {
+      border: 2px solid #f76707;
+      border-radius: 5px;
+      background-color: #fff4e6;
+    }
+
+    .wrapper>div {
+      border: 2px solid #ffa94d;
+      border-radius: 5px;
+      padding: 3em;
+      color: black;
+    }
+    .one {
+      grid-area: a;
+      background-color: #ffd8a8;
+    }
+    .one2 {
+      grid-area: b;
+      background-color: red;
+    }
+    .one3 {
+      grid-area: c;
+      background-color: gray;
+    }
+    .two {
+      grid-area: d;
+      background-color: blueviolet;
+    }
+    .two2 {
+      grid-area: e;
+      background-color: #7f9fd4;
+    }
+    .two3 {
+      grid-area: f;
+      background-color: greenyellow;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="one">One</div>
+    <div class="one2">Two</div>
+    <div class="one3">Three</div>
+    <div class="two">Four</div>
+    <div class="two2">Five</div>
+    <div class="two3">six</div>
+  </div>
+</body>
+
+</html>

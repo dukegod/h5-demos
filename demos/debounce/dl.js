@@ -5,6 +5,7 @@ var debounce = function(func, wait, immediate) {
     // 定时器设置的回调 later 方法的触发时间，和连续事件触发的最后一次时间戳的间隔
     // 如果间隔为 wait（或者刚好大于 wait），则触发事件
     var last = Date.now() - timestamp;
+    console.log(last)
 
     // 时间间隔 last 在 [0, wait) 中
     // 还没到触发的点，则继续设置定时器
@@ -22,6 +23,7 @@ var debounce = function(func, wait, immediate) {
       if (!immediate) {
         // 执行 func 函数
         result = func.apply(context, args);
+        console.log(`laterrrrr`)
         // 这里的 timeout 一定是 null 了吧
         // 感觉这个判断多余了
         if (!timeout)
