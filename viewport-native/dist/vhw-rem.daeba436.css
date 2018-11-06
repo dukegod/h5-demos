@@ -1,20 +1,33 @@
+:root {
+  font-size: calc(10vw);
+}
+@media screen and (max-width: 320px) {
+  html {
+    font-size: 64px;
+  }
+}
+@media screen and (min-width: 540px) {
+  html {
+    font-size: 108px;
+  }
+}
 body {
   max-width: 540px;
   min-width: 320px;
-  font-size: 14px;
+  font-size: 16px;
 }
 * {
   margin: 0;
   padding: 0;
 }
 .full {
-  width: 100vw;
-  height: 13.33333333vw;
+  width: 10rem;
+  height: 1.33333333rem;
   background-color: aqua;
 }
 .square {
-  width: 46.66666667vw;
-  height: 46.66666667vw;
+  width: 4.66666667rem;
+  height: 4.66666667rem;
   background-color: yellow;
 }
 .slim-one-px {

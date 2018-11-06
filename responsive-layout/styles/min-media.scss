@@ -1,0 +1,107 @@
+@media only screen and (min-width: 1100px) {
+  .s-asin-suggestion {
+    width: 25%
+  }
+
+  #biaDiv3 {
+    display: block
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .s-asin-suggestion {
+    width: 20%
+  }
+
+  #biaDiv4 {
+    display: block
+  }
+}
+
+@media only screen and (min-width: 1300px) {
+  .s-asin-suggestion {
+    width: 16.6667%
+  }
+
+  #biaDiv5 {
+    display: block
+  }
+}
+
+@media only screen and (min-width: 1300px) {
+  .s-asin-suggestion {
+    width: 16.6667%
+  }
+}
+
+@media only screen and (min-width: 1400px) {
+  .s-asin-suggestion {
+    width: 14.2857%
+  }
+}
+
+@media only screen and (min-width: 1500px) {
+  .s-asin-suggestion {
+    width: 12.5%
+  }
+}
+
+@media only screen and (min-width: 1600px) {
+  .s-asin-suggestion {
+    width: 11.1111%
+  }
+}
+
+@media only screen and (min-width: 1700px) {
+  .s-asin-suggestion {
+    width: 10%
+  }
+}
+
+@media only screen and (min-width: 1800px) {
+  .s-asin-suggestion {
+    width: 9.0909%
+  }
+}
+
+@media only screen and (min-width: 1900px) {
+  .s-asin-suggestion {
+    width: 8.3333%
+  }
+}
+
+@media only screen and (min-width: 2000px) {
+  .s-asin-suggestion {
+    width: 7.6923%
+  }
+}
+
+@media only screen and (min-width: 2100px) {
+  .s-asin-suggestion {
+    width: 7.1429%
+  }
+}
+
+@media only screen and (min-width: 2200px) {
+  .s-asin-suggestion {
+    width: 6.6667%
+  }
+}
+
+@media only screen and (min-width: 2300px) {
+  .s-asin-suggestion {
+    width: 6.25%
+  }
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (min--moz-device-pixel-ratio: 2),
+only screen and (-o-min-device-pixel-ratio: 2 / 1),
+only screen and (min-device-pixel-ratio: 2),
+only screen and (min-resolution: 192dpi),
+only screen and (min-resolution: 2dppx) {
+  .icp-flag-2, .icp-flag-3, .icp-nav-globe-img-2, .icp-radio, .nav-arrow.icp-up-down-arrow {
+    background-image: url(https://m.media-amazon.com/images/G/01/AUIClients/InternationalCustomerPreferencesNavAssets-icp_sprite_2x-391462dbcf09456cb0249b135186930d7e699c73._V2_.png);
+    background-size: 142px 120px
+  }
+}
