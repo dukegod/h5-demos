@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/dukegod/h5-demos/issues"
   },
-  "homepage": "https://github.com/dukegod/h5-demos#readme"
+  "homepage": "https://github.com/dukegod/h5-demos#readme",
+  "devDependencies": {
+    "sass": "^1.14.3"
+  }
 }

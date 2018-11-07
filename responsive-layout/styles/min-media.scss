@@ -100,8 +100,7 @@ only screen and (-o-min-device-pixel-ratio: 2 / 1),
 only screen and (min-device-pixel-ratio: 2),
 only screen and (min-resolution: 192dpi),
 only screen and (min-resolution: 2dppx) {
-  .icp-flag-2, .icp-flag-3, .icp-nav-globe-img-2, .icp-radio, .nav-arrow.icp-up-down-arrow {
-    background-image: url(https://m.media-amazon.com/images/G/01/AUIClients/InternationalCustomerPreferencesNavAssets-icp_sprite_2x-391462dbcf09456cb0249b135186930d7e699c73._V2_.png);
-    background-size: 142px 120px
+  .retina {
+    color: red;
   }
 }

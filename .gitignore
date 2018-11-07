@@ -18,3 +18,7 @@ node_modules
 manifest.json
 
 .DS_Store
+
+responsive-layout/.cache/*
+
+responsive-layout/dist/*
