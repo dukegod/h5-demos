@@ -1,0 +1,27 @@
+// flex box 样式控制
+// 控制弹性盒
+@mixin flex-flow($fd,$fw){
+  flex-direction: $fd;
+  flex-wrap: $fw;
+}
+@mixin align-content($fac){
+  align-content: $fac;
+}
+@mixin align-items($fai){
+  align-items: $fai;
+}
+@mixin justify-content($fjc){
+  justify-content: $fjc
+}
+// 控制子元素的样式
+@mixin flex($fg,$fs,$fb){
+  flex-grow:  $fg;
+  flex-shrink: $fs;
+  flex-basis: $fb;
+}
+@mixin align-self($fas){
+  align-self: $fas;
+}
+@mixin order($fo){
+  order: $fo;
+}

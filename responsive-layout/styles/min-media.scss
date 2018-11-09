@@ -1,34 +1,24 @@
-@media only screen and (min-width: 1100px) {
+
+
+@media only screen and (min-width: 576px) {
   .s-asin-suggestion {
     width: 25%
   }
+}
 
-  #biaDiv3 {
-    display: block
+@media only screen and (min-width: 768px) {
+  .s-asin-suggestion {
+    width: 20%
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .s-asin-suggestion {
+    width: 16.6667%
   }
 }
 
 @media only screen and (min-width: 1200px) {
-  .s-asin-suggestion {
-    width: 20%
-  }
-
-  #biaDiv4 {
-    display: block
-  }
-}
-
-@media only screen and (min-width: 1300px) {
-  .s-asin-suggestion {
-    width: 16.6667%
-  }
-
-  #biaDiv5 {
-    display: block
-  }
-}
-
-@media only screen and (min-width: 1300px) {
   .s-asin-suggestion {
     width: 16.6667%
   }

@@ -29,4 +29,8 @@
 100vw = 750px
 
 1rem = 75px
+
+// that to say
+1rem = 10vw = 75px;
+
 ``

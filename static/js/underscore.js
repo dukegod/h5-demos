@@ -28,7 +28,7 @@
   // 而不是 gzip 压缩
   var ArrayProto = Array.prototype, ObjProto = Object.prototype, FuncProto = Function.prototype;
 
-  // Create quick reference variables for speed access to core prototypes.
+  // Create quick reference variables.scss for speed access to core prototypes.
   // 缓存变量, 便于压缩代码
   // 同时可减少在原型链中的查找次数(提高代码效率)
   var
