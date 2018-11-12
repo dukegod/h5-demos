@@ -1,0 +1,213 @@
+html {
+  font-size: 16px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+body {
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+body,
+ul, li,
+p, div,
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+}
+
+@media only screen and (min-width: 576px) {
+  .col {
+    width: 25%;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .col {
+    width: 20%;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .col {
+    width: 16.6667%;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .col {
+    width: 16.6667%;
+  }
+}
+@media only screen and (min-width: 1400px) {
+  .col {
+    width: 14.2857%;
+  }
+}
+@media only screen and (min-width: 1500px) {
+  .col {
+    width: 12.5%;
+  }
+}
+@media only screen and (min-width: 1600px) {
+  .col {
+    width: 11.1111%;
+  }
+}
+@media only screen and (min-width: 1700px) {
+  .col {
+    width: 10%;
+  }
+}
+@media only screen and (min-width: 1800px) {
+  .col {
+    width: 9.0909%;
+  }
+}
+@media only screen and (min-width: 1900px) {
+  .col {
+    width: 8.3333%;
+  }
+}
+@media only screen and (min-width: 2000px) {
+  .col {
+    width: 7.6923%;
+  }
+}
+@media only screen and (min-width: 2100px) {
+  .col {
+    width: 7.1429%;
+  }
+}
+@media only screen and (min-width: 2200px) {
+  .col {
+    width: 6.6667%;
+  }
+}
+@media only screen and (min-width: 2300px) {
+  .col {
+    width: 6.25%;
+  }
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  .retina {
+    color: red;
+  }
+}
+.m-top {
+  margin-top: 20px;
+}
+
+.top {
+  height: 5rem;
+  border: 2px solid #000000;
+}
+
+.short-cut {
+  height: 1.875rem;
+  background-color: #dddddd;
+  border: 2px solid #000000;
+}
+
+header {
+  position: relative;
+  padding-top: 1.875rem;
+}
+header .search {
+  width: 18.75rem;
+  height: 1.875rem;
+  margin: 0 auto;
+  border: 2px solid #000000;
+}
+header nav {
+  width: calc(100% - 3rem);
+  height: 3.625rem;
+  margin: 1.875rem auto 0;
+  border: 2px solid #000000;
+}
+header .jd-logo {
+  width: 9.375rem;
+  height: 9.375rem;
+  border: 2px solid #000000;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+header .jd-logo img {
+  width: 100%;
+}
+
+main {
+  height: 6rem;
+  display: flex;
+}
+
+aside {
+  flex: 0 0 12.5rem;
+  background-color: #eeeeee;
+}
+
+section {
+  flex: 0 0 calc(100% - 4rem);
+  background-color: #eeeeee;
+}
+
+ul {
+  height: 25;
+}
+
+article {
+  width: 100vw;
+  height: calc(100% - 2rem);
+  border: 1px solid #000000;
+  background-color: #eeeeee;
+}
+
+@media only screen and (min-width: 576px) {
+  aside {
+    flex: 0 0 12.5;
+    background-color: #eeeeee;
+  }
+
+  section {
+    flex: 0 0 100%;
+    background-color: #eeeeee;
+  }
+}
+@media only screen and (min-width: 768px) {
+  aside[class=right] {
+    display: none;
+    flex: 0 0 12.5;
+    background-color: #543624;
+  }
+
+  section {
+    flex: 0 0 calc(100% - 4rem);
+    background-color: #eeeeee;
+  }
+}
+@media only screen and (min-width: 992px) {
+  aside[class=left] {
+    flex: 0 0 12.5;
+    background-color: #2b542c;
+  }
+
+  aside[class=right] {
+    display: none;
+    flex: 0 0 12.5;
+    background-color: #543624;
+  }
+
+  section {
+    flex: 0 0 calc(100% - 4rem);
+    background-color: #eeeeee;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  aside {
+    flex: 0 0 12.5;
+    background-color: #2b542c;
+  }
+
+  section {
+    flex: 0 0 calc(100% - 4rem);
+    background-color: #eeeeee;
+  }
+}

@@ -1,7 +1,4 @@
-@import "variables";
-@import "global-set";
-@import "media";
-@import "flexbox";
+@import "../styles/index";
 
 @mixin border {
   border: 2px solid #000000;
