@@ -1,0 +1,221 @@
+html {
+  font-size: 16px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+body {
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+body,
+ul, li,
+p, div,
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+}
+
+@media only screen and (min-width: 576px) {
+  .col {
+    width: 25%;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .col {
+    width: 20%;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .col {
+    width: 16.6667%;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .col {
+    width: 16.6667%;
+  }
+}
+@media only screen and (min-width: 1400px) {
+  .col {
+    width: 14.2857%;
+  }
+}
+@media only screen and (min-width: 1500px) {
+  .col {
+    width: 12.5%;
+  }
+}
+@media only screen and (min-width: 1600px) {
+  .col {
+    width: 11.1111%;
+  }
+}
+@media only screen and (min-width: 1700px) {
+  .col {
+    width: 10%;
+  }
+}
+@media only screen and (min-width: 1800px) {
+  .col {
+    width: 9.0909%;
+  }
+}
+@media only screen and (min-width: 1900px) {
+  .col {
+    width: 8.3333%;
+  }
+}
+@media only screen and (min-width: 2000px) {
+  .col {
+    width: 7.6923%;
+  }
+}
+@media only screen and (min-width: 2100px) {
+  .col {
+    width: 7.1429%;
+  }
+}
+@media only screen and (min-width: 2200px) {
+  .col {
+    width: 6.6667%;
+  }
+}
+@media only screen and (min-width: 2300px) {
+  .col {
+    width: 6.25%;
+  }
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  .retina {
+    color: red;
+  }
+}
+html {
+  font-size: 16px;
+  font: 16px;
+}
+
+body {
+  background-color: #ffffff;
+  text-align: center;
+}
+body {
+  font-size: 16px;
+}
+@media screen and (min-width: 320px) {
+  body {
+    font-size: calc( 16px + 8 * ((100vw - 320px) / 880) );
+  }
+}
+@media screen and (min-width: 1200px) {
+  body {
+    font-size: 24px;
+  }
+}
+
+.demo-top {
+  height: 1.875rem;
+  border-bottom: 1px solid #dddddd;
+}
+
+.demo-search {
+  height: 3.125rem;
+  margin: 0 auto;
+  border-bottom: 1px solid #dddddd;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+.demo-search label {
+  height: 1.875rem;
+}
+.demo-search button {
+  color: initial;
+}
+
+.demo-header {
+  display: flex;
+  height: 9.375rem;
+  flex-flow: row nowrap;
+  align-items: center;
+  border-bottom: 1px solid #dddddd;
+}
+.demo-header .demo-nav {
+  width: calc(80%);
+  height: 3.625rem;
+  border: 1px solid #000000;
+  display: flex;
+  align-items: center;
+}
+.demo-header .demo-nav div {
+  flex-basis: 20%;
+  max-width: 20%;
+}
+.demo-header .demo-logo {
+  max-height: 9.375rem;
+  flex-basis: 10%;
+  min-height: 3.625rem;
+  min-width: 3.625rem;
+  border: 1px solid #000000;
+}
+.demo-header .demo-logo .demo-img {
+  padding-top: 100%;
+  width: 100%;
+  display: block;
+  overflow: hidden;
+  z-index: 1;
+  position: relative;
+}
+.demo-header .demo-logo .demo-img img {
+  max-width: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+}
+.demo-header .demo-btn {
+  min-height: 3.625rem;
+  min-width: 9.375rem;
+  flex-basis: 10%;
+  align-content: center;
+  align-items: center;
+  display: flex;
+  justify-content: space-evenly;
+  border: 1px solid #000000;
+}
+.demo-header .demo-btn div {
+  flex: auto;
+}
+
+.demo-container {
+  margin-top: 3.125rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.demo-container ul,
+.demo-container li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.demo-container ul {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+}
+.demo-container li {
+  flex-basis: 20%;
+  max-width: 20%;
+  border: 1px solid #000000;
+}
+.demo-container li:nth-child(2n) {
+  background-color: aquamarine;
+}
+.demo-container li div {
+  width: 6.25rem;
+  height: 6.25rem;
+}

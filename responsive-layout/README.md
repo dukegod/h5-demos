@@ -10,7 +10,7 @@
 
 media   
 
-
+[calac](https://www.w3.org/TR/css3-values/#calc-notation):
 
 
 ## layout
@@ -33,19 +33,21 @@ media
 + max-width： 从大到小适配
 
 ### 处理高清屏
+
 [Retina Display Media Query](https://css-tricks.com/snippets/css/retina-display-media-query/)
 
 ```css
-@media only screen and (-webkit-min-device-pixel-ratio: 2),
-only screen and (min--moz-device-pixel-ratio: 2),
-only screen and (-o-min-device-pixel-ratio: 2 / 1),
-only screen and (min-device-pixel-ratio: 2),
-only screen and (min-resolution: 192dpi),
-only screen and (min-resolution: 2dppx) {
-  .retina {
-    color: red;
+@media 
+  only screen and (-webkit-min-device-pixel-ratio: 2),
+  only screen and (min--moz-device-pixel-ratio: 2),
+  only screen and (-o-min-device-pixel-ratio: 2 / 1),
+  only screen and (min-device-pixel-ratio: 2),
+  only screen and (min-resolution: 192dpi),
+  only screen and (min-resolution: 2dppx) {
+    .retina {
+      color: red;
+    }
   }
-}
 ```
 
 

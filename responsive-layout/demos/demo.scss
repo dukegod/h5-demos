@@ -1,134 +1,241 @@
-@import "../styles/index";
+@import '../styles/index';
 
 @mixin border {
-  border: 2px solid #000000;
-}
-.m-top {
-  margin-top: 20px;
+  border: 1px solid #000000;
 }
 
-$baseFont: 16;
-// 头部导航框
-.top{
-  height: 80rem/$baseFont;
-  @include border;
-}
-// 中间地址栏目
-.short-cut {
-  height: 30rem/$baseFont;
-  background-color: #dddddd;
-  @include border;
+@function strip-unit($value) {
+  @return $value / ($value * 0 + 1);
 }
 
-header {
-  //height: 150px;
-  //display: flex;
-  position: relative;
-  //justify-content: center;
-  //background-color: $red;
-  padding-top: 30rem/$baseFont;
-  //text-align: center;
-  .search {
-    width: 300rem/$baseFont;
-    height: 30rem/$baseFont;
-    margin: 0 auto;
-    //margin: 30rem/$baseFont auto 0;
-    @include border;
-  }
-  nav{
-    width: calc(100% - 3rem);
-    height: 58rem/$baseFont;
-    margin: 30rem/$baseFont auto 0;
-    @include border;
-  }
-  .jd-logo {
-    width: 150rem/$baseFont;
-    height: 150rem/$baseFont;
-    @include border;
-    position: absolute;
-    top: 0;
-    left: 0;
-    img {
-      width: 100%;
+@mixin fluid-type($min-vw, $max-vw, $min-font-size, $max-font-size) {
+  $u1: unit($min-vw);
+  $u2: unit($max-vw);
+  $u3: unit($min-font-size);
+  $u4: unit($max-font-size);
+
+  @if $u1 == $u2 and $u1 == $u3 and $u1 == $u4 {
+    & {
+      font-size: $min-font-size;
+      @media screen and (min-width: $min-vw) {
+        font-size: calc(
+          #{$min-font-size} + #{strip-unit($max-font-size - $min-font-size)} *
+            ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)})
+        );
+      }
+      @media screen and (min-width: $max-vw) {
+        font-size: $max-font-size;
+      }
     }
   }
 }
 
-main {
-  height: 6rem;
+$min_width: 320px;
+$max_width: 1200px;
+$min_font: 16px;
+$max_font: 24px;
+$baseFont: 16;
+
+html {
+  font-size: 16px;
+  font: 16px;
+}
+
+body {
+  @include fluid-type($min_width, $max_width, $min_font, $max_font);
+  background-color: #ffffff;
+  text-align: center;
+}
+
+.demo-top {
+  height: 30rem / $baseFont;
+  border-bottom: 1px solid #dddddd;
+}
+
+.demo-search {
+  // width: 300rem / $baseFont;
+  height: 50rem / $baseFont;
+  margin: 0 auto;
+  border-bottom: 1px solid #dddddd;
   display: flex;
-}
-
-aside {
-  flex: 0 0 200rem/$baseFont;
-  background-color: $grey;
-}
-
-section {
-  flex: 0 0 calc(100% - 4rem);
-  background-color: $grey;
-}
-
-ul {
-  height: 400/$baseFont;
-}
-
-article {
-  width: 100vw;
-  height: calc(100% - 2rem);
-  border: 1px solid #000000;
-  background-color: $grey;
-}
-
-@media only screen and (min-width: 576px) {
-  aside {
-    flex: 0 0 200/$baseFont;
-    background-color: $grey;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  label {
+    height: 30rem / $baseFont;
   }
-
-  section {
-    flex: 0 0 100%;
-    background-color: $grey;
+  button {
+    color: initial;
   }
 }
 
-@media only screen and (min-width: 768px) {
-  aside[class="right"] {
-    display: none;
-    flex: 0 0 200/$baseFont;
-    background-color: #543624;
-  }
+.demo-header {
+  display: flex;
+  height: 150rem / $baseFont;
+  flex-flow: row nowrap;
+  align-items: center;
+  border-bottom: 1px solid #dddddd;
 
-  section {
-    flex: 0 0 calc(100% - 4rem);
-    background-color: $grey;
+  .demo-nav {
+    width: calc(80%);
+    height: 58rem / $baseFont;
+    @include border;
+    display: flex;
+    align-items: center;
+    div {
+      flex-basis: 20%;
+      max-width: 20%;
+    }
+  }
+  .demo-logo {
+    // width: 150rem / $baseFont;
+    max-height: 150rem / $baseFont;
+    flex-basis: 10%;
+    min-height: 58rem / $baseFont;
+    min-width: 58rem / $baseFont;
+    @include border;
+    .demo-img {
+      // background-position: center;
+      // background-size: cover;
+      padding-top: 100%;
+      width: 100%;
+      // border-radius: 50%;
+      display: block;
+      overflow: hidden;
+      z-index: 1;
+      position: relative;
+      // width: 100%;
+      // max-width: 158rem /$baseFont;
+      // max-height: 158rem / $baseFont;
+      // max-width: 100%;
+      // height: 100%;
+      // padding-top: 100%;
+      img {
+        // height: 1px;
+        max-width: 100%;
+        // height: 1px;
+        left: 0;
+        position: absolute;
+        top: 0;
+        // width: 1px;
+      }
+    }
+  }
+  .demo-btn {
+    min-height: 58rem / $baseFont;
+    min-width: 150rem / $baseFont;
+    flex-basis: 10%;
+    align-content: center;
+    align-items: center;
+    display: flex;
+    justify-content: space-evenly;
+    @include border;
+    div {
+      flex: auto;
+      // @include border;
+    }
   }
 }
 
-@media only screen and (min-width: 992px) {
-  aside[class="left"] {
-    flex: 0 0 200/$baseFont;
-    background-color: #2b542c;
+.demo-container {
+  margin-top: 50rem/ $baseFont;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  ul,
+  li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
   }
-  aside[class="right"] {
-    display: none;
-    flex: 0 0 200/$baseFont;
-    background-color: #543624;
+  ul {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
   }
-  section {
-    flex: 0 0 calc(100% - 4rem);
-    background-color: $grey;
+  li {
+    flex-basis: 20%;
+    max-width: 20%;
+    @include border();
+    &:nth-child(2n) {
+      background-color: aquamarine;
+    }
+    div {
+      width: 100rem / $baseFont;
+      height: 100rem / $baseFont;
+    }
   }
 }
 
-@media only screen and (min-width: 1200px) {
-  aside {
-    flex: 0 0 200/$baseFont;
-    background-color: #2b542c;
-  }
+// /*
+//   ##Device = Desktops
+//   ##Screen = 1281px to higher resolution desktops
+// */
+// @media (min-width: 1281px) {
+//   //CSS
+//   body {
+//     background-color: red;
+//   }
+// }
 
-  section {
-    flex: 0 0 calc(100% - 4rem);
-    background-color: $grey;
-  }
-}
+// /*
+//   ##Device = Laptops, Desktops
+//   ##Screen = B/w 1025px to 1280px
+// */
+
+// @media (min-width: 1025px) and (max-width: 1280px) {
+//   //CSS
+//   body {
+//     background-color: green;
+//   }
+// }
+
+// /*
+//   ##Device = Tablets, Ipads (portrait)
+//   ##Screen = B/w 768px to 1024px
+// */
+
+// @media (min-width: 768px) and (max-width: 1024px) {
+//   //CSS
+//   body {
+//     background-color: blue;
+//   }
+// }
+
+// /*
+//   ##Device = Tablets, Ipads (landscape)
+//   ##Screen = B/w 768px to 1024px
+// */
+
+// @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+//   //CSS
+//   body {
+//     background-color: orange;
+//   }
+// }
+
+// /*
+//   ##Device = Low Resolution Tablets, Mobiles (Landscape)
+//   ##Screen = B/w 481px to 767px
+// */
+
+// @media (min-width: 481px) and (max-width: 767px) {
+//   //CSS
+//   body {
+//     background-color: purple;
+//   }
+// }
+
+// /*
+//   ##Device = Most of the Smartphones Mobiles (Portrait)
+//   ##Screen = B/w 320px to 479px
+// */
+
+// @media (min-width: 320px) and (max-width: 480px) {
+//   //CSS
+//   body {
+//     background-color: black;
+//   }
+// }
