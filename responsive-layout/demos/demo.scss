@@ -38,13 +38,26 @@ $baseFont: 16;
 
 html {
   font-size: 16px;
-  font: 16px;
 }
 
+* {
+  box-sizing: border-box;
+}
 body {
   @include fluid-type($min_width, $max_width, $min_font, $max_font);
   background-color: #ffffff;
   text-align: center;
+}
+
+@media only screen and (min-width: 768px) {
+  body {
+    // font-size: 24px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  body {
+    // font-size: 48px;
+  }
 }
 
 .demo-top {
@@ -53,7 +66,6 @@ body {
 }
 
 .demo-search {
-  // width: 300rem / $baseFont;
   height: 50rem / $baseFont;
   margin: 0 auto;
   border-bottom: 1px solid #dddddd;
@@ -75,9 +87,22 @@ body {
   flex-flow: row nowrap;
   align-items: center;
   border-bottom: 1px solid #dddddd;
+ 
+  .demo-logo {
+    // display: none;
+    flex-basis: 10%;
+    @include border;
+    .demo-img {
+      padding-top: 100%;
+      display: block;
+      overflow: hidden;
+      z-index: 1;
+      position: relative;
+    }
+  }
 
   .demo-nav {
-    width: calc(80%);
+    flex-basis: 80%;
     height: 58rem / $baseFont;
     @include border;
     display: flex;
@@ -87,57 +112,110 @@ body {
       max-width: 20%;
     }
   }
-  .demo-logo {
-    // width: 150rem / $baseFont;
-    max-height: 150rem / $baseFont;
-    flex-basis: 10%;
-    min-height: 58rem / $baseFont;
-    min-width: 58rem / $baseFont;
-    @include border;
-    .demo-img {
-      // background-position: center;
-      // background-size: cover;
-      padding-top: 100%;
-      width: 100%;
-      // border-radius: 50%;
-      display: block;
-      overflow: hidden;
-      z-index: 1;
-      position: relative;
-      // width: 100%;
-      // max-width: 158rem /$baseFont;
-      // max-height: 158rem / $baseFont;
-      // max-width: 100%;
-      // height: 100%;
-      // padding-top: 100%;
-      img {
-        // height: 1px;
-        max-width: 100%;
-        // height: 1px;
-        left: 0;
-        position: absolute;
-        top: 0;
-        // width: 1px;
-      }
-    }
-  }
+
   .demo-btn {
-    min-height: 58rem / $baseFont;
-    min-width: 150rem / $baseFont;
     flex-basis: 10%;
     align-content: center;
     align-items: center;
     display: flex;
     justify-content: space-evenly;
     @include border;
-    div {
-      flex: auto;
-      // @include border;
+    // display: none;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .demo-header {
+    display: flex;
+    height: 150rem / $baseFont;
+    flex-flow: row nowrap;
+    align-items: center;
+    border-bottom: 1px solid #dddddd;
+   
+    .demo-logo {
+      display: none;
+      flex-basis: 10%;
+      @include border;
+      .demo-img {
+        padding-top: 100%;
+        display: block;
+        overflow: hidden;
+        z-index: 1;
+        position: relative;
+      }
+    }
+  
+    .demo-nav {
+      flex-basis: 100%;
+      // max-width: 80%;
+      height: 58rem / $baseFont;
+      @include border;
+      display: flex;
+      align-items: center;
+      div {
+        flex-basis: 20%;
+        max-width: 20%;
+      }
+    }
+  
+    .demo-btn {
+      flex-basis: 10%;
+      align-content: center;
+      align-items: center;
+      display: flex;
+      justify-content: space-evenly;
+      @include border;
+      display: none;
+    }
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .demo-header {
+    display: flex;
+    height: 150rem / $baseFont;
+    flex-flow: row nowrap;
+    align-items: center;
+    border-bottom: 1px solid #dddddd;
+   
+    .demo-logo {
+      flex-basis: 10%;
+      @include border;
+      .demo-img {
+        padding-top: 100%;
+        display: block;
+        overflow: hidden;
+        z-index: 1;
+        position: relative;
+      }
+    }
+  
+    .demo-nav {
+      flex-basis: 80%;
+      max-width: 80%;
+      height: 58rem / $baseFont;
+      @include border;
+      display: flex;
+      align-items: center;
+      div {
+        flex-basis: 20%;
+        max-width: 20%;
+      }
+    }
+  
+    .demo-btn {
+      flex-basis: 10%;
+      align-content: center;
+      align-items: center;
+      display: flex;
+      justify-content: space-evenly;
+      @include border;
     }
   }
 }
 
+
 .demo-container {
+  width: 100%;
   margin-top: 50rem/ $baseFont;
   display: flex;
   justify-content: center;
@@ -156,86 +234,39 @@ body {
     flex-flow: row wrap;
   }
   li {
-    flex-basis: 20%;
-    max-width: 20%;
+    flex-basis: 100%;
+    max-width: 100%;
     @include border();
     &:nth-child(2n) {
       background-color: aquamarine;
     }
     div {
-      width: 100rem / $baseFont;
-      height: 100rem / $baseFont;
+      padding-top: 10%;
+    }
+  }
+  @media only screen and (min-width: 768px) {
+    li {
+      flex-basis: 50%;
+      max-width: 50%;
+      transition: all 1s;
+    }
+  }
+  @media only screen and (min-width: 1024px) {
+    li {
+      flex-basis: 20%;
+      max-width: 20%;
     }
   }
 }
 
-// /*
-//   ##Device = Desktops
-//   ##Screen = 1281px to higher resolution desktops
-// */
-// @media (min-width: 1281px) {
-//   //CSS
-//   body {
-//     background-color: red;
-//   }
-// }
+.demo-middle {
+  margin-top: 50px;
+}
 
-// /*
-//   ##Device = Laptops, Desktops
-//   ##Screen = B/w 1025px to 1280px
-// */
+.demo-flow-container {
+  margin-top: 50px;
+}
 
-// @media (min-width: 1025px) and (max-width: 1280px) {
-//   //CSS
-//   body {
-//     background-color: green;
-//   }
-// }
-
-// /*
-//   ##Device = Tablets, Ipads (portrait)
-//   ##Screen = B/w 768px to 1024px
-// */
-
-// @media (min-width: 768px) and (max-width: 1024px) {
-//   //CSS
-//   body {
-//     background-color: blue;
-//   }
-// }
-
-// /*
-//   ##Device = Tablets, Ipads (landscape)
-//   ##Screen = B/w 768px to 1024px
-// */
-
-// @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
-//   //CSS
-//   body {
-//     background-color: orange;
-//   }
-// }
-
-// /*
-//   ##Device = Low Resolution Tablets, Mobiles (Landscape)
-//   ##Screen = B/w 481px to 767px
-// */
-
-// @media (min-width: 481px) and (max-width: 767px) {
-//   //CSS
-//   body {
-//     background-color: purple;
-//   }
-// }
-
-// /*
-//   ##Device = Most of the Smartphones Mobiles (Portrait)
-//   ##Screen = B/w 320px to 479px
-// */
-
-// @media (min-width: 320px) and (max-width: 480px) {
-//   //CSS
-//   body {
-//     background-color: black;
-//   }
-// }
+.demo-footer {
+  margin-top: 50px;
+}

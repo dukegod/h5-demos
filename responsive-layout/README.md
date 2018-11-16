@@ -1,6 +1,6 @@
 响应式布局方案
 
-基本思路： 
+基本思路：
 
 + `rem` 配合 `flexbox(max-width属性做降级处理)`
 + 单独适配IE
@@ -8,9 +8,19 @@
 
 栅栏视图：分为12份。
 
-media   
+media
 
 [calac](https://www.w3.org/TR/css3-values/#calc-notation):
+
+图片的处理： 绝对定位
+
+宽度适配：
++ flex-basis
++ max-width
+
+分割点：
+
+添加过渡动画：`transtions`
 
 
 ## layout
@@ -19,7 +29,7 @@ media
 
 设置root： 10vw;
 
-10vw = 108px    
+10vw = 108px
 1rem = 10.8px/vw;
 
 
@@ -37,7 +47,7 @@ media
 [Retina Display Media Query](https://css-tricks.com/snippets/css/retina-display-media-query/)
 
 ```css
-@media 
+@media
   only screen and (-webkit-min-device-pixel-ratio: 2),
   only screen and (min--moz-device-pixel-ratio: 2),
   only screen and (-o-min-device-pixel-ratio: 2 / 1),
