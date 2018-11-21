@@ -1,0 +1,16 @@
+/**控制多行显示与省略号问题**/
+.row-limit-1 {
+  display: -webkit-box !important;
+  overflow: hidden!important;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+}
+
+.row-limit-2 {
+  display: -webkit-box !important;
+  overflow: hidden!important;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+}

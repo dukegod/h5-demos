@@ -3,66 +3,23 @@
 @mixin border {
   border: 1px solid #000000;
 }
-
-@function strip-unit($value) {
-  @return $value / ($value * 0 + 1);
-}
-
-@mixin fluid-type($min-vw, $max-vw, $min-font-size, $max-font-size) {
-  $u1: unit($min-vw);
-  $u2: unit($max-vw);
-  $u3: unit($min-font-size);
-  $u4: unit($max-font-size);
-
-  @if $u1 == $u2 and $u1 == $u3 and $u1 == $u4 {
-    & {
-      font-size: $min-font-size;
-      @media screen and (min-width: $min-vw) {
-        font-size: calc(
-          #{$min-font-size} + #{strip-unit($max-font-size - $min-font-size)} *
-            ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)})
-        );
-      }
-      @media screen and (min-width: $max-vw) {
-        font-size: $max-font-size;
-      }
-    }
-  }
-}
-
 $min_width: 320px;
 $max_width: 1200px;
 $min_font: 16px;
 $max_font: 24px;
 $baseFont: 16;
 
-html {
-  font-size: 16px;
-}
 
-* {
-  box-sizing: border-box;
-}
-body {
-  @include fluid-type($min_width, $max_width, $min_font, $max_font);
-  background-color: #ffffff;
-  text-align: center;
-}
-
-@media only screen and (min-width: 768px) {
-  body {
-    // font-size: 24px;
-  }
-}
-@media only screen and (min-width: 1024px) {
-  body {
-    // font-size: 48px;
-  }
+.container {
+  min-width: 480px;
+  max-width: 1440px;
+  margin: 0 auto;
 }
 
 .demo-top {
   height: 30rem / $baseFont;
   border-bottom: 1px solid #dddddd;
+  background-color: #dddddd;
 }
 
 .demo-search {
@@ -89,8 +46,6 @@ body {
   border-bottom: 1px solid #dddddd;
  
   .demo-logo {
-    // display: none;
-    flex-basis: 10%;
     @include border;
     .demo-img {
       padding-top: 100%;
@@ -98,11 +53,12 @@ body {
       overflow: hidden;
       z-index: 1;
       position: relative;
+      img{
+        max-width: 50%;
+      }
     }
   }
-
   .demo-nav {
-    flex-basis: 80%;
     height: 58rem / $baseFont;
     @include border;
     display: flex;
@@ -120,142 +76,6 @@ body {
     display: flex;
     justify-content: space-evenly;
     @include border;
-    // display: none;
-  }
-}
-
-@media only screen and (max-width: 768px) {
-  .demo-header {
-    display: flex;
-    height: 150rem / $baseFont;
-    flex-flow: row nowrap;
-    align-items: center;
-    border-bottom: 1px solid #dddddd;
-   
-    .demo-logo {
-      display: none;
-      flex-basis: 10%;
-      @include border;
-      .demo-img {
-        padding-top: 100%;
-        display: block;
-        overflow: hidden;
-        z-index: 1;
-        position: relative;
-      }
-    }
-  
-    .demo-nav {
-      flex-basis: 100%;
-      // max-width: 80%;
-      height: 58rem / $baseFont;
-      @include border;
-      display: flex;
-      align-items: center;
-      div {
-        flex-basis: 20%;
-        max-width: 20%;
-      }
-    }
-  
-    .demo-btn {
-      flex-basis: 10%;
-      align-content: center;
-      align-items: center;
-      display: flex;
-      justify-content: space-evenly;
-      @include border;
-      display: none;
-    }
-  }
-}
-@media only screen and (min-width: 1024px) {
-  .demo-header {
-    display: flex;
-    height: 150rem / $baseFont;
-    flex-flow: row nowrap;
-    align-items: center;
-    border-bottom: 1px solid #dddddd;
-   
-    .demo-logo {
-      flex-basis: 10%;
-      @include border;
-      .demo-img {
-        padding-top: 100%;
-        display: block;
-        overflow: hidden;
-        z-index: 1;
-        position: relative;
-      }
-    }
-  
-    .demo-nav {
-      flex-basis: 80%;
-      max-width: 80%;
-      height: 58rem / $baseFont;
-      @include border;
-      display: flex;
-      align-items: center;
-      div {
-        flex-basis: 20%;
-        max-width: 20%;
-      }
-    }
-  
-    .demo-btn {
-      flex-basis: 10%;
-      align-content: center;
-      align-items: center;
-      display: flex;
-      justify-content: space-evenly;
-      @include border;
-    }
-  }
-}
-
-
-.demo-container {
-  width: 100%;
-  margin-top: 50rem/ $baseFont;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  ul,
-  li {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-  }
-  ul {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-flow: row wrap;
-  }
-  li {
-    flex-basis: 100%;
-    max-width: 100%;
-    @include border();
-    &:nth-child(2n) {
-      background-color: aquamarine;
-    }
-    div {
-      padding-top: 10%;
-    }
-  }
-  @media only screen and (min-width: 768px) {
-    li {
-      flex-basis: 50%;
-      max-width: 50%;
-      transition: all 1s;
-    }
-  }
-  @media only screen and (min-width: 1024px) {
-    li {
-      flex-basis: 20%;
-      max-width: 20%;
-    }
   }
 }
 

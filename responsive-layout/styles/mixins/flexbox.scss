@@ -24,3 +24,9 @@
 @mixin order($fo){
   order: $fo;
 }
+
+// 划分宽度
+@mixin basis-width($bw) {
+  flex-basis: $bw;
+  max-width: $bw;
+}

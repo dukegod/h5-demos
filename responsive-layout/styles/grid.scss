@@ -1,0 +1,30 @@
+/* 
+ * 栅栏布局
+ */
+
+@media only screen and (max-width: 767px) {
+  @for $i from 1 through 12 {
+    .col-sd-#{$i} {
+      flex-basis: 100%/12 * $i;
+      max-width: 100%/12 * $i;
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  @for $i from 1 through 12 {
+    .col-md-#{$i} {
+      flex-basis: 100%/12 * $i;
+      max-width: 100%/12 * $i;
+    }
+  }
+}
+
+@media only screen and (min-width: 1025px) {
+  @for $i from 1 through 12 {
+    .col-#{$i} {
+      flex-basis: 100%/12 * $i;
+      max-width: 100%/12 * $i;
+    }
+  }
+}
