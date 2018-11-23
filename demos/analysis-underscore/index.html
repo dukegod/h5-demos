@@ -1,16 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
     <title>undersore analysised</title>
-</head>
-<body>
-<script src="underscore.js"></script>
-<script>
-  (function () {
-    console.log(_.toArray(arguments).slice(1))
-  })(1, 2, 3, 4);
-</script>
-</body>
+  </head>
+  <body>
+    <script src="underscore.js"></script>
+    <script>
+      // (function () {
+      //   console.log(_.toArray(arguments).slice(1))
+      // })(1, 2, 3, 4);
+
+      var raceResults = _.restArguments(function(
+        gold,
+        silver,
+        bronze,
+        everyoneElse
+      ) {
+        
+      });
+
+      var t = raceResults(
+        'Dopey',
+        'Grumpy',
+        'Happy',
+        'Sneezy',
+        'Bashful',
+        'Sleepy',
+        'Doc'
+      );
+      console.log(t);
+    </script>
+  </body>
 </html>
