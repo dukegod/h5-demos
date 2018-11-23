@@ -9,7 +9,6 @@ $min_font: 16px;
 $max_font: 24px;
 $baseFont: 16;
 
-
 .container {
   min-width: 480px;
   max-width: 1440px;
@@ -20,23 +19,10 @@ $baseFont: 16;
   height: 30rem / $baseFont;
   border-bottom: 1px solid #dddddd;
   background-color: #dddddd;
+  text-align: center;
 }
 
-.demo-search {
-  height: 50rem / $baseFont;
-  margin: 0 auto;
-  border-bottom: 1px solid #dddddd;
-  display: flex;
-  align-content: center;
-  justify-content: center;
-  align-items: center;
-  label {
-    height: 30rem / $baseFont;
-  }
-  button {
-    color: initial;
-  }
-}
+
 
 .demo-header {
   display: flex;
@@ -76,6 +62,94 @@ $baseFont: 16;
     display: flex;
     justify-content: space-evenly;
     @include border;
+  }
+}
+
+
+
+@media only screen and (min-width: 770px) {
+  .demo-header2{
+    display: none;
+  }  
+}
+
+
+@media only screen and (max-width: 768px) {
+  .demo-header2 {
+    display: flex;
+    height: 75rem / $baseFont;
+    flex-flow: row nowrap;
+    align-items: center;
+    border-bottom: 1px solid #eeeeee;
+    background-color: #ededed;
+    .demo-menu{
+      color: #000000;
+      button {
+        margin-left: 10px;
+        background: #ccc;
+        border: none;
+        width: 48px;
+        height: 45px;
+        text-indent: -900em;
+        overflow: hidden;
+        position: relative;
+        cursor: pointer;
+        outline: none;
+      }
+      button:after {
+        content: '';
+        position: absolute;
+        width: 68%;
+        height: 5px;
+        background: #fff;
+        top: 10px;
+        left: 16%;
+        box-shadow: 
+          0 10px 0 #fff, 
+          0 20px 0 #fff;
+      }
+    }
+    .demo-search {
+      display: flex;
+      align-content: center;
+      justify-content: center;
+      align-items: center;
+      label {
+        height: 30rem / $baseFont;
+      }
+      button {
+        color: initial;
+      }
+    }
+  }
+  
+}
+
+
+
+
+
+.demo-container {
+  width: 100%;
+  margin-top: 50rem/ $baseFont;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  ul {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+  }
+  li {
+    @include border();
+    &:nth-child(2n) {
+      background-color: aquamarine;
+    }
+    div {
+      padding-top: 10%;
+    }
   }
 }
 

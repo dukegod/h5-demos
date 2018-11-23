@@ -1,0 +1,26 @@
+
+
+button {
+	background: #ccc;
+	border: none;
+	width: 48px;
+	height: 45px;
+	text-indent: -900em;
+	overflow: hidden;
+	position: relative;
+	cursor: pointer;
+  outline: none;
+
+  &:after {
+    content: '';
+    position: absolute;
+    width: 68%;
+    height: 5px;
+    background: #fff;
+    top: 10px;
+    left: 16%;
+    box-shadow: 
+      0 10px 0 #fff, 
+      0 20px 0 #fff;
+  }
+}
