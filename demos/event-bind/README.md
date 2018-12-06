@@ -30,12 +30,12 @@ jquery， zepto
 
 
 const M = {};
-$(M).on('changeBg', (event, obj)=>{
+$(M).on('changeBg', (event, obj)=> {
 console.log(event);
 console.log(obj);
 const e = $('#sectionId')[0];
 e.innerText= '';
-setTimeout(()=>{
+setTimeout(()=> {
   e.style.backgroundColor= obj.color;
   e.style.color = 'black';
   e.style.opacity= 0.5;

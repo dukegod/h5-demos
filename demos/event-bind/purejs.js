@@ -4,8 +4,6 @@
 
 const hello = 'hello event';
 document.title = hello;
-
-
 /**
  *  第一种解决方案
  *  创建： document.createEvent()，

@@ -1,7 +1,4 @@
 /**
- * Created by hui on 2017/7/26.
- */
-/**
  * @description 包含事件监听、移除和模拟事件触发的事件机制，支持链式调用
  * @author Kayo Lee(kayosite.com)
  * @create 2014-07-24
@@ -141,7 +138,7 @@
 
 const jsId = document.getElementById('jsId');
 const sectionId = document.getElementById('sectionId');
-Ev(sectionId).add('changeBg', (e)=>{
+Ev(sectionId).add('changeBg', (e)=> {
   console.log(e);
 //        let e = sectionId;
   e.target.innerText= '';
