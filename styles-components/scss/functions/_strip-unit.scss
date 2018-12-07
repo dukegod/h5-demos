@@ -1,0 +1,8 @@
+// 
+// return value
+//
+@function strip-unit($value) {
+  @return $value / ($value * 0 + 1);
+}
+
+@debug strip-unit(100px);

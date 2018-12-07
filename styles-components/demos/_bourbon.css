@@ -1,5 +1,0 @@
-.clearfixed::after {
-  clear: both;
-  content: "";
-  display: block;
-}
