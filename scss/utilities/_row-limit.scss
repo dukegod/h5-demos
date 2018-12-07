@@ -1,0 +1,54 @@
+/**控制多行显示与省略号问题**/
+@mixin ellipsis(
+    $width: 100%,
+    $display: inline-block
+) {
+    display: $display;
+    max-width: $width;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    word-wrap: normal;
+    @content;
+}
+
+.row-ellipsis {
+    @include ellipsis(300px);
+}
+.row-ellipsis-height {
+    @include ellipsis(400px);
+    max-height: 100px;
+}
+
+.row-limit-1 {
+    display: -webkit-box !important;
+    overflow: hidden !important;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+}
+
+.row-limit-2 {
+    display: -webkit-box !important;
+    overflow: hidden !important;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+}
+
+.row-limit-1-hidden {
+    display: -webkit-box !important;
+    overflow: hidden !important;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    // text-overflow: ellipsis;
+}
+
+.row-limit-2-hidden {
+    display: -webkit-box !important;
+    overflow: hidden !important;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    // text-overflow: ellipsis;
+}
+

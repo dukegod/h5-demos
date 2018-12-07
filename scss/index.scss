@@ -1,0 +1,81 @@
+/* @import 'highlight.js/styles/dracula.css'; */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.left {
+    padding: 10px;
+    flex-basis: 148px;
+    border-right: 2px solid #ededed;
+}
+.main {
+    padding: 5px;
+    flex-basis: calc(100% - 100px);
+    overflow-y: auto;
+}
+li {
+    cursor: pointer;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #dddddd;
+    font-size: 18px;
+    line-height: 1.6;
+}
+pre {
+    padding: 10px;
+    /* background-color: #ddddf5; */
+}
+
+section {
+    margin: 10px auto;
+    padding: 15px;
+    background-color: $gray-100;
+}
+
+.border,
+.border-top,
+.border-bottom,
+.border-left,
+.border-right {
+    width: 68px;
+    height: 30px;
+}
+
+h3 {
+    margin-top: 10px;
+}
+
+
+.row12 {
+
+    & > .col-1 {
+        background-color: $gray-200;
+        height: 10px;
+    }
+
+    & > .col-1:nth-child(2n) {
+        background-color: $gray-400;
+    }
+}
+.row4 {
+    & > .col-4 {
+        background-color: $gray-200;
+        height: 10px;
+    }
+
+    & > .col-4:nth-child(2n) {
+        background-color: $gray-400;
+    }
+}
+
+.row5 {
+    & > .col-5, .col-2 {
+        background-color: $gray-200;
+        height: 10px;
+    }
+
+    & > .col-5 {
+        background-color: $gray-400;
+    }
+}

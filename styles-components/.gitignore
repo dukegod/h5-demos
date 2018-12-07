@@ -1,0 +1,10 @@
+
+/node_modules
+.svn
+.DS_Store
+.idea
+.project
+package-lock.json
+*/package-lock.json
+.sass-cache
+dist
