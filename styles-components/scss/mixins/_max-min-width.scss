@@ -1,8 +1,0 @@
-/* 
-* 最大最小宽度设置 
-*/
-
-@mixin max-min-width($max, $min) {
-  max-width: $max;
-  min-width: $min;
-}
