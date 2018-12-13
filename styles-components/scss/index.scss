@@ -1,5 +1,22 @@
 // 
 // default output
-// 
-@import "./settings/index";
-@import "./functions/index";
+//
+
+// settings
+@import "./settings/default";
+@import "./settings/breakpoint";
+@import "./settings/color";
+
+// functions
+//@import "./functions/";
+
+// mixins
+@import "./mixins/media";
+@import "./mixins/grid";
+
+
+// utilities
+@import "utilities/grid";
+
+// demos
+@import "demo";

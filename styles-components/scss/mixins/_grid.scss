@@ -1,0 +1,40 @@
+// 最外层包裹性控制
+@mixin container() {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+// row
+@mixin row() {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+// 列数的设置
+@mixin col($size, $columns: $grid-columns) {
+  flex: 0 0 percentage($size / $grid-columns);
+  max-width: percentage($size / $grid-columns);
+}
+
+// 生成栅栏布局格式
+@mixin make-min-columns() {
+  @each $key, $val in $grid-breakpoints {
+
+    @if $key != xs {
+      @include media-min($key ) {
+        @for $i from 1 through $grid-columns {
+          .col-#{$key}-#{$i} {
+            @include col($i)
+          }
+        }
+      }
+    } @else {
+      @for $i from 1 through $grid-columns {
+        .col-#{$i} {
+          @include col($i)
+        }
+      }
+    }
+  }
+}

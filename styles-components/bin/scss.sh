@@ -6,5 +6,5 @@
 
 in='./scss/index.scss'
 out='./demos/index.css'
-sass --sourcemap='none' --trace --style expanded $in $out
+sass --sourcemap=none --style expanded  $in $out
 sass --watch $in:$out

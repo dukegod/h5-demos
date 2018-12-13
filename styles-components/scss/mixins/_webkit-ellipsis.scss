@@ -1,0 +1,12 @@
+//
+//webkit 内核有用, 但是在移动端很好用（Android，iOS）
+//控制多行显示与省略号问题
+//
+
+@mixin row-limit($number: 1) {
+  display: -webkit-box !important;
+  overflow: hidden!important;
+  -webkit-line-clamp: $number;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+}

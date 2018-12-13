@@ -1,0 +1,24 @@
+// kep-map
+//@debug $grid-breakpoints;
+
+@mixin media-min($name) {
+  $min: map-get($grid-breakpoints, $name);
+  @media screen and (min-width: $min) {
+    @content
+  }
+}
+
+@mixin media-max($name) {
+  $min: map-get($grid-breakpoints, $name);
+  @media screen and (max-width: $min) {
+    @content
+  }
+}
+
+@mixin media-min-max($min, $max) {
+  $min: map-get($grid-breakpoints, $min);
+  $max: map-get($grid-breakpoints, $max);
+  @media screen and (min-width: $min) and (max-width: $max) {
+    @content
+  }
+}

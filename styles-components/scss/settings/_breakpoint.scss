@@ -1,0 +1,16 @@
+// Grid breakpoints
+
+$grid-breakpoints: () !default;
+$grid-breakpoints: map-merge(
+  (
+      xs: 0,
+      sm: 540px,
+      md: 768px,
+      lg: 998px,
+      xl: 1200px
+  ),
+  $grid-breakpoints
+);
+
+$grid-columns:                12 !default;
+$grid-gutter-width:           30px !default;

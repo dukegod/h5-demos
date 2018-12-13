@@ -1,0 +1,9 @@
+//
+// 处理绝对居中问题
+//
+@mixin absolutePosition() {
+  position: fixed;
+  top: 0;
+  left: 0;
+  transform: translate(-50%, -50%);
+}
