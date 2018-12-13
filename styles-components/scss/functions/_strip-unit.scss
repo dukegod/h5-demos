@@ -1,5 +1,5 @@
 // 
-// return value
+// 去掉长度单位，返回数值
 //
 @function strip-unit($value) {
   @return $value / ($value * 0 + 1);
