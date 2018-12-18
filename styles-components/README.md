@@ -17,3 +17,8 @@ aim to cross browser, display fluid layout between mobile with pc.
     - strip-unit : 返回单位数值
 + components: 封装的组件
 + utilities: 框架对外输出的样式
+
+### 已经完成的组件
+
++ 栅栏布局（grid）
++ 
