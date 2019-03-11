@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Web work</title>
+</head>
+<body>
+  <h2> web work promoted the process </h2>
+  <label for="topId">
+    <input type="text" value="0" id="topId" />
+  </label>
+  <hr>
+  <label for="bottomId">
+    <input type="text" value="1" id="bottomId" />
+  </label>
+  <hr>
+  <div> add two number：<span id="resultId"></span> </div>
+</body>
+<script>
+  const $top = document.getElementById('topId');
+  const $bot = document.getElementById('bottomId');
+  const $resultId = document.getElementById('resultId');
+
+  if (window.Worker) {
+    const workIns = new Worker('index.js');
+    $top.onchange = function (e) {
+      workIns.postMessage({
+        top: e.target.value
+      })
+      console.log(e.target.value)
+    };
+    $bot.onchange = function (e) {
+      workIns.postMessage({
+        bot: e.target.value
+      })
+      console.log(e.target.value)
+    };
+
+    workIns.onmessage = function (e) {
+      // 来自work。js的消息
+      console.log(`来自work。js的消息, ${JSON.stringify(e)}`)
+    }
+
+  }
+
+</script>
+</html>
