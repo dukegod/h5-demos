@@ -39,6 +39,8 @@
     workIns.onmessage = function (e) {
       // 来自work。js的消息
       console.log(`来自work。js的消息, ${JSON.stringify(e)}`)
+      const { top, bot} = e.data;
+      $resultId.innerText = top + bot;
     }
 
   }
