@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+      div {
+        margin-top: 20px;
+        width: 100px;
+        height: 40px;
+        background-color: red;
+      }
+
+      div>p {
+        background-color: black;
+      }
+      div~p {
+        background-color: purple;
+      }
+      div+p {
+        background-color: yellow;
+      }
+
+      #divId {
+        background-color: black;
+      }
+
+      .divClass {
+        background-color: blue;
+      }
+    </style>
+</head>
+<body>
+  <div>
+    color red
+  </div>
+
+  <p>5</p>
+  <div>
+    <p>1</p>
+  </div>
+  <p>2</p>
+  <p>3</p>
+  <p>4</p>
+
+  <div id="divId"></div>
+  <div class="divClass"></div>
+</body>
+</html>

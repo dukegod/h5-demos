@@ -2,10 +2,10 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Web work</title>
+  <title>Web work share page</title>
 </head>
 <body>
-  <h2> web work promoted the process </h2>
+  <h2> work share </h2>
   <label for="topId">
     <input type="text" value="0" id="topId" />
   </label>
@@ -22,28 +22,23 @@
   const $resultId = document.getElementById('resultId');
 
   if (window.Worker) {
-    const workIns = new Worker('index.js');
+    const workIns = new SharedWorker('share.js');
     $top.onchange = function (e) {
-      workIns.postMessage({
+      workIns.port.postMessage({
         top: e.target.value
-      });
+      })
       console.log(e.target.value)
     };
     $bot.onchange = function (e) {
-      workIns.postMessage({
+      workIns.port.postMessage({
         bot: e.target.value
-      });
+      })
       console.log(e.target.value)
     };
 
-    workIns.onerror = function (e) {
-      console.log(e);
-      return e
-    };
-
-    workIns.onmessage = function (e) {
+    workIns.port.onmessage = function (e) {
       // 来自work。js的消息
-      console.log(`来自work。js的消息, ${JSON.stringify(e)}`)
+      console.log(`来自子 work。js的消息, ${JSON.stringify(e)}`)
       const { top, bot} = e.data;
       $resultId.innerText = top + bot;
     }
